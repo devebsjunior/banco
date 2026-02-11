@@ -39,6 +39,27 @@ mvn clean test
 ```
 Nota: Os testes utilizam @ActiveProfiles("test") para isolar o ambiente de produção do ambiente de testes, garantindo que o banco real nunca seja afetado.
 
+## 🐳 Rodando com Docker
+Para facilitar o setup do banco de dados MySQL, o projeto inclui um arquivo docker-compose.yml.
+
+### Pré-requisitos
+Docker e Docker Compose instalados.
+
+### Passo a Passo
+Subir o Banco de Dados: Na raiz do projeto, execute:
+
+```
+docker-compose up -d
+```
+
+Isso iniciará um container MySQL configurado com as credenciais padrão do projeto.
+
+Parar os containers:
+
+```
+docker-compose down
+```
+
 ## 📖 Documentação da API (Swagger)
 Com a aplicação rodando, você pode acessar a documentação interativa e testar os endpoints em:
 ```
