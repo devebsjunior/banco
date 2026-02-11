@@ -1,4 +1,4 @@
-# 🏦 Banco CastGroup API
+# 🏦 Banco API
 
 Bem-vindo ao projeto **Banco**, uma API robusta desenvolvida em Spring Boot para gerenciamento de contas bancárias, clientes e transações. Este projeto foi desenhado com foco em segurança, escalabilidade e testabilidade.
 
