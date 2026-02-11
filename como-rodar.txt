@@ -1,0 +1,7 @@
+PARA O PROJETO - docker compose down
+RODA O PROJETO - docker compose up -d --build
+ENTRA NO MYSQL - docker exec -it mysql-banco mysql -u root -p
+ACOMPANHAR LOGS - docker logs -f spring_app --tail 100
+
+docker compose stop app
+docker compose up -d --build app
