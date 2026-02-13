@@ -2,6 +2,7 @@ package br.com.arq.model;
 
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Column;
@@ -48,6 +49,7 @@ public class Conta {
 	@NotBlank(message = "O perfil é obrigatorio")
 	private String perfil;
 
+	@Column(name = "senha")
 	private String senha;
 
 	@Version

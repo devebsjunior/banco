@@ -28,8 +28,8 @@ public class AdminController {
 	@PostMapping
 	public ResponseEntity<?> criarConta(@Valid @RequestBody ContaRequestDTO dto) {
 		try {
-			contaService.criarConta(dto);
-			return ResponseEntity.status(HttpStatus.CREATED).body(dto);
+			Conta contaSalva = contaService.criarConta(dto);
+			return ResponseEntity.status(HttpStatus.CREATED).body(contaSalva);
 		} catch (Exception e) {
 			return ResponseEntity.badRequest().body(e.getMessage());
 		}
@@ -39,4 +39,5 @@ public class AdminController {
 	public ResponseEntity<List<Conta>> listarContas() {
 		return ResponseEntity.ok(contaService.listarTodas());
 	}
+
 }

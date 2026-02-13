@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -25,31 +26,31 @@ public class ContaService {
 	private final TransacaoRepository transacaoRepository;
 	private final ClienteRepository clienteRepository;
 
-
 	@Transactional
 	public Conta criarConta(ContaRequestDTO dto) {
-		if (clienteRepository.findByCpf(dto.cpf()).isPresent()) {
-			throw new RuntimeException("Este CPF já está cadastrado no sistema.");
-		}
+	    String senhaHash = BCrypt.hashpw(dto.senha(), BCrypt.gensalt());
+	    
+	    System.out.println("DEBUG - Senha Pura: " + dto.senha());
+	    System.out.println("DEBUG - Senha Hash: " + senhaHash);
 
-		if (contaRepository.findByNumeroConta(dto.numeroConta()).isPresent()) {
-			throw new RuntimeException("Este número de conta já existe.");
-		}
+	    Cliente cliente = clienteRepository.findByCpf(dto.cpf()).orElseGet(() -> {
+	        Cliente novoCliente = new Cliente();
+	        novoCliente.setNome(dto.nome());
+	        novoCliente.setCpf(dto.cpf());
+	        novoCliente.setEmail(dto.email());
+	        return clienteRepository.save(novoCliente);
+	    });
 
-		Cliente cliente = new Cliente();
-		cliente.setNome(dto.nome());
-		cliente.setCpf(dto.cpf());
-		cliente.setEmail(dto.email());
-		cliente = clienteRepository.save(cliente);
+	    Conta novaConta = new Conta();
+	    novaConta.setNumeroConta(dto.numeroConta());
+	    novaConta.setPerfil(dto.perfil());
+	    novaConta.setSaldo(dto.saldo());
+	    novaConta.setSenha(senhaHash); 
+	    novaConta.setCliente(cliente);
 
-		Conta conta = new Conta();
-		conta.setNumeroConta(dto.numeroConta());
-		conta.setSaldo(dto.saldo());
-		conta.setPerfil(dto.perfil() != null ? dto.perfil() : "usuario");
-		conta.setSenha(dto.senha());
-		conta.setCliente(cliente);
-
-		return contaRepository.save(conta);
+	    contaRepository.save(novaConta);
+	    System.out.println(">>> SALVO NO BANCO COM SUCESSO!");
+	    return contaRepository.save(novaConta);
 	}
 
 	@Transactional

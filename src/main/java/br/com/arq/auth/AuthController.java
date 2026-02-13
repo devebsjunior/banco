@@ -22,9 +22,11 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequestDTO dto) {
         try {
-            System.out.println("Tentativa de login para a conta: " + dto.login());
-            return ResponseEntity.ok(authService.autenticar(dto.login(), dto.senha()));
+            System.out.println("Tentativa de login para: " + dto.login());
+            var response = authService.autenticar(dto.login(), dto.senha());
+            return ResponseEntity.ok(response);
         } catch (Exception e) {
+            System.err.println("ERRO NO LOGIN:");
             e.printStackTrace(); 
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
         }
