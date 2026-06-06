@@ -4,6 +4,7 @@ import br.com.arq.dto.ContaDTO;
 import br.com.arq.dto.ContaRequestDTO;
 import br.com.arq.dto.TransacaoDTO;
 import br.com.arq.dto.TransferenciaDTO;
+import br.com.arq.enums.TipoTransacao;
 import br.com.arq.exception.ContaNaoEncontradaException;
 import br.com.arq.mapper.ContaMapper;
 import br.com.arq.mapper.TransacaoMapper;
@@ -18,14 +19,11 @@ import br.com.arq.rules.core.Rule;
 import br.com.arq.rules.core.RuleEngine;
 import br.com.arq.rules.core.RuleResult;
 import br.com.arq.rules.core.catalog.ContaRules;
-
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.stereotype.Service;
-
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -143,8 +141,8 @@ public class ContaService {
             cDestino.creditar(valor);
             contaRepository.save(cOrigem);
             contaRepository.save(cDestino);
-            registrarTransacao(origem, "TRANSFERENCIA ENVIADA", valor);
-            registrarTransacao(destino, "TRANSFERENCIA RECEBIDA", valor);
+            registrarTransacao(cOrigem, TipoTransacao.TRANSFERENCIA_ENVIADA, valor);
+            registrarTransacao(cDestino, TipoTransacao.TRANSFERENCIA_RECEBIDA, valor);
             logService.info("Transferência realizada com sucesso", "ContaService");
             auditService.registrar(
                     "user", "USER", "TRANSFERENCIA",
@@ -188,7 +186,7 @@ public class ContaService {
             conta.creditar(valor);
             contaRepository.save(conta);
 
-            registrarTransacao(numero, "DEPOSITO", valor);
+            registrarTransacao(conta, TipoTransacao.DEPOSITO, valor);
 
             auditService.registrar(
                     "user",
@@ -248,7 +246,7 @@ public class ContaService {
             conta.debitar(valor);
             contaRepository.save(conta);
 
-            registrarTransacao(numero, "SAQUE", valor);
+            registrarTransacao(conta, TipoTransacao.SAQUE, valor);
 
             auditService.registrar(
                     "user", "USER", "SAQUE",
@@ -273,20 +271,39 @@ public class ContaService {
     }
 
 
-
-
     @Transactional
     public List<TransacaoDTO> buscarExtrato(String numeroConta) {
 
         Conta conta = contaRepository.findByNumeroConta(numeroConta)
                 .orElseThrow(() -> new ContaNaoEncontradaException(numeroConta));
 
-        return transacaoRepository.findByConta(conta)
+        return transacaoRepository.findByNumeroContaOrderByDataHoraDesc(conta.getNumeroConta())
                 .stream()
                 .map(TransacaoMapper.TO_DTO)
                 .toList();
     }
 
+    private TransacaoDTO registrarTransacao(
+            Conta conta,
+            TipoTransacao tipo,
+            BigDecimal valor
+    ) {
+        Transacao t = new Transacao();
+
+        t.setConta(conta);
+        t.setTipo(tipo);
+        t.setValor(valor);
+
+        Transacao salva = transacaoRepository.save(t);
+
+        return TransacaoMapper.TO_DTO.apply(salva);
+    }
+
+    public ContaDTO buscarPorNumero(String numero) {
+        Conta conta = contaRepository.findByNumeroConta(numero)
+                .orElseThrow(() -> new ContaNaoEncontradaException(numero));
+        return ContaMapper.TO_DTO.apply(conta);
+    }
 
 
     private void executarRegras(Facts facts, Rule... rules) {
@@ -298,14 +315,11 @@ public class ContaService {
                 .run();
 
         for (RuleResult result : results) {
-
             if (!result.success()) {
-
                 logService.warn(
                         "Falha na regra: " + result.ruleName(),
                         "RuleEngine"
                 );
-
                 throw new IllegalArgumentException(result.message());
             }
         }

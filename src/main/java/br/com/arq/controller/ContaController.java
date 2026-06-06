@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
+import br.com.arq.dto.ContaDTO;
+import br.com.arq.dto.TransacaoDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -78,16 +80,17 @@ public class ContaController {
 	}
 
 	@GetMapping("/{numero}/extrato")
-	public ResponseEntity<List<Transacao>> verExtrato(@PathVariable String numero) {
-		List<Transacao> extrato = contaService.buscarExtrato(numero);
+	public ResponseEntity<List<TransacaoDTO>> verExtrato(@PathVariable String numero) {
+		List<TransacaoDTO> extrato = contaService.buscarExtrato(numero);
 		return ResponseEntity.ok(extrato);
 	}
 
+
 	@GetMapping("/{numero}")
-	public ResponseEntity<Conta> consultarConta(@PathVariable String numero) {
-		return ResponseEntity.ok(contaService.listarTodas().stream().filter(c -> c.getNumeroConta().equals(numero))
-				.findFirst().orElseThrow(() -> new RuntimeException("Conta nao encontrada")));
+	public ResponseEntity<ContaDTO> consultarConta(@PathVariable String numero) {
+		return ResponseEntity.ok(contaService.buscarPorNumero(numero));
 	}
+
 
 	@GetMapping("/admin/usuarios")
 	public ResponseEntity<List<Conta>> listarUsuariosComuns() {
