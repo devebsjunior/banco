@@ -1,10 +1,10 @@
 package br.com.arq.model;
 
+
+import br.com.arq.enums.TipoTransacao;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -21,8 +21,17 @@ public class Transacao {
     private Long id;
 
     private String numeroConta;
-    private String tipo; 
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "conta_id", nullable = false)
+    private Conta conta;
+
+
+    @Enumerated(EnumType.STRING)
+    private TipoTransacao tipo;
+
     private BigDecimal valor;
+
     private LocalDateTime dataHora;
 
     @PrePersist

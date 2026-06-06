@@ -22,7 +22,7 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/api/usuarios/contas")
 @RequiredArgsConstructor
-public class UsuarioController {
+public class ContaController {
 
 	private final ContaService contaService;
 	private final  ContaRepository repository;
@@ -68,7 +68,7 @@ public class UsuarioController {
 	public ResponseEntity<?> transferir(@RequestBody TransferenciaDTO dto) {
 	    try {
 	        System.out.println("Recebendo transferência: " + dto.origem() + " para " + dto.destino());
-	        contaService.transferir(dto); 
+	        contaService.transferir(dto);
 	        return ResponseEntity.ok().body("Transferência realizada com sucesso");
 	    } catch (RuntimeException e) {
 	        return ResponseEntity.badRequest().body(e.getMessage());
@@ -76,7 +76,7 @@ public class UsuarioController {
 	        return ResponseEntity.internalServerError().body("Erro: " + e.getMessage());
 	    }
 	}
-	
+
 	@GetMapping("/{numero}/extrato")
 	public ResponseEntity<List<Transacao>> verExtrato(@PathVariable String numero) {
 		List<Transacao> extrato = contaService.buscarExtrato(numero);

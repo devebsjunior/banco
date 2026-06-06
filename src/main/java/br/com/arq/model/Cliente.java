@@ -4,14 +4,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
@@ -41,7 +34,16 @@ public class Cliente {
     @Column(unique = true)
     private String email;
 
+
+    @OneToOne(mappedBy = "cliente", fetch = FetchType.LAZY)
+    private Usuario usuario;
+
     @JsonIgnore
-    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY)
     private List<Conta> contas;
+
+    @JsonIgnore
+    @OneToOne(mappedBy = "cliente", fetch = FetchType.LAZY)
+    private  Endereco  endereco;
+
 }
