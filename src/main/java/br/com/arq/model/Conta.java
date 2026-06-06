@@ -2,10 +2,7 @@ package br.com.arq.model;
 
 import java.math.BigDecimal;
 import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -25,9 +22,17 @@ public class Conta {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	@Column(name="nomeBanco")
+	private String nomeBanco;
+
+	@Column(name="agencia")
+	private String agencia;
+
+
 	@NotBlank(message = "O numero da conta é obrigatorio")
     @Column(name = "numero_conta", unique = true)
     private String numeroConta;
+
 
 
 	@ManyToOne(fetch = FetchType.LAZY)

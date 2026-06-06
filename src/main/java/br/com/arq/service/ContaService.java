@@ -1,9 +1,6 @@
 package br.com.arq.service;
 
-import br.com.arq.dto.ContaDTO;
-import br.com.arq.dto.ContaRequestDTO;
-import br.com.arq.dto.TransacaoDTO;
-import br.com.arq.dto.TransferenciaDTO;
+import br.com.arq.dto.*;
 import br.com.arq.enums.TipoTransacao;
 import br.com.arq.exception.ContaNaoEncontradaException;
 import br.com.arq.mapper.ContaMapper;
@@ -107,73 +104,28 @@ public class ContaService {
         }
     }
 
-        @Transactional
-        public void transferir(TransferenciaDTO dto) {
-            executarTransferencia(dto.origem(), dto.destino(), dto.valor());
-        }
-
-    private void executarTransferencia(String origem, String destino, BigDecimal valor) {
-
-        long inicio = System.currentTimeMillis();
-
-        try {
-            logService.info("Iniciando transferência", "ContaService");
-
-            Conta cOrigem = contaRepository.findByNumeroContaWithLock(origem)
-                    .orElseThrow(() -> new ContaNaoEncontradaException(origem));
-
-            Conta cDestino = contaRepository.findByNumeroContaWithLock(destino)
-                    .orElseThrow(() -> new ContaNaoEncontradaException(destino));
-
-            Facts facts = new Facts()
-                    .add(Conta.class, cOrigem)
-                    .add(BigDecimal.class, valor);
-
-            RuleEngine.builder()
-                    .facts(facts)
-                    .rule(ContaRules.valorInvalido())
-                    .rule(ContaRules.saldoInsuficiente())
-                    .logService(logService)
-                    .auditService(auditService)
-                    .build()
-                    .run();
-            cOrigem.debitar(valor);
-            cDestino.creditar(valor);
-            contaRepository.save(cOrigem);
-            contaRepository.save(cDestino);
-            registrarTransacao(cOrigem, TipoTransacao.TRANSFERENCIA_ENVIADA, valor);
-            registrarTransacao(cDestino, TipoTransacao.TRANSFERENCIA_RECEBIDA, valor);
-            logService.info("Transferência realizada com sucesso", "ContaService");
-            auditService.registrar(
-                    "user", "USER", "TRANSFERENCIA",
-                    true, "Transferência OK",
-                    null, "ContaService",
-                    tempo(inicio)
-            );
-        } catch (Exception ex) {
-            logService.error("Erro na transferência", "ContaService", ex.getMessage());
-            auditService.registrar(
-                    "user", "USER", "TRANSFERENCIA",
-                    false, ex.getMessage(),
-                    null, "ContaService",
-                    tempo(inicio)
-            );
-            throw ex;
-        }
-    }
-
     @Transactional
-    public void depositar(String numero, BigDecimal valor) {
+    public void depositar(OperacaoBancariaDTO dto) {
 
         long inicio = System.currentTimeMillis();
 
         try {
+            logService.info("Iniciando depósito", "ContaService");
 
-            Conta conta = contaRepository.findByNumeroContaWithLock(numero)
-                    .orElseThrow(() -> new ContaNaoEncontradaException(numero));
+            Conta conta = contaRepository.findByNumeroContaWithLock(dto.numeroConta())
+                    .orElseThrow(() -> new ContaNaoEncontradaException(dto.numeroConta()));
+
+
+            if (!conta.getNomeBanco().equalsIgnoreCase(dto.banco())) {
+                throw new RuntimeException("Banco inválido");
+            }
+
+            if (!conta.getAgencia().equals(dto.agencia())) {
+                throw new RuntimeException("Agência inválida");
+            }
 
             Facts facts = new Facts()
-                    .add(BigDecimal.class, valor);
+                    .add(BigDecimal.class, dto.valor());
 
             RuleEngine.builder()
                     .facts(facts)
@@ -183,10 +135,12 @@ public class ContaService {
                     .build()
                     .run();
 
-            conta.creditar(valor);
+            conta.creditar(dto.valor());
             contaRepository.save(conta);
 
-            registrarTransacao(conta, TipoTransacao.DEPOSITO, valor);
+            registrarTransacao(conta, TipoTransacao.DEPOSITO, dto.valor());
+
+            logService.info("Depósito realizado com sucesso", "ContaService");
 
             auditService.registrar(
                     "user",
@@ -201,7 +155,7 @@ public class ContaService {
 
         } catch (Exception ex) {
 
-            logService.error("Erro no deposito", "ContaService", ex.getMessage());
+            logService.error("Erro no depósito", "ContaService", ex.getMessage());
 
             auditService.registrar(
                     "user",
@@ -218,21 +172,42 @@ public class ContaService {
         }
     }
 
+
+
     @Transactional
-    public void sacar(String numero, BigDecimal valor) {
+    public void transferir(TransferenciaDTO dto) {
 
         long inicio = System.currentTimeMillis();
 
         try {
-            logService.info("Iniciando saque", "ContaService");
+            logService.info("Iniciando transferência", "ContaService");
 
-            Conta conta = contaRepository.findByNumeroContaWithLock(numero)
-                    .orElseThrow(() -> new ContaNaoEncontradaException(numero));
+            Conta origem = contaRepository.findByNumeroContaWithLock(dto.contaOrigem())
+                    .orElseThrow(() -> new ContaNaoEncontradaException(dto.contaOrigem()));
+
+            Conta destino = contaRepository.findByNumeroContaWithLock(dto.contaDestino())
+                    .orElseThrow(() -> new ContaNaoEncontradaException(dto.contaDestino()));
+
+            if (!origem.getNomeBanco().equalsIgnoreCase(dto.bancoOrigem())) {
+                throw new RuntimeException("Banco origem inválido");
+            }
+
+            if (!origem.getAgencia().equals(dto.agenciaOrigem())) {
+                throw new RuntimeException("Agência origem inválida");
+            }
+
+
+            if (!destino.getNomeBanco().equalsIgnoreCase(dto.bancoDestino())) {
+                throw new RuntimeException("Banco destino inválido");
+            }
+
+            if (!destino.getAgencia().equals(dto.agenciaDestino())) {
+                throw new RuntimeException("Agência destino inválida");
+            }
 
             Facts facts = new Facts()
-                    .add(Conta.class, conta)
-                    .add(BigDecimal.class, valor);
-
+                    .add(Conta.class, origem)
+                    .add(BigDecimal.class, dto.valor());
 
             RuleEngine.builder()
                     .facts(facts)
@@ -243,15 +218,96 @@ public class ContaService {
                     .build()
                     .run();
 
-            conta.debitar(valor);
-            contaRepository.save(conta);
+            origem.debitar(dto.valor());
+            destino.creditar(dto.valor());
 
-            registrarTransacao(conta, TipoTransacao.SAQUE, valor);
+            contaRepository.save(origem);
+            contaRepository.save(destino);
+
+            registrarTransacao(origem, TipoTransacao.TRANSFERENCIA_ENVIADA, dto.valor());
+            registrarTransacao(destino, TipoTransacao.TRANSFERENCIA_RECEBIDA, dto.valor());
+
+            logService.info("Transferência realizada com sucesso", "ContaService");
 
             auditService.registrar(
-                    "user", "USER", "SAQUE",
-                    true, "Saque OK",
-                    null, "ContaService",
+                    "user",
+                    "USER",
+                    "TRANSFERENCIA",
+                    true,
+                    "Transferência realizada",
+                    null,
+                    "ContaService",
+                    tempo(inicio)
+            );
+
+        } catch (Exception ex) {
+
+            logService.error("Erro na transferência", "ContaService", ex.getMessage());
+
+            auditService.registrar(
+                    "user",
+                    "USER",
+                    "TRANSFERENCIA",
+                    false,
+                    ex.getMessage(),
+                    null,
+                    "ContaService",
+                    tempo(inicio)
+            );
+
+            throw ex;
+        }
+    }
+
+    @Transactional
+    public void sacar(OperacaoBancariaDTO dto) {
+
+        long inicio = System.currentTimeMillis();
+
+        try {
+            logService.info("Iniciando saque", "ContaService");
+
+            Conta conta = contaRepository.findByNumeroContaWithLock(dto.numeroConta())
+                    .orElseThrow(() -> new ContaNaoEncontradaException(dto.numeroConta()));
+
+            // ✅ valida banco
+            if (!conta.getNomeBanco().equalsIgnoreCase(dto.banco())) {
+                throw new RuntimeException("Banco inválido");
+            }
+
+            // ✅ valida agência
+            if (!conta.getAgencia().equals(dto.agencia())) {
+                throw new RuntimeException("Agência inválida");
+            }
+
+            Facts facts = new Facts()
+                    .add(Conta.class, conta)
+                    .add(BigDecimal.class, dto.valor());
+
+            RuleEngine.builder()
+                    .facts(facts)
+                    .rule(ContaRules.valorInvalido())
+                    .rule(ContaRules.saldoInsuficiente())
+                    .logService(logService)
+                    .auditService(auditService)
+                    .build()
+                    .run();
+
+            conta.debitar(dto.valor());
+            contaRepository.save(conta);
+
+            registrarTransacao(conta, TipoTransacao.SAQUE, dto.valor());
+
+            logService.info("Saque realizado com sucesso", "ContaService");
+
+            auditService.registrar(
+                    "user",
+                    "USER",
+                    "SAQUE",
+                    true,
+                    "Saque realizado",
+                    null,
+                    "ContaService",
                     tempo(inicio)
             );
 
@@ -260,16 +316,19 @@ public class ContaService {
             logService.error("Erro no saque", "ContaService", ex.getMessage());
 
             auditService.registrar(
-                    "user", "USER", "SAQUE",
-                    false, ex.getMessage(),
-                    null, "ContaService",
+                    "user",
+                    "USER",
+                    "SAQUE",
+                    false,
+                    ex.getMessage(),
+                    null,
+                    "ContaService",
                     tempo(inicio)
             );
 
             throw ex;
         }
     }
-
 
     @Transactional
     public List<TransacaoDTO> buscarExtrato(String numeroConta) {
@@ -300,6 +359,7 @@ public class ContaService {
     }
 
     public ContaDTO buscarPorNumero(String numero) {
+
         Conta conta = contaRepository.findByNumeroConta(numero)
                 .orElseThrow(() -> new ContaNaoEncontradaException(numero));
         return ContaMapper.TO_DTO.apply(conta);
@@ -328,4 +388,5 @@ public class ContaService {
     private long tempo(long inicio) {
         return System.currentTimeMillis() - inicio;
     }
+
 }
