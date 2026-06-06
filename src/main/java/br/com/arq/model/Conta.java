@@ -1,20 +1,12 @@
 package br.com.arq.model;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
-import jakarta.persistence.Version;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -37,10 +29,16 @@ public class Conta {
     @Column(name = "numero_conta", unique = true)
     private String numeroConta;
 
-	@ManyToOne(fetch = FetchType.EAGER)  
+
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "cliente_id", nullable = false)
-	@JsonIgnoreProperties("contas")
 	private Cliente cliente;
+
+
+	@JsonIgnore
+	@OneToMany(mappedBy = "conta", fetch = FetchType.LAZY)
+	private List<Transacao> transacoes;
+
 
 	@NotNull(message = "O saldo inicial deve ser informado")
 	@Min(value = 0, message = "O saldo nao pode ser negativo")
