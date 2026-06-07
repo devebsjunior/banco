@@ -1,4 +1,4 @@
-package br.com.arq.asyncecurity.security;
+package br.com.arq.asyncsecurity.security;
 
 
 import org.mindrot.jbcrypt.BCrypt;

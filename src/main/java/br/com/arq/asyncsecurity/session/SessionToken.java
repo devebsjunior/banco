@@ -1,4 +1,4 @@
-package br.com.arq.asyncecurity.session;
+package br.com.arq.asyncsecurity.session;
 
 
 import lombok.Getter;
@@ -17,6 +17,7 @@ public class SessionToken {
     private boolean autorizado;
     private final LocalDateTime criadoEm;
     private LocalDateTime expiraEm;
+
     public SessionToken(Long usuarioId) {
         this.uuid= UUID.randomUUID().toString();
         this.usuarioId = usuarioId;

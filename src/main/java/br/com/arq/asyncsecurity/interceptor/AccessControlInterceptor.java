@@ -1,11 +1,11 @@
-package br.com.arq.asyncecurity.interceptor;
+package br.com.arq.asyncsecurity.interceptor;
 
-import br.com.arq.asyncecurity.session.SessionService;
+import br.com.arq.asyncsecurity.session.SessionService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
-import br.com.arq.asyncecurity.security.TokenService;
+import br.com.arq.asyncsecurity.security.TokenService;
 import br.com.arq.utils.RequestUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
