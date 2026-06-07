@@ -14,11 +14,13 @@ import br.com.arq.repository.TransacaoRepository;
 import br.com.arq.rules.core.Facts;
 import br.com.arq.rules.core.Rule;
 import br.com.arq.rules.core.RuleEngine;
-import br.com.arq.rules.core.RuleResult;
 import br.com.arq.rules.core.catalog.ContaRules;
+import br.com.arq.utils.FactNames;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.mindrot.jbcrypt.BCrypt;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.util.List;
@@ -26,6 +28,8 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class ContaService {
+
+    private static final Logger logger = LoggerFactory.getLogger(ContaService.class);
 
     private final ContaRepository contaRepository;
     private final TransacaoRepository transacaoRepository;
@@ -36,16 +40,18 @@ public class ContaService {
 
     @Transactional
     public Conta criarConta(ContaRequestDTO dto) {
-
         long inicio = System.currentTimeMillis();
 
         try {
+            logger.info("Criando conta - CPF: {}, Numero: {}", dto.cpf(), dto.numeroConta());
             logService.info("Iniciando criação de conta", "ContaService");
 
             String senhaHash = BCrypt.hashpw(dto.senha(), BCrypt.gensalt());
+            logger.debug("Senha criptografada com BCrypt");
 
-             Cliente cliente = clienteRepository.findByCpf(dto.cpf())
+            Cliente cliente = clienteRepository.findByCpf(dto.cpf())
                     .orElseGet(() -> {
+                        logger.debug("Cliente nao encontrado, criando novo - CPF: {}", dto.cpf());
                         Cliente novo = new Cliente();
                         novo.setNome(dto.nome());
                         novo.setCpf(dto.cpf());
@@ -53,9 +59,10 @@ public class ContaService {
                         return clienteRepository.save(novo);
                     });
 
+            logger.debug("Cliente associado - CPF: {}, Nome: {}", cliente.getCpf(), cliente.getNome());
 
             Facts facts = new Facts()
-                    .add(BigDecimal.class, dto.saldo());
+                    .add(FactNames.VALOR, dto.saldo());
 
             RuleEngine.builder()
                     .facts(facts)
@@ -65,6 +72,8 @@ public class ContaService {
                     .build()
                     .run();
 
+            logger.debug("Regra de saldo inicial validada");
+
             Conta conta = new Conta();
             conta.setNumeroConta(dto.numeroConta());
             conta.setPerfil(dto.perfil());
@@ -73,6 +82,8 @@ public class ContaService {
             conta.setCliente(cliente);
 
             Conta salva = contaRepository.save(conta);
+            logger.info("Conta criada com sucesso - Numero: {}, Saldo: {}, Duracao: {}ms",
+                dto.numeroConta(), dto.saldo(), System.currentTimeMillis() - inicio);
 
             logService.info("Conta criada com sucesso", "ContaService");
             auditService.registrar(
@@ -89,6 +100,8 @@ public class ContaService {
             return salva;
 
         } catch (Exception ex) {
+            logger.error("Erro ao criar conta - CPF: {}, Numero: {}",
+                dto.cpf(), dto.numeroConta(), ex);
             logService.error("Erro ao criar conta", "ContaService", ex.getMessage());
             auditService.registrar(
                     "user",
@@ -106,26 +119,33 @@ public class ContaService {
 
     @Transactional
     public void depositar(OperacaoBancariaDTO dto) {
-
         long inicio = System.currentTimeMillis();
 
         try {
+            logger.info("Deposito iniciado - Conta: {}, Valor: R$ {}",
+                dto.numeroConta(), dto.valor());
             logService.info("Iniciando depósito", "ContaService");
 
             Conta conta = contaRepository.findByNumeroContaWithLock(dto.numeroConta())
                     .orElseThrow(() -> new ContaNaoEncontradaException(dto.numeroConta()));
 
+            logger.debug("Conta localizada: {}, Saldo Atual: R$ {}",
+                dto.numeroConta(), conta.getSaldo());
 
             if (!conta.getNomeBanco().equalsIgnoreCase(dto.banco())) {
+                logger.warn("Banco invalido - Esperado: {}, Recebido: {}",
+                    conta.getNomeBanco(), dto.banco());
                 throw new RuntimeException("Banco inválido");
             }
 
             if (!conta.getAgencia().equals(dto.agencia())) {
+                logger.warn("Agencia invalida - Esperada: {}, Recebida: {}",
+                    conta.getAgencia(), dto.agencia());
                 throw new RuntimeException("Agência inválida");
             }
 
             Facts facts = new Facts()
-                    .add(BigDecimal.class, dto.valor());
+                    .add(FactNames.VALOR, dto.valor());
 
             RuleEngine.builder()
                     .facts(facts)
@@ -135,10 +155,16 @@ public class ContaService {
                     .build()
                     .run();
 
+            logger.debug("Regra de valor validada");
+
             conta.creditar(dto.valor());
             contaRepository.save(conta);
 
             registrarTransacao(conta, TipoTransacao.DEPOSITO, dto.valor());
+
+            logger.info("Deposito concluido - Conta: {}, Valor: R$ {}, Novo Saldo: R$ {}, Duracao: {}ms",
+                dto.numeroConta(), dto.valor(), conta.getSaldo(),
+                System.currentTimeMillis() - inicio);
 
             logService.info("Depósito realizado com sucesso", "ContaService");
 
@@ -154,7 +180,8 @@ public class ContaService {
             );
 
         } catch (Exception ex) {
-
+            logger.error("Erro ao depositar - Conta: {}, Valor: R$ {}, Duracao: {}ms",
+                dto.numeroConta(), dto.valor(), System.currentTimeMillis() - inicio, ex);
             logService.error("Erro no depósito", "ContaService", ex.getMessage());
 
             auditService.registrar(
@@ -176,10 +203,11 @@ public class ContaService {
 
     @Transactional
     public void transferir(TransferenciaDTO dto) {
-
         long inicio = System.currentTimeMillis();
 
         try {
+            logger.info("Transferencia iniciada - De: {} Para: {}, Valor: R$ {}",
+                dto.contaOrigem(), dto.contaDestino(), dto.valor());
             logService.info("Iniciando transferência", "ContaService");
 
             Conta origem = contaRepository.findByNumeroContaWithLock(dto.contaOrigem())
@@ -188,22 +216,11 @@ public class ContaService {
             Conta destino = contaRepository.findByNumeroContaWithLock(dto.contaDestino())
                     .orElseThrow(() -> new ContaNaoEncontradaException(dto.contaDestino()));
 
-            if (!origem.getNomeBanco().equalsIgnoreCase(dto.bancoOrigem())) {
-                throw new RuntimeException("Banco origem inválido");
-            }
+            logger.debug("Contas localizadas - Origem: {}, Destino: {}, Saldo Origem: R$ {}",
+                dto.contaOrigem(), dto.contaDestino(), origem.getSaldo());
 
-            if (!origem.getAgencia().equals(dto.agenciaOrigem())) {
-                throw new RuntimeException("Agência origem inválida");
-            }
-
-
-            if (!destino.getNomeBanco().equalsIgnoreCase(dto.bancoDestino())) {
-                throw new RuntimeException("Banco destino inválido");
-            }
-
-            if (!destino.getAgencia().equals(dto.agenciaDestino())) {
-                throw new RuntimeException("Agência destino inválida");
-            }
+            validarBancoAgencia(origem, dto.bancoOrigem(), dto.agenciaOrigem(), "origem");
+            validarBancoAgencia(destino, dto.bancoDestino(), dto.agenciaDestino(), "destino");
 
             Facts facts = new Facts()
                     .add(Conta.class, origem)
@@ -218,6 +235,8 @@ public class ContaService {
                     .build()
                     .run();
 
+            logger.debug("Regras de transferencia validadas");
+
             origem.debitar(dto.valor());
             destino.creditar(dto.valor());
 
@@ -226,6 +245,10 @@ public class ContaService {
 
             registrarTransacao(origem, TipoTransacao.TRANSFERENCIA_ENVIADA, dto.valor());
             registrarTransacao(destino, TipoTransacao.TRANSFERENCIA_RECEBIDA, dto.valor());
+
+            logger.info("Transferencia concluida - De: {} Para: {}, Valor: R$ {}, Novo Saldo Origem: R$ {}, Duracao: {}ms",
+                dto.contaOrigem(), dto.contaDestino(), dto.valor(), origem.getSaldo(),
+                System.currentTimeMillis() - inicio);
 
             logService.info("Transferência realizada com sucesso", "ContaService");
 
@@ -241,6 +264,9 @@ public class ContaService {
             );
 
         } catch (Exception ex) {
+            logger.error("Erro na transferencia - De: {} Para: {}, Valor: R$ {}, Duracao: {}ms",
+                dto.contaOrigem(), dto.contaDestino(), dto.valor(),
+                System.currentTimeMillis() - inicio, ex);
 
             logService.error("Erro na transferência", "ContaService", ex.getMessage());
 
@@ -261,24 +287,20 @@ public class ContaService {
 
     @Transactional
     public void sacar(OperacaoBancariaDTO dto) {
-
         long inicio = System.currentTimeMillis();
 
         try {
+            logger.info("Saque iniciado - Conta: {}, Valor: R$ {}",
+                dto.numeroConta(), dto.valor());
             logService.info("Iniciando saque", "ContaService");
 
             Conta conta = contaRepository.findByNumeroContaWithLock(dto.numeroConta())
                     .orElseThrow(() -> new ContaNaoEncontradaException(dto.numeroConta()));
 
-            // ✅ valida banco
-            if (!conta.getNomeBanco().equalsIgnoreCase(dto.banco())) {
-                throw new RuntimeException("Banco inválido");
-            }
+            logger.debug("Conta localizada: {}, Saldo: R$ {}",
+                dto.numeroConta(), conta.getSaldo());
 
-            // ✅ valida agência
-            if (!conta.getAgencia().equals(dto.agencia())) {
-                throw new RuntimeException("Agência inválida");
-            }
+            validarBancoAgencia(conta, dto.banco(), dto.agencia(), "saque");
 
             Facts facts = new Facts()
                     .add(Conta.class, conta)
@@ -293,10 +315,16 @@ public class ContaService {
                     .build()
                     .run();
 
+            logger.debug("Regras de saque validadas");
+
             conta.debitar(dto.valor());
             contaRepository.save(conta);
 
             registrarTransacao(conta, TipoTransacao.SAQUE, dto.valor());
+
+            logger.info("Saque concluido - Conta: {}, Valor: R$ {}, Novo Saldo: R$ {}, Duracao: {}ms",
+                dto.numeroConta(), dto.valor(), conta.getSaldo(),
+                System.currentTimeMillis() - inicio);
 
             logService.info("Saque realizado com sucesso", "ContaService");
 
@@ -312,6 +340,8 @@ public class ContaService {
             );
 
         } catch (Exception ex) {
+            logger.error("Erro no saque - Conta: {}, Valor: R$ {}, Duracao: {}ms",
+                dto.numeroConta(), dto.valor(), System.currentTimeMillis() - inicio, ex);
 
             logService.error("Erro no saque", "ContaService", ex.getMessage());
 
@@ -332,61 +362,199 @@ public class ContaService {
 
     @Transactional
     public List<TransacaoDTO> buscarExtrato(String numeroConta) {
+        try {
+            logger.debug("Buscando extrato - Conta: {}", numeroConta);
 
-        Conta conta = contaRepository.findByNumeroConta(numeroConta)
-                .orElseThrow(() -> new ContaNaoEncontradaException(numeroConta));
+            Conta conta = contaRepository.findByNumeroConta(numeroConta)
+                    .orElseThrow(() -> new ContaNaoEncontradaException(numeroConta));
 
-        return transacaoRepository.findByNumeroContaOrderByDataHoraDesc(conta.getNumeroConta())
-                .stream()
-                .map(TransacaoMapper.TO_DTO)
-                .toList();
-    }
+            List<TransacaoDTO> extrato = transacaoRepository.findByNumeroContaOrderByDataHoraDesc(conta.getNumeroConta())
+                    .stream()
+                    .map(TransacaoMapper.TO_DTO)
+                    .toList();
 
-    private TransacaoDTO registrarTransacao(
-            Conta conta,
-            TipoTransacao tipo,
-            BigDecimal valor
-    ) {
-        Transacao t = new Transacao();
+            logger.info("Extrato recuperado - Conta: {}, Total de transacoes: {}",
+                numeroConta, extrato.size());
 
-        t.setConta(conta);
-        t.setTipo(tipo);
-        t.setValor(valor);
-
-        Transacao salva = transacaoRepository.save(t);
-
-        return TransacaoMapper.TO_DTO.apply(salva);
-    }
-
-    public ContaDTO buscarPorNumero(String numero) {
-
-        Conta conta = contaRepository.findByNumeroConta(numero)
-                .orElseThrow(() -> new ContaNaoEncontradaException(numero));
-        return ContaMapper.TO_DTO.apply(conta);
-    }
-
-
-    private void executarRegras(Facts facts, Rule... rules) {
-
-        List<RuleResult> results = RuleEngine.builder()
-                .facts(facts)
-                .rules(List.of(rules))
-                .build()
-                .run();
-
-        for (RuleResult result : results) {
-            if (!result.success()) {
-                logService.warn(
-                        "Falha na regra: " + result.ruleName(),
-                        "RuleEngine"
-                );
-                throw new IllegalArgumentException(result.message());
-            }
+            return extrato;
+        } catch (Exception ex) {
+            logger.error("Erro ao buscar extrato - Conta: {}", numeroConta, ex);
+            throw ex;
         }
     }
 
-    private long tempo(long inicio) {
-        return System.currentTimeMillis() - inicio;
+    public ContaDTO buscarPorNumero(String numero) {
+        try {
+            logger.debug("Consultando conta - Numero: {}", numero);
+
+            Conta conta = contaRepository.findByNumeroConta(numero)
+                    .orElseThrow(() -> new ContaNaoEncontradaException(numero));
+
+            ContaDTO contaDTO = ContaMapper.TO_DTO.apply(conta);
+
+            logger.debug("Conta localizada - Numero: {}, Saldo: R$ {}",
+                numero, conta.getSaldo());
+
+            return contaDTO;
+        } catch (Exception ex) {
+            logger.error("Erro ao consultar conta - Numero: {}", numero, ex);
+            throw ex;
+        }
     }
+
+    private void validarBancoAgencia(Conta conta, String banco, String agencia, String tipo) {
+        if (!conta.getNomeBanco().equalsIgnoreCase(banco)) {
+            logger.warn("Banco invalido em {} - Esperado: {}, Recebido: {}",
+                tipo, conta.getNomeBanco(), banco);
+            throw new RuntimeException("Banco inválido");
+        }
+
+        if (!conta.getAgencia().equals(agencia)) {
+            logger.warn("Agencia invalida em {} - Esperada: {}, Recebida: {}",
+                tipo, conta.getAgencia(), agencia);
+            throw new RuntimeException("Agência inválida");
+        }
+    }
+
+    private void registrarTransacao(Conta conta, TipoTransacao tipo, BigDecimal valor) {
+        try {
+            Transacao t = new Transacao();
+            t.setConta(conta);
+            t.setTipo(tipo);
+            t.setValor(valor);
+
+            transacaoRepository.save(t);
+
+            logger.debug("Transacao registrada - Tipo: {}, Valor: R$ {}, Conta: {}",
+                tipo, valor, conta.getNumeroConta());
+
+        } catch (Exception ex) {
+            logger.error("Erro ao registrar transacao - Tipo: {}, Valor: R$ {}",
+                tipo, valor, ex);
+            throw ex;
+        }
+    }
+
+
+
+    private void executarRegras(
+            Facts facts,
+            Rule... rules
+    ) {
+
+        RuleEngine.RuleEngineBuilder builder =
+                RuleEngine.builder()
+                        .facts(facts)
+                        .logService(logService)
+                        .auditService(auditService);
+
+        for (Rule rule : rules) {
+            builder.rule(rule);
+        }
+
+        builder.build().run();
+    }
+
+    private void auditoriaSucesso(
+            String operacao,
+            String mensagem,
+            long inicio
+    ) {
+
+        auditService.registrar(
+                "user",
+                "USER",
+                operacao,
+                true,
+                mensagem,
+                null,
+                "ContaService",
+                tempo(inicio)
+        );
+    }
+
+    private void auditoriaErro(
+            String operacao,
+            Exception ex,
+            long inicio
+    ) {
+
+        auditService.registrar(
+                "user",
+                "USER",
+                operacao,
+                false,
+                ex.getMessage(),
+                null,
+                "ContaService",
+                tempo(inicio)
+        );
+    }
+
+    private long tempo(long inicio) {
+        return System.currentTimeMillis()
+                - inicio;
+    }
+
+        private Cliente obterOuCriarCliente(
+                ContaRequestDTO dto
+        ) {
+
+            return clienteRepository
+                    .findByCpf(dto.cpf())
+                    .orElseGet(() -> {
+
+                        logger.info(
+                                "Cliente não encontrado. Criando novo CPF={}",
+                                dto.cpf()
+                        );
+
+                        Cliente cliente =
+                                new Cliente();
+
+                        cliente.setNome(dto.nome());
+                        cliente.setCpf(dto.cpf());
+                        cliente.setEmail(dto.email());
+
+                        return clienteRepository.save(cliente);
+                    });
+        }
+
+
+        private Conta construirConta(
+                ContaRequestDTO dto,
+                Cliente cliente
+        ) {
+
+            Conta conta =
+                    new Conta();
+
+            conta.setNumeroConta(
+                    dto.numeroConta()
+            );
+
+            conta.setPerfil(
+                    dto.perfil()
+            );
+
+            conta.setSaldo(
+                    dto.saldo()
+            );
+
+            conta.setSenha(
+                    BCrypt.hashpw(
+                            dto.senha(),
+                            BCrypt.gensalt()
+                    )
+            );
+
+            conta.setCliente(
+                    cliente
+            );
+
+            return conta;
+        }
+
+
 
 }

@@ -1,26 +1,87 @@
 package br.com.arq.rules.core;
 
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-@Getter
 public class Facts {
 
-    private final Map<Class<?>, Object> data = new ConcurrentHashMap<>();
 
-    public <T> T get(Class<T> type) {
-        return type.cast(data.get(type));
-    }
+        private final Map<Object, Object> data =
+                new ConcurrentHashMap<>();
 
-    public <T> Facts add(Class<T> type, T value) {
-        data.put(type, value);
-        return this;
-    }
+        /*
+         * NOVO MODELO
+         */
+        public <T> Facts add(
+                FactKey<T> key,
+                T value
+        ) {
 
-    public <T> boolean contains(Class<T> type) {
-        return data.containsKey(type);
+            data.put(key, value);
+            return this;
+        }
+
+        @SuppressWarnings("unchecked")
+        public <T> T get(
+                FactKey<T> key
+        ) {
+
+            return (T) data.get(key);
+        }
+
+        /*
+         * MODELO ANTIGO
+         */
+        public <T> Facts add(
+                Class<T> type,
+                T value
+        ) {
+
+            data.put(type, value);
+            return this;
+        }
+
+        @SuppressWarnings("unchecked")
+        public <T> T get(
+                Class<T> type
+        ) {
+
+            return (T) data.get(type);
+        }
+
+        /*
+         * STRING (caso queira usar FactNames)
+         */
+        public Facts add(
+                String key,
+                Object value
+        ) {
+
+            data.put(key, value);
+            return this;
+        }
+
+        @SuppressWarnings("unchecked")
+        public <T> T get(
+                String key
+        ) {
+
+            return (T) data.get(key);
+        }
+
+        public boolean contains(
+                Object key
+        ) {
+
+            return data.containsKey(key);
+        }
+
+        public void remove(
+                Object key
+        ) {
+
+            data.remove(key);
+        }
     }
-}

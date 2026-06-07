@@ -96,13 +96,14 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-validation</artifactId>
 			</dependency>
-			
-			<dependency>
-				<groupId>org.projectlombok</groupId>
-				<artifactId>lombok</artifactId>
-				<optional>true</optional>
-			</dependency>
-			
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.38</version>
+			<scope>provided</scope>
+		</dependency>
+
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter</artifactId>
@@ -167,6 +168,15 @@
 					<compilerArgs>
 						<arg>--enable-preview</arg>
 						</compilerArgs>
+					<annotationProcessorPaths>
+
+						<path>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+							<version>1.18.38</version>
+						</path>
+
+					</annotationProcessorPaths>
 				</configuration>
 			</plugin>
 
