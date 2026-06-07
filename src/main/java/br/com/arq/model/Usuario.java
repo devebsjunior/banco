@@ -39,17 +39,17 @@ public class Usuario {
     @JsonProperty("ultimo_nome")
     private String ultimoNome;
 
+    @Column(length = 250)
     @JsonIgnore
     private String tokenTransacao;
 
-    @OneToOne
-    @JoinColumn(name = "cliente_id", nullable = false, unique = true)
-    @JsonManagedReference
-    private Cliente cliente;
-    @OneToMany(mappedBy = "usuario",
+
+    @OneToMany(
+            mappedBy = "usuario",
             cascade = CascadeType.ALL,
-            fetch = FetchType.EAGER)
-    @JsonProperty("perfis")
+            orphanRemoval = true,
+            fetch = FetchType.LAZY
+    )
     private List<Perfil> perfis;
 
     @JsonProperty("data_criacao")

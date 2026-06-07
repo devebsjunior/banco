@@ -21,7 +21,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import br.com.arq.dto.ContaRequestDTO;
+import br.com.arq.dto.request.ContaRequestDTO;
 import br.com.arq.service.ContaService;
 
 @WebMvcTest(AdminController.class)
@@ -38,29 +38,29 @@ public class AdminControllerTest {
 	@Autowired
 	private ObjectMapper objectMapper;
 
-	//@Test
-	//void deveTratarRuntimeException() throws Exception {
-	//    mockMvc.perform(get("/api/admin/contas/erro-proposital"))
-//	            .andExpect(status().isInternalServerError());
-//	}
-//
-//	@Test
-//	@DisplayName("Deve retornar 400 Bad Request se o Service lançar exceção")
-//	void deveRetornarErroQuandoServiceFalha() throws Exception {
-//		ContaRequestDTO dto = new ContaRequestDTO("123", "Nome", "email@test.com", "123", BigDecimal.ZERO, "admin",
-//				"123");
-//
-//		when(contaService.criarConta(any())).thenThrow(new RuntimeException("CPF já cadastrado"));
-//
-//		mockMvc.perform(post("/api/admin/contas").contentType(MediaType.APPLICATION_JSON)
-//				.content(objectMapper.writeValueAsString(dto))).andExpect(status().isBadRequest());
-//	}
-//
-//	@Test
-//	@DisplayName("Deve retornar 200 OK ao listar as contas")
-//	void deveListarContasComSucesso() throws Exception {
-//		when(contaService.listarTodas()).thenReturn(Collections.emptyList());
-//
-//		mockMvc.perform(get("/api/admin/contas")).andExpect(status().isOk());
-//	}
-//}
+	@Test
+	void deveTratarRuntimeException() throws Exception {
+	    mockMvc.perform(get("/api/admin/contas/erro-proposital"))
+	            .andExpect(status().isInternalServerError());
+	}
+
+	@Test
+	@DisplayName("Deve retornar 400 Bad Request se o Service lançar exceção")
+	void deveRetornarErroQuandoServiceFalha() throws Exception {
+		ContaRequestDTO dto = new ContaRequestDTO("123", "Nome", "email@test.com", "123", BigDecimal.ZERO, "admin",
+				"123");
+
+		when(contaService.criarConta(any())).thenThrow(new RuntimeException("CPF já cadastrado"));
+
+		mockMvc.perform(post("/api/admin/contas").contentType(MediaType.APPLICATION_JSON)
+				.content(objectMapper.writeValueAsString(dto))).andExpect(status().isBadRequest());
+	}
+
+	@Test
+	@DisplayName("Deve retornar 200 OK ao listar as contas")
+	void deveListarContasComSucesso() throws Exception {
+		when(contaService.listarTodas()).thenReturn(Collections.emptyList());
+
+		mockMvc.perform(get("/api/admin/contas")).andExpect(status().isOk());
+	}
+}

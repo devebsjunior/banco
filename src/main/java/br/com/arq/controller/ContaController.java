@@ -3,7 +3,7 @@ package br.com.arq.controller;
 import java.util.List;
 
 import br.com.arq.dto.ContaDTO;
-import br.com.arq.dto.OperacaoBancariaDTO;
+import br.com.arq.dto.request.OperacaoBancariaDTO;
 import br.com.arq.dto.TransacaoDTO;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;

@@ -278,3 +278,74 @@ GET /contas/{numero}/extrato
 }
 ```
 
+```java=
+usuario
+{
+  "username": "edson",
+  "email": "edson@email.com",
+  "senha": "123456",
+  "primeiroNome": "Edson",
+  "ultimoNome": "Belem",
+  "clienteId": 1,
+  "tipoPerfil": "CLIENTE"
+}
+``` 
+
+```json=
+POST /agencias
+{
+  "nomeAgencia": "Agencia Centro",
+  "numeroAgencia": "1001",
+  "logradouro": "Rua das Flores",
+  "numero": "100",
+  "bairro": "Centro",
+  "cidade": "Volta Redonda",
+  "estado": "RJ",
+  "cep": "27200-000"
+}
+```
+----------------
+
+
+```json=
+POST /usuarios
+
+{
+  "username": "edson",
+  "email": "edson@email.com",
+  "senha": "123456",
+  "primeiroNome": "Edson",
+  "ultimoNome": "Belem",
+  "perfil": {
+    "tipoPerfil": "CLIENTE",
+    "nivelPermissao": 5
+  }
+}
+```
+
+POST /contas
+
+```json=
+{
+  "nome": "Edson Belem",
+  "cpf": "02295351782",
+  "email": "edson@email.com",
+  "numeroConta": "123456",
+  "numeroAgencia": "1001",
+  "perfil": "CLIENTE",
+  "senha": "123456",
+  "saldo": 1000.00
+}
+```
+
+
+```
+POST /contas/sacar
+
+{
+  "numeroConta": "123456",
+  "valor": 200.00,
+  "banco": "Banco Arq",
+  "agencia": "1001"
+}
+```

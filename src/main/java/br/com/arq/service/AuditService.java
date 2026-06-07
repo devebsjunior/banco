@@ -9,20 +9,17 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class AuditService {
 
-    private final AuditRepository repository;
+       private final AuditRepository repository;
 
+        public void registrar(
+                Audit log
+                             ) {
 
-
-        /**
-         * Método simples (mantém o atual)
-         */
-        public void registrar(Audit log) {
-            repository.save(log);
+            repository.save(
+                    log
+                           );
         }
 
-        /**
-         * ✅ Método correto para uso no service
-         */
         public void registrar(
                 String usuario,
                 String perfil,
@@ -32,20 +29,94 @@ public class AuditService {
                 String regra,
                 String origem,
                 Long tempoExecucaoMs
-        ) {
+                             ) {
 
-            Audit audit = Audit.builder()
-                    .usuario(usuario)
-                    .perfil(perfil)
-                    .operacao(operacao)
-                    .sucesso(sucesso)
-                    .mensagem(mensagem)
-                    .regra(regra)
-                    .origem(origem)
-                    .tempoExecucaoMs(tempoExecucaoMs)
-                    .build();
+            Audit audit =
+                    Audit.builder()
+                            .usuario(usuario)
+                            .perfil(perfil)
+                            .operacao(operacao)
+                            .sucesso(sucesso)
+                            .mensagem(mensagem)
+                            .regra(regra)
+                            .origem(origem)
+                            .tempoExecucaoMs(tempoExecucaoMs)
+                            .build();
 
-            repository.save(audit);
+            repository.save(
+                    audit
+                           );
+        }
+
+        public void usuarioCriado(
+                String email,
+                Long tempo
+                                 ) {
+
+            registrar(
+                    email,
+                    "USER",
+                    "CRIAR_USUARIO",
+                    true,
+                    "Usuário criado com sucesso",
+                    null,
+                    "UsuarioService",
+                    tempo
+                     );
+        }
+
+        public void usuarioErro(
+                String email,
+                Exception ex,
+                Long tempo
+                               ) {
+
+            registrar(
+                    email,
+                    "USER",
+                    "CRIAR_USUARIO",
+                    false,
+                    ex.getMessage(),
+                    null,
+                    "UsuarioService",
+                    tempo
+                     );
+        }
+
+        public void agenciaCriada(
+                String numeroAgencia,
+                Long tempo
+                                 ) {
+
+            registrar(
+                    numeroAgencia,
+                    "ADMIN",
+                    "CRIAR_AGENCIA",
+                    true,
+                    "Agência criada com sucesso",
+                    null,
+                    "AgenciaService",
+                    tempo
+                     );
+        }
+
+        public void agenciaErro(
+                String numeroAgencia,
+                Exception ex,
+                Long tempo
+                               ) {
+
+            registrar(
+                    numeroAgencia,
+                    "ADMIN",
+                    "CRIAR_AGENCIA",
+                    false,
+                    ex.getMessage(),
+                    null,
+                    "AgenciaService",
+                    tempo
+                     );
         }
 }
+
 

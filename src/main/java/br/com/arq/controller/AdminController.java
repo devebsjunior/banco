@@ -2,6 +2,7 @@ package br.com.arq.controller;
 
 import java.util.List;
 
+import br.com.arq.dto.ContaDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.arq.dto.ContaRequestDTO;
+import br.com.arq.dto.request.ContaRequestDTO;
 import br.com.arq.model.Conta;
 import br.com.arq.service.ContaService;
 import jakarta.validation.Valid;
@@ -35,6 +36,10 @@ public class AdminController {
 		}
 	}
 
-
+	@GetMapping("/buscaTodas")
+	public ResponseEntity<List<ContaDTO>> buscarTodas() {
+		List<ContaDTO> contas =	contaService.buscarTodas();
+		return ResponseEntity.ok(contas);
+	}
 
 }

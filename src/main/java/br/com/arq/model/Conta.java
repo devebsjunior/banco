@@ -21,14 +21,12 @@ public class Conta {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(name="nomeBanco")
-	private String nomeBanco;
-
-	@Column(name="agencia")
-	private String agencia;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "agencia_id",nullable = false)
+	private Agencia agencia;
 
 
-	@NotBlank(message = "O numero da conta é obrigatorio")
+		@NotBlank(message = "O numero da conta é obrigatorio")
     @Column(name = "numero_conta", unique = true)
     private String numeroConta;
 
@@ -73,5 +71,13 @@ public class Conta {
 			throw new RuntimeException("O valor do credito deve ser positivo");
 		}
 		this.saldo = this.saldo.add(valor);
+	}
+
+	@JsonIgnore
+	public String getNumeroAgencia() {
+
+		return agencia != null
+				? agencia.getNumeroAgencia()
+				: null;
 	}
 }
