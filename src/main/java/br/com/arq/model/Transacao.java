@@ -2,6 +2,7 @@ package br.com.arq.model;
 
 
 import br.com.arq.enums.TipoTransacao;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -10,7 +11,8 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "transacoes")
-@Data
+@Getter
+@Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -24,6 +26,7 @@ public class Transacao {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "conta_id", nullable = false)
+    @JsonIgnore
     private Conta conta;
 
 

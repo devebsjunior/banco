@@ -217,7 +217,7 @@ GET /contas/{numero}/extrato
 
 
 ## Post CREATE USUÁRIO
-
+```json=
 {
 "email": "edson@email.com",
 "senha": "123456",
@@ -225,14 +225,56 @@ GET /contas/{numero}/extrato
 "ultimoNome": "Souza",
 "clienteId": 1
 }
+```
 
 
 ## Response 
+```json=
 {
 "id": 10,
 "email": "edson@email.com",
 "primeiroNome": "Edson",
 "ultimoNome": "Souza"
 }
+```
 
+1. Login
+```json=
+{
+"email": "edson@email.com",
+"senha": "123456"
+}
+```
+
+
+```json=
+{
+  "token": "jwt-aqui",
+  "usuario": {
+    "id": 1,
+    "username": "edson",
+    "email": "edson@email.com",
+    "cliente": {
+      "id": 10,
+      "nome": "Edson Belém",
+      "cpf": "12345678900",
+      "email": "edson@email.com"
+    }
+  }
+}
+```
+
+```json=
+{
+"cliente": {
+"id": 10,
+"nome": "Edson",
+"cpf": "12345678900",
+"email": "edson@email.com",
+"endereco": {
+"cidade": "Resende"
+}
+}
+}
+```
 

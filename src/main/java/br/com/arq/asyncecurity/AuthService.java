@@ -1,14 +1,12 @@
-package br.com.arq.auth;
+package br.com.arq.asyncecurity;
 
-import java.util.HashMap;
 import java.util.Map;
 
-import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 
 import br.com.arq.model.Conta;
 import br.com.arq.repository.ContaRepository;
-import br.com.arq.service.TokenService;
+import br.com.arq.asyncecurity.security.TokenService;
 import lombok.RequiredArgsConstructor;
 
 @Service

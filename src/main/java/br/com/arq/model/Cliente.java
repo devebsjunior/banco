@@ -2,18 +2,19 @@ package br.com.arq.model;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @Table(name = "clientes")
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Cliente {
@@ -36,14 +37,18 @@ public class Cliente {
 
 
     @OneToOne(mappedBy = "cliente", fetch = FetchType.LAZY)
+    @JsonIgnore
     private Usuario usuario;
 
-    @JsonIgnore
+
     @OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY)
+    @JsonIgnore
     private List<Conta> contas;
 
-    @JsonIgnore
-    @OneToOne(mappedBy = "cliente", fetch = FetchType.LAZY)
+
+    @OneToOne(mappedBy = "cliente", fetch = FetchType.LAZY,
+              cascade=CascadeType.ALL)
+    @JsonProperty("endereco")
     private  Endereco  endereco;
 
 }

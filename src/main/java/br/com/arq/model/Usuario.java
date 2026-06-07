@@ -2,6 +2,7 @@ package br.com.arq.model;
 
 import br.com.arq.utils.TimeUtils;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
@@ -25,7 +26,6 @@ public class Usuario {
     @JsonProperty("username")
     private String username;
 
-
     @JsonProperty("email")
     @Column(unique = true, nullable = false)
     private String email;
@@ -39,22 +39,24 @@ public class Usuario {
     @JsonProperty("ultimo_nome")
     private String ultimoNome;
 
-    @JsonProperty("token_transacao")
+    @JsonIgnore
     private String tokenTransacao;
 
     @OneToOne
     @JoinColumn(name = "cliente_id", nullable = false, unique = true)
+    @JsonManagedReference
     private Cliente cliente;
-
     @OneToMany(mappedBy = "usuario",
             cascade = CascadeType.ALL,
             fetch = FetchType.EAGER)
+    @JsonProperty("perfis")
     private List<Perfil> perfis;
 
+    @JsonProperty("data_criacao")
     private LocalDateTime dataCriacao;
 
+    @JsonProperty("data_alteracao")
     private LocalDateTime dataAlteracao;
-
 
     @PrePersist
     public void prePersist() {
