@@ -35,9 +35,6 @@ public class AdminController {
 		}
 	}
 
-	@GetMapping
-	public ResponseEntity<List<Conta>> listarContas() {
-		return ResponseEntity.ok(contaService.listarTodas());
-	}
+
 
 }

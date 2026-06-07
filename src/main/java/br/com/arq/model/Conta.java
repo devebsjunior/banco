@@ -2,21 +2,17 @@ package br.com.arq.model;
 
 import java.math.BigDecimal;
 import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @Table(name = "contas")
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Conta {
@@ -25,13 +21,22 @@ public class Conta {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	@Column(name="nomeBanco")
+	private String nomeBanco;
+
+	@Column(name="agencia")
+	private String agencia;
+
+
 	@NotBlank(message = "O numero da conta é obrigatorio")
     @Column(name = "numero_conta", unique = true)
     private String numeroConta;
 
 
+
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "cliente_id", nullable = false)
+	@JsonIgnore
 	private Cliente cliente;
 
 

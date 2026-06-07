@@ -1,4 +1,4 @@
-package br.com.arq.auth;
+package br.com.arq.asyncecurity;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,8 +27,7 @@ public class AuthController {
             return ResponseEntity.ok(response);
         } catch (Exception e) {
             System.err.println("ERRO NO LOGIN:");
-            e.printStackTrace(); 
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
+             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
         }
     }
 }

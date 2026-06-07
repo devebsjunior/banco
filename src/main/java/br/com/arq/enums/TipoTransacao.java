@@ -11,6 +11,8 @@ public enum TipoTransacao {
     DEPOSITO("Depósito realizado"),
     SAQUE("Saque realizado"),
     TRANSFERENCIA("Transferência realizada"),
+    TRANSFERENCIA_ENVIADA("transferencia Enviada"),
+    TRANSFERENCIA_RECEBIDA("transferencia Recebida"),
     RULE_EXECUTION("Execução de regra");
 
     private final String mensagem;
