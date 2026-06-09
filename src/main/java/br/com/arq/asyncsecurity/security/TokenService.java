@@ -1,7 +1,8 @@
 package br.com.arq.asyncsecurity.security;
 
 import java.util.Date;
-import javax.annotation.PostConstruct;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -18,7 +19,9 @@ import br.com.arq.model.Conta;
  * @version 1.0
  * @since 2026
  */
+@RequiredArgsConstructor
 @Service
+@Slf4j
 public class TokenService {
 
     private static final Logger logger = LoggerFactory.getLogger(TokenService.class);
@@ -34,7 +37,7 @@ public class TokenService {
 
     private Algorithm algorithm;
 
-    @PostConstruct
+    @jakarta.annotation.PostConstruct
     public void init() {
         this.algorithm = Algorithm.HMAC256(secretKey);
         logger.info("TokenService inicializado com sucesso");

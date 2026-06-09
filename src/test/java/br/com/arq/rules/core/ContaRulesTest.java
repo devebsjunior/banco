@@ -9,43 +9,29 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ContaRulesTest {
 
-    @Test
-    void deveValidarValorInvalido() {
 
-        Facts facts =
-                new Facts()
-                        .add(
-                                "VALOR",
-                                BigDecimal.ZERO
-                        );
 
-        RuleResult result =
-                ContaRules
-                        .valorInvalido()
-                        .execute(facts);
+        @Test
+        void deveValidarValorInvalido() {
 
-        assertFalse(
-                result.success()
-        );
+            Facts facts = new Facts()
+                    .add("VALOR", BigDecimal.ZERO);
+            BigDecimal valor = facts.get("VALOR");
+            RuleResult result =
+                    ContaRules.valorInvalido().execute(facts);
+
+            assertFalse(result.success());
+        }
+
+        @Test
+        void deveAceitarValorValido() {
+
+            Facts facts = new Facts()
+                    .add("VALOR", BigDecimal.TEN);
+
+            RuleResult result =
+                    ContaRules.valorInvalido().execute(facts);
+
+            assertTrue(result.success());
+        }
     }
-
-    @Test
-    void deveAceitarValorValido() {
-
-        Facts facts =
-                new Facts()
-                        .add(
-                                "VALOR",
-                                BigDecimal.TEN
-                        );
-
-        RuleResult result =
-                ContaRules
-                        .valorInvalido()
-                        .execute(facts);
-
-        assertTrue(
-                result.success()
-        );
-    }
-}

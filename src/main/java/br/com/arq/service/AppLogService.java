@@ -11,34 +11,137 @@ public class AppLogService {
 
     private final AppLogRepository repository;
 
-    public void info(String msg, String origem) {
+    public void registrar(
+            AppLog log
+                         ) {
+
         repository.save(
-                AppLog.builder()
-                        .nivel("INFO")
-                        .mensagem(msg)
-                        .origem(origem)
-                        .build()
-        );
+                log
+                       );
     }
 
-    public void warn(String msg, String origem) {
-        repository.save(
-                AppLog.builder()
-                        .nivel("WARN")
-                        .mensagem(msg)
-                        .origem(origem)
-                        .build()
-        );
-    }
+    public void registrar(
+            String nivel,
+            String mensagem,
+            String origem,
+            String error
+                         ) {
 
-    public void error(String msg, String origem, String error) {
-        repository.save(
+        AppLog log =
                 AppLog.builder()
-                        .nivel("ERROR")
+                        .nivel(nivel)
+                        .mensagem(mensagem)
+                        .origem(origem)
                         .error(error)
-                        .mensagem(msg)
-                        .origem(origem)
-                        .build()
-        );
+                        .build();
+
+        repository.save(
+                log
+                       );
+    }
+
+    public void info(
+            String mensagem,
+            String origem
+                    ) {
+
+        registrar(
+                "INFO",
+                mensagem,
+                origem,
+                null
+                 );
+    }
+
+    public void warn(
+            String mensagem,
+            String origem
+                    ) {
+
+        registrar(
+                "WARN",
+                mensagem,
+                origem,
+                null
+                 );
+    }
+
+    public void error(
+            String mensagem,
+            String origem,
+            String erro
+                     ) {
+
+        registrar(
+                "ERROR",
+                mensagem,
+                origem,
+                erro
+                 );
+    }
+
+    public void usuarioCriado(
+            String email
+                             ) {
+
+        info(
+                "Usuário criado: " + email,
+                "UsuarioService"
+            );
+    }
+
+    public void usuarioErro(
+            String email,
+            Exception ex
+                           ) {
+
+        error(
+                "Erro ao criar usuário: " + email,
+                "UsuarioService",
+                ex.getMessage()
+             );
+    }
+
+    public void agenciaCriada(
+            String numeroAgencia
+                             ) {
+
+        info(
+                "Agência criada: " + numeroAgencia,
+                "AgenciaService"
+            );
+    }
+
+    public void agenciaErro(
+            String numeroAgencia,
+            Exception ex
+                           ) {
+
+        error(
+                "Erro ao criar agência: " + numeroAgencia,
+                "AgenciaService",
+                ex.getMessage()
+             );
+    }
+
+    public void contaCriada(
+            String numeroConta
+                           ) {
+
+        info(
+                "Conta criada: " + numeroConta,
+                "ContaService"
+            );
+    }
+
+    public void contaErro(
+            String numeroConta,
+            Exception ex
+                         ) {
+
+        error( "Erro ao criar conta: " + numeroConta,
+                "ContaService",
+                ex.getMessage()
+             );
     }
 }

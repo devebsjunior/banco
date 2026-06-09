@@ -1,15 +1,13 @@
 package br.com.arq.model;
 
-import java.util.List;
-
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "clientes")
@@ -17,6 +15,7 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Cliente {
 
     @Id
@@ -35,20 +34,14 @@ public class Cliente {
     @Column(unique = true)
     private String email;
 
-
-    @OneToOne(mappedBy = "cliente", fetch = FetchType.LAZY)
-    @JsonIgnore
-    private Usuario usuario;
-
-
-    @OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "cliente",
+            fetch = FetchType.LAZY)
     @JsonIgnore
     private List<Conta> contas;
 
-
     @OneToOne(mappedBy = "cliente", fetch = FetchType.LAZY,
-              cascade=CascadeType.ALL)
+            cascade = CascadeType.ALL)
     @JsonProperty("endereco")
-    private  Endereco  endereco;
+    private Endereco endereco;
 
 }

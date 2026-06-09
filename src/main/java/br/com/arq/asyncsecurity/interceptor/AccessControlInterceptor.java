@@ -1,6 +1,5 @@
 package br.com.arq.asyncsecurity.interceptor;
 
-import br.com.arq.asyncsecurity.session.SessionService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -10,86 +9,55 @@ import br.com.arq.utils.RequestUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-
-
-
-/**
- * Interceptor responsável por controlar o acesso às requisições HTTP.
- * Valida:
- * - Token JWT
- * - Sessão ativa
- * Bloqueia a requisição caso alguma validação falhe.
- */
 @Component
 @RequiredArgsConstructor
 @Slf4j
 public class AccessControlInterceptor implements HandlerInterceptor {
 
     private final TokenService tokenService;
-    private final SessionService sessionService;
 
-        @Override
-        public boolean preHandle(HttpServletRequest request,
-                                 HttpServletResponse response,
-                                 Object handler) {
-
-            String path = request.getRequestURI();
-
-            if (path.startsWith("/auth")) {
-                return true;
-            }
-
-            try {
-
-                String authHeader = request.getHeader("Authorization");
-
-                if (authHeader == null || !authHeader.startsWith("Bearer ")) {
-                    log.warn("JWT ausente | IP={} | Agent={}",
-                            RequestUtils.getIp(request),
-                            RequestUtils.getUserAgent(request));
-
-                    response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-                    return false;
-                }
-
-                String token = authHeader.replace("Bearer ", "");
-
-                String numeroConta = tokenService.validarToken(token);
-
-                if (numeroConta.isBlank()) {
-                    log.error("JWT inválido");
-                    response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-                    return false;
-                }
-
-
-                String sessionId = request.getHeader("X-BBI-Session");
-
-                if (sessionId == null || sessionId.isBlank()) {
-                    log.warn("Sessão ausente");
-                    response.setStatus(HttpServletResponse.SC_FORBIDDEN);
-                    return false;
-                }
-
-                if (!sessionService.validar(sessionId)) {
-                    log.warn("Sessão inválida: {}", sessionId);
-                    response.setStatus(HttpServletResponse.SC_FORBIDDEN);
-                    return false;
-                }
-
-
-                log.info(" OK | Conta={} | Sessão={} | IP={} | Agent={}",
-                        numeroConta,
-                        sessionId,
+    @Override
+    public boolean preHandle(HttpServletRequest request,
+                             HttpServletResponse response,
+                             Object handler) {
+        String path = request.getRequestURI();
+        if (path.contains("swagger") ||
+                path.contains("api-docs") ||
+                path.contains("webjars")) {
+            return true;
+        }
+        if ("OPTIONS".equalsIgnoreCase(request.getMethod())) {
+            return true;
+        }
+        if (path.startsWith("/api/auth")) {
+            return true;
+        }
+        try {
+            String authHeader = request.getHeader("Authorization");
+            if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+                log.warn("JWT ausente | IP={} | Agent={}",
                         RequestUtils.getIp(request),
                         RequestUtils.getUserAgent(request));
-
-                return true;
-
-            } catch (Exception e) {
-                log.error("Erro no interceptor: {}", e.getMessage());
-                response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
                 return false;
             }
+            String token = authHeader.replace("Bearer ", "");
+            String numeroConta = tokenService.validarToken(token);
+            if (numeroConta == null || numeroConta.isBlank()) {
+                log.warn("JWT inválido");
+                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+                return false;
+            }
+            log.debug("OK | Conta={} | IP={} | Agent={}",
+                    numeroConta,
+                    RequestUtils.getIp(request),
+                    RequestUtils.getUserAgent(request));
+            request.setAttribute("numeroConta", numeroConta);
+            return true;
+        } catch (Exception e) {
+            log.warn("Falha na validação do token: {}", e.getMessage());
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            return false;
         }
+    }
 }

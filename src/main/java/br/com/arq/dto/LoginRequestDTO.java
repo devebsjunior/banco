@@ -1,3 +1,6 @@
 package br.com.arq.dto;
 
-public record LoginRequestDTO(String login, String senha) {}
+public record LoginRequestDTO(String login, String senha) {
+    public static class DadosConta {
+    }
+}

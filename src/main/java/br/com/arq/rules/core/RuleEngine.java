@@ -17,51 +17,55 @@ import java.util.List;
 @RequiredArgsConstructor
 public class RuleEngine {
 
-    private final Facts facts;
-    @Singular
-    private final List<Rule> rules;
-    private final AppLogService logService;
-    private final AuditService auditService;
 
-    public List<RuleResult> run() {
+        private final Facts facts;
 
-        List<RuleResult> results = new java.util.ArrayList<>();
+        @Singular
+        private final List<Rule> rules;
 
-        for (Rule rule : rules) {
+        private final AppLogService logService;
+        private final AuditService auditService;
 
-            long inicio = System.currentTimeMillis();
+        public List<RuleResult> run() {
 
-            RuleResult result = rule.execute(facts);
-            results.add(result);
+            List<RuleResult> results = new java.util.ArrayList<>();
 
-            if (logService != null) {
-                if (result.success()) {
-                    logService.info("Regra OK: " + rule.name(), "RuleEngine");
-                } else {
-                    logService.warn("Regra falhou: " + rule.name(), "RuleEngine");
+            for (Rule rule : rules) {
+
+                long inicio = System.currentTimeMillis();
+
+                RuleResult result = rule.execute(facts);
+                results.add(result);
+
+                if (logService != null) {
+                    if (result.success()) {
+                        logService.info("Regra OK: " + rule.name(), "RuleEngine");
+                    } else {
+                        logService.warn("Regra falhou: " + rule.name(), "RuleEngine");
+                    }
+                }
+
+                if (auditService != null) {
+                    auditService.registrar(
+                            "user",
+                            "USER",
+                            "RULE_EXECUTION",
+                            result.success(),
+                            result.message(),
+                            rule.name(),
+                            "RuleEngine",
+                            System.currentTimeMillis() - inicio
+                    );
+                }
+
+                if (!result.success()) {
+                    throw new IllegalStateException(result.message());
                 }
             }
 
-            if (auditService != null) {
-                auditService.registrar(
-                        "user",
-                        "USER",
-                        "RULE_EXECUTION",
-                        result.success(),
-                        result.message(),
-                        rule.name(),
-                        "RuleEngine",
-                        System.currentTimeMillis() - inicio
-                );
-            }
-
-            if (!result.success()) {
-                throw new IllegalStateException(result.message());
-            }
+            return results;
         }
+ }
 
-        return results;
-    }
-}
 
 

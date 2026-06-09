@@ -1,0 +1,293 @@
+2026-06-09 09:32:17.169 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:32:17.209 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:32:17.224 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:32:17.432 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+select c1_0.id,c1_0.cpf,c1_0.email,c1_0.nome from clientes c1_0 where c1_0.cpf=? [42104-224]
+2026-06-09 09:32:17.454 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:32:17.470 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:32:17.516 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:32:17.560 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:32:17.571 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:32:18.211 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKcv38e6kk2iu1nm5qffjma2kds
+2026-06-09 09:32:18.212 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKe46s8q5k8d3r3h8x1vs19nl82
+2026-06-09 09:32:18.212 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table enderecos 
+       drop 
+       foreign key if exists FKifst74rmma55fhyky5g1l0589
+2026-06-09 09:32:18.212 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table perfis 
+       drop 
+       foreign key if exists FK4khnbs8y5xgijftx9c34bbpg
+2026-06-09 09:32:18.213 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table transacoes 
+       drop 
+       foreign key if exists FKqknvd0xl8u532gmq093dgvxoe
+2026-06-09 09:32:18.223 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKcv38e6kk2iu1nm5qffjma2kds
+2026-06-09 09:32:18.224 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKe46s8q5k8d3r3h8x1vs19nl82
+2026-06-09 09:32:18.224 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table enderecos 
+       drop 
+       foreign key if exists FKifst74rmma55fhyky5g1l0589
+2026-06-09 09:32:18.225 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table perfis 
+       drop 
+       foreign key if exists FK4khnbs8y5xgijftx9c34bbpg
+2026-06-09 09:32:18.226 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table transacoes 
+       drop 
+       foreign key if exists FKqknvd0xl8u532gmq093dgvxoe
+2026-06-09 09:37:57.654 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:37:57.709 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:37:57.729 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:37:57.988 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+select c1_0.id,c1_0.cpf,c1_0.email,c1_0.nome from clientes c1_0 where c1_0.cpf=? [42104-224]
+2026-06-09 09:37:58.005 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:37:58.026 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:37:58.090 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:37:58.144 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:37:58.164 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:37:59.001 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKcv38e6kk2iu1nm5qffjma2kds
+2026-06-09 09:37:59.002 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKe46s8q5k8d3r3h8x1vs19nl82
+2026-06-09 09:37:59.004 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table enderecos 
+       drop 
+       foreign key if exists FKifst74rmma55fhyky5g1l0589
+2026-06-09 09:37:59.005 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table perfis 
+       drop 
+       foreign key if exists FK4khnbs8y5xgijftx9c34bbpg
+2026-06-09 09:37:59.007 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table transacoes 
+       drop 
+       foreign key if exists FKqknvd0xl8u532gmq093dgvxoe
+2026-06-09 09:37:59.027 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKcv38e6kk2iu1nm5qffjma2kds
+2026-06-09 09:37:59.028 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKe46s8q5k8d3r3h8x1vs19nl82
+2026-06-09 09:37:59.028 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table enderecos 
+       drop 
+       foreign key if exists FKifst74rmma55fhyky5g1l0589
+2026-06-09 09:37:59.029 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table perfis 
+       drop 
+       foreign key if exists FK4khnbs8y5xgijftx9c34bbpg
+2026-06-09 09:37:59.029 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table transacoes 
+       drop 
+       foreign key if exists FKqknvd0xl8u532gmq093dgvxoe
+2026-06-09 09:39:25.447 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:39:25.508 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:39:25.536 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:39:25.888 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+select c1_0.id,c1_0.cpf,c1_0.email,c1_0.nome from clientes c1_0 where c1_0.cpf=? [42104-224]
+2026-06-09 09:39:25.910 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:39:25.932 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:39:25.993 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:39:26.790 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKcv38e6kk2iu1nm5qffjma2kds
+2026-06-09 09:39:26.791 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKe46s8q5k8d3r3h8x1vs19nl82
+2026-06-09 09:39:26.792 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table enderecos 
+       drop 
+       foreign key if exists FKifst74rmma55fhyky5g1l0589
+2026-06-09 09:39:26.792 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table perfis 
+       drop 
+       foreign key if exists FK4khnbs8y5xgijftx9c34bbpg
+2026-06-09 09:39:26.793 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table transacoes 
+       drop 
+       foreign key if exists FKqknvd0xl8u532gmq093dgvxoe
+2026-06-09 09:39:26.810 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKcv38e6kk2iu1nm5qffjma2kds
+2026-06-09 09:39:26.811 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKe46s8q5k8d3r3h8x1vs19nl82
+2026-06-09 09:39:26.812 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table enderecos 
+       drop 
+       foreign key if exists FKifst74rmma55fhyky5g1l0589
+2026-06-09 09:39:26.813 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table perfis 
+       drop 
+       foreign key if exists FK4khnbs8y5xgijftx9c34bbpg
+2026-06-09 09:39:26.814 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table transacoes 
+       drop 
+       foreign key if exists FKqknvd0xl8u532gmq093dgvxoe
+2026-06-09 09:40:35.103 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:40:35.818 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKcv38e6kk2iu1nm5qffjma2kds
+2026-06-09 09:40:35.819 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKe46s8q5k8d3r3h8x1vs19nl82
+2026-06-09 09:40:35.819 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table enderecos 
+       drop 
+       foreign key if exists FKifst74rmma55fhyky5g1l0589
+2026-06-09 09:40:35.819 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table perfis 
+       drop 
+       foreign key if exists FK4khnbs8y5xgijftx9c34bbpg
+2026-06-09 09:40:35.819 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table transacoes 
+       drop 
+       foreign key if exists FKqknvd0xl8u532gmq093dgvxoe
+2026-06-09 09:40:35.828 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKcv38e6kk2iu1nm5qffjma2kds
+2026-06-09 09:40:35.829 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKe46s8q5k8d3r3h8x1vs19nl82
+2026-06-09 09:40:35.829 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table enderecos 
+       drop 
+       foreign key if exists FKifst74rmma55fhyky5g1l0589
+2026-06-09 09:40:35.829 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table perfis 
+       drop 
+       foreign key if exists FK4khnbs8y5xgijftx9c34bbpg
+2026-06-09 09:40:35.829 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table transacoes 
+       drop 
+       foreign key if exists FKqknvd0xl8u532gmq093dgvxoe
+2026-06-09 09:42:18.902 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper.logExceptions:150 - Table "CLIENTES" not found (this database is empty); SQL statement:
+insert into clientes (cpf,email,nome) values (?,?,?) [42104-224]
+2026-06-09 09:42:19.820 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKcv38e6kk2iu1nm5qffjma2kds
+2026-06-09 09:42:19.823 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKe46s8q5k8d3r3h8x1vs19nl82
+2026-06-09 09:42:19.824 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table enderecos 
+       drop 
+       foreign key if exists FKifst74rmma55fhyky5g1l0589
+2026-06-09 09:42:19.826 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table perfis 
+       drop 
+       foreign key if exists FK4khnbs8y5xgijftx9c34bbpg
+2026-06-09 09:42:19.828 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table transacoes 
+       drop 
+       foreign key if exists FKqknvd0xl8u532gmq093dgvxoe
+2026-06-09 09:42:19.848 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKcv38e6kk2iu1nm5qffjma2kds
+2026-06-09 09:42:19.849 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKe46s8q5k8d3r3h8x1vs19nl82
+2026-06-09 09:42:19.850 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table enderecos 
+       drop 
+       foreign key if exists FKifst74rmma55fhyky5g1l0589
+2026-06-09 09:42:19.850 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table perfis 
+       drop 
+       foreign key if exists FK4khnbs8y5xgijftx9c34bbpg
+2026-06-09 09:42:19.851 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table transacoes 
+       drop 
+       foreign key if exists FKqknvd0xl8u532gmq093dgvxoe
+2026-06-09 09:43:39.476 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKcv38e6kk2iu1nm5qffjma2kds
+2026-06-09 09:43:39.478 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKe46s8q5k8d3r3h8x1vs19nl82
+2026-06-09 09:43:39.479 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table enderecos 
+       drop 
+       foreign key if exists FKifst74rmma55fhyky5g1l0589
+2026-06-09 09:43:39.480 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table perfis 
+       drop 
+       foreign key if exists FK4khnbs8y5xgijftx9c34bbpg
+2026-06-09 09:43:39.481 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table transacoes 
+       drop 
+       foreign key if exists FKqknvd0xl8u532gmq093dgvxoe
+2026-06-09 12:00:09.013 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter.report:40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+

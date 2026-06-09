@@ -13,6 +13,8 @@ import br.com.arq.rules.core.RuleBuilder;
  */
 public final class ContaRules {
 
+    public static final String VALOR = "VALOR";
+
     private ContaRules() {}
 
     /**
@@ -24,7 +26,8 @@ public final class ContaRules {
         return RuleBuilder
                 .when("Valor deve ser maior que zero",
                         facts -> {
-                            BigDecimal valor = facts.get(BigDecimal.class);
+                            BigDecimal valor = facts.get("VALOR");
+
                             return valor == null || valor.compareTo(BigDecimal.ZERO) <= 0;
                         }
                 )
@@ -70,7 +73,7 @@ public final class ContaRules {
         return RuleBuilder
                 .when("Saldo inicial não pode ser negativo",
                         facts -> {
-                            BigDecimal valor = facts.get(BigDecimal.class);
+                            BigDecimal valor = facts.get("VALOR");
                             return valor == null || valor.compareTo(BigDecimal.ZERO) < 0;
                         }
                 )
@@ -78,4 +81,6 @@ public final class ContaRules {
                     throw new IllegalArgumentException("Saldo inicial não pode ser negativo");
                 });
     }
+
+
 }
