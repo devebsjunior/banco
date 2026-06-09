@@ -54,13 +54,20 @@ public class AgenciaService {
   }
 
   private Agencia construirAgencia(AgenciaRequestDTO dto) {
-    return Agencia.builder().nomeAgencia(dto.nomeAgencia()).
-            numeroAgencia(dto.numeroAgencia()).
-            logradouro(dto.logradouro()).
-            numero(dto.numero()).
-            bairro(dto.bairro()).
-            cidade(dto.cidade()).
-            estado(dto.estado()).cep(dto.cep()).build();
+
+    Agencia agencia = Agencia.builder()
+            .codigo(dto.numeroAgencia())
+            .nomeAgencia(dto.nomeAgencia())
+            .numeroAgencia(dto.numeroAgencia())
+            .logradouro(dto.logradouro())
+            .numero(dto.numero())
+            .bairro(dto.bairro())
+            .cidade(dto.cidade())
+            .estado(dto.estado())
+            .cep(dto.cep())
+            .build();
+  return agencia;
+
   }
 
 

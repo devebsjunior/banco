@@ -8,8 +8,8 @@ import io.github.cdimascio.dotenv.Dotenv;
 public class BancoApplication {
 
     static {
-        Dotenv dotenv = Dotenv.configure().ignoreIfMissing().load();
-        dotenv.entries().forEach(entry -> System.setProperty(entry.getKey(), entry.getValue()));
+       // Dotenv dotenv = Dotenv.configure().ignoreIfMissing().load();
+      //  dotenv.entries().forEach(entry -> System.setProperty(entry.getKey(), entry.getValue()));
     }
 
     public static void main(String[] args) {

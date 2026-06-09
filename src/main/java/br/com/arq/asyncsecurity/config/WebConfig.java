@@ -14,42 +14,36 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebConfig implements WebMvcConfigurer {
 
     private static final Logger logger = LoggerFactory.getLogger(WebConfig.class);
-
     private final AccessControlInterceptor interceptor;
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        logger.info("Configurando CORS para origem: http://localhost:4200");
-
-        registry.addMapping("/**")
-                .allowedOrigins("http://localhost:4200") 
+        registry.addMapping("/api/**")
+                .allowedOrigins("http://localhost:4200")
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                .allowedHeaders("*")
-                .allowCredentials(true);
+                .allowedHeaders("*");
 
-        logger.debug("CORS configurado com metodos: GET, POST, PUT, DELETE, OPTIONS");
     }
 
-    /**
-     * Registra o interceptor responsável pelo controle de acesso da aplicação.
-     * Protege todas as rotas que começam com "/api/**"
-     * e libera acesso para rotas públicas como "/auth/**" e "/error".
-     * O interceptor valida:
-     * - Token JWT
-     * - Sessão ativa (UUID)
-     * Se a validação falhar, a requisição é bloqueada.
-     */
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         logger.info("Registrando AccessControlInterceptor");
 
-        registry.addInterceptor(interceptor)
-                .addPathPatterns("/api/**")   // protege APIs
-                .excludePathPatterns(         // libera login
-                        "/auth/**",
+       registry.addInterceptor(interceptor)
+                .excludePathPatterns(
+                        "/api/auth/**",
+                        "/api/admin/contas",
+                        "/swagger-ui/**",
+                        "/swagger-ui.html",
+                        "/v3/api-docs/**",
+                        "/swagger-resources/**",
+                        "/webjars/**",
                         "/error"
                 );
 
-        logger.debug("Interceptor configurado - Protegendo: /api/** | Liberando: /auth/**, /error");
+
+        logger.info("Interceptor configurado corretamente (Swagger liberado)");
     }
+
 }

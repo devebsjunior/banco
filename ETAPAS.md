@@ -1,6 +1,143 @@
 ## Caminho do PayLoad
 
 
+
+
+
+
+{
+"login": "12345",
+"senha": "123456"
+}
+
+
+curl -X POST http://localhost:8080/api/auth/login \
+-H "Content-Type: application/json" \
+-d '{
+"login": "12345",
+"senha": "123456"
+}'
+
+
+#####################
+
+
+POST /api/admin/contas
+
+{
+"numeroConta": "99999",
+"senha": "123456",
+"cpf": "12345678900",
+"nome": "Carlos Silva",
+"email": "carlos@email.com",
+"saldo": 500,
+"codigoAgencia": "001",
+"nomeAgencia": "Banco XPTO",
+"logradouro": "Rua A",
+"bairro": "Centro",
+"cidade": "Rio",
+"estado": "RJ",
+"cep": "20000-000"
+}
+
+
+
+
+
+
+
+curl -X POST http://localhost:8080/api/admin/contas \
+-H "Authorization: Bearer SEU_TOKEN_AQUI" \
+-H "Content-Type: application/json" \
+-d '{ ...payload acima... }'
+
+
+
+POST /api/usuarios/contas/deposito
+
+{
+"numeroConta": "99999",
+"valor": 200,
+"agencia": "Banco XPTO",
+"numeroAgencia": "001"
+}
+
+POST /api/usuarios/contas/saque
+
+
+{
+"numeroConta": "99999",
+"valor": 100,
+"agencia": "Banco XPTO",
+"numeroAgencia": "001"
+}
+
+
+$ curl -X POST http://localhost:8081/api/admin/contas \
+-H "Content-Type: application/json" \
+-d '{"nome":"Edson","cpf":"12345678999","email":"edson@email.com","numeroConta":"0001","codigoAgencia":"001","nomeAgencia":"Banco Teste","cep":"01001000","saldo":2000,"senha":"123456","logradouro":"Rua A","numero":"100","bairro":"Centro","cidade":"Sao Paulo","estado":"SP"}'
+{"id":1,"agencia":{"id":1,"codigo":"001","nomeAgencia":"Banco Teste","numeroAgencia":"001"},"numeroConta":"0001","saldo":2000,"perfil":"CLIENTE","senha":"$2a$12$Hru.pwscSEnGKM/v53pav.OtYm0Q2G1XTA7gLCy3PaMWkv7QFGzqa","version":0}
+
+
+POST /api/usuarios/contas/transferir
+
+{
+"contaOrigem": "99999",
+"contaDestino": "88888",
+"valor": 50,
+"bancoOrigem": "Banco XPTO",
+"agenciaOrigem": "001",
+"bancoDestino": "Banco XPTO",
+"agenciaDestino": "001"
+}
+
+GET /api/usuarios/contas/{numero}/extrato
+
+
+curl -X GET http://localhost:8080/api/usuarios/contas/99999/extrato \
+-H "Authorization: Bearer SEU_TOKEN_AQUI"
+
+
+POST /clientes
+
+
+{
+"nome": "Maria Souza",
+"cpf": "98765432100",
+"email": "maria@email.com"
+}
+
+POST /usuarios
+
+{
+"username": "admin",
+"email": "admin@email.com",
+"senha": "123456",
+"primeiroNome": "Admin",
+"ultimoNome": "Sistema",
+"perfil": {
+"tipoPerfil": "ADMIN",
+"nivelPermissao": 10
+}
+}
+
+POST /api/admin/agencias
+
+
+{
+"numeroAgencia": "001",
+"nomeAgencia": "Banco XPTO",
+"logradouro": "Rua A",
+"numero": "100",
+"bairro": "Centro",
+"cidade": "Rio",
+"estado": "RJ",
+"cep": "20000-000"
+}
+
+
+
+
 ```java=
 
 

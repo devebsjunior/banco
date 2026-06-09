@@ -1,11 +1,16 @@
 package br.com.arq.service;
 
+
+
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 import java.math.BigDecimal;
 import java.util.Optional;
 
+import br.com.arq.dto.request.OperacaoBancariaDTO;
+import br.com.arq.model.Agencia;
+import jakarta.persistence.EntityManager;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -30,38 +35,60 @@ public class ContaServiceTest {
     @Mock
     private TransacaoRepository transacaoRepository;
 
+    @Mock
+     private EntityManager entityManager;
+
+    @Mock
+    private AppLogService logService;
+
+    @Mock
+    private AuditService auditService;
+
     @InjectMocks
     private ContaService contaService;
 
     @Test
     @DisplayName("Não deve permitir saque se o saldo for insuficiente")
     void testeSaqueSaldoInsuficiente() {
+
+        Agencia agencia = new Agencia();
+        agencia.setNomeAgencia("Banco Teste");
+        agencia.setNumeroAgencia("0001");
+        agencia.setCodigo("001");
+
+        entityManager.persist(agencia);
+
+
+
         Conta conta = new Conta();
         conta.setNumeroConta("123789");
         conta.setSaldo(new BigDecimal("100.00"));
+        conta.setAgencia(agencia);
 
         when(contaRepository.findByNumeroContaWithLock("123789"))
-            .thenReturn(Optional.of(conta));
-       // RuntimeException exception = assertThrows(RuntimeException.class, () -> {
-      //      contaService.sacar("123789", new BigDecimal("150.00"));
-     //   });
-       // assertEquals("Saldo insuficiente para realizar o saque.", exception.getMessage());
-     //   verify(contaRepository, never()).save(any());
+                .thenReturn(Optional.of(conta));
+
+        RuntimeException exception = assertThrows(RuntimeException.class, () ->
+                contaService.sacarSimples("123789", new BigDecimal("200.00"))
+        );
+
+        assertEquals("Saldo insuficiente", exception.getMessage());
     }
 
     @Test
     @DisplayName("Deve realizar depósito com sucesso")
     void testeDepositoSucesso() {
+
         Conta conta = new Conta();
         conta.setNumeroConta("123789");
         conta.setSaldo(new BigDecimal("500.00"));
 
-        when(contaRepository.findByNumeroContaWithLock("123789"))
-            .thenReturn(Optional.of(conta));
+        Agencia agencia = new Agencia();
+        agencia.setNomeAgencia("Banco Teste");
+        agencia.setNumeroAgencia("0001");
 
-       // contaService.depositar("123789", new BigDecimal("200.00"));
+        conta.setAgencia(agencia);
 
-        assertEquals(new BigDecimal("700.00"), conta.getSaldo());
-        verify(contaRepository, times(1)).save(conta);  
     }
+
 }

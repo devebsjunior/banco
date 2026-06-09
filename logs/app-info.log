@@ -1,0 +1,575 @@
+2026-06-09 09:32:05.200 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 09:32:05.394 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 162 ms. Found 7 JPA repository interfaces.
+2026-06-09 09:32:09.417 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 09:32:09.472 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-09 09:32:09.964 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-09 09:32:09.973 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-09 09:32:12.029 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 09:32:13.084 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-09 09:32:14.834 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-09 09:32:14.901 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-09 09:32:14.902 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-09 09:32:14.904 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 2 ms
+2026-06-09 09:32:15.150 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.controller.AdminControllerTest]: AdminControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-09 09:32:15.204 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.controller.AdminControllerTest
+2026-06-09 09:32:15.211 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-09 09:32:15.491 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-09 09:32:15.492 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-09 09:32:15.492 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 0 ms
+2026-06-09 09:32:15.598 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.controller.UsuarioControllerTest]: UsuarioControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-09 09:32:15.611 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.controller.UsuarioControllerTest
+2026-06-09 09:32:15.614 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-09 09:32:15.842 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-09 09:32:15.842 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-09 09:32:15.843 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 0 ms
+2026-06-09 09:32:16.028 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.exception.GlobalExceptionHandlerTest]: GlobalExceptionHandlerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-09 09:32:16.051 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.exception.GlobalExceptionHandlerTest
+2026-06-09 09:32:16.054 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-09 09:32:16.234 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-09 09:32:16.235 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-09 09:32:16.235 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 0 ms
+2026-06-09 09:32:16.283 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.repository.ClienteRepositoryTest]: ClienteRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-09 09:32:16.323 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.repository.ClienteRepositoryTest
+2026-06-09 09:32:16.329 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-09 09:32:16.485 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 09:32:16.506 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 19 ms. Found 7 JPA repository interfaces.
+2026-06-09 09:32:16.576 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 09:32:16.578 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-2 - Starting...
+2026-06-09 09:32:16.579 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2026-06-09 09:32:16.580 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-2 - Start completed.
+2026-06-09 09:32:16.824 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 09:32:17.481 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.repository.ContaRepositoryTest]: ContaRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-09 09:32:17.504 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.repository.ContaRepositoryTest
+2026-06-09 09:32:17.533 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.repository.TransacaoRepositoryTest]: TransacaoRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-09 09:32:17.551 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.repository.TransacaoRepositoryTest
+2026-06-09 09:32:18.206 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 09:32:18.217 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-09 09:32:18.220 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-09 09:32:18.223 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 09:32:18.227 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-2 - Shutdown initiated...
+2026-06-09 09:32:18.230 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-2 - Shutdown completed.
+2026-06-09 09:37:41.602 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 09:37:41.809 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 187 ms. Found 7 JPA repository interfaces.
+2026-06-09 09:37:46.263 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 09:37:46.365 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-09 09:37:46.895 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-09 09:37:46.899 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-09 09:37:49.113 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 09:37:50.210 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-09 09:37:53.474 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-09 09:37:53.590 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-09 09:37:53.591 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-09 09:37:53.594 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 3 ms
+2026-06-09 09:37:54.069 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.controller.AdminControllerTest]: AdminControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-09 09:37:54.147 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.controller.AdminControllerTest
+2026-06-09 09:37:54.154 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-09 09:37:54.792 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-09 09:37:54.793 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-09 09:37:54.796 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 1 ms
+2026-06-09 09:37:55.285 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.exception.GlobalExceptionHandlerTest]: GlobalExceptionHandlerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-09 09:37:55.346 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.exception.GlobalExceptionHandlerTest
+2026-06-09 09:37:55.354 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-09 09:37:55.827 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-09 09:37:55.828 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-09 09:37:55.830 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 1 ms
+2026-06-09 09:37:55.937 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.repository.ClienteRepositoryTest]: ClienteRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-09 09:37:56.001 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.repository.ClienteRepositoryTest
+2026-06-09 09:37:56.007 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-09 09:37:56.245 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 09:37:56.288 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 41 ms. Found 7 JPA repository interfaces.
+2026-06-09 09:37:56.458 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 09:37:56.463 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-2 - Starting...
+2026-06-09 09:37:56.466 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2026-06-09 09:37:56.467 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-2 - Start completed.
+2026-06-09 09:37:56.984 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 09:37:58.048 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.repository.ContaRepositoryTest]: ContaRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-09 09:37:58.078 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.repository.ContaRepositoryTest
+2026-06-09 09:37:58.112 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.repository.TransacaoRepositoryTest]: TransacaoRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-09 09:37:58.136 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.repository.TransacaoRepositoryTest
+2026-06-09 09:37:58.997 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 09:37:59.016 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-09 09:37:59.022 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-09 09:37:59.026 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 09:37:59.031 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-2 - Shutdown initiated...
+2026-06-09 09:37:59.034 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-2 - Shutdown completed.
+2026-06-09 09:39:09.485 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 09:39:09.652 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 154 ms. Found 7 JPA repository interfaces.
+2026-06-09 09:39:14.015 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 09:39:14.110 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-09 09:39:14.751 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-09 09:39:14.759 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-09 09:39:16.945 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 09:39:17.855 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-09 09:39:21.076 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-09 09:39:21.187 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-09 09:39:21.188 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-09 09:39:21.192 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 4 ms
+2026-06-09 09:39:21.747 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.controller.AdminControllerTest]: AdminControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-09 09:39:21.856 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.controller.AdminControllerTest
+2026-06-09 09:39:21.872 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-09 09:39:22.652 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-09 09:39:22.653 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-09 09:39:22.655 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 1 ms
+2026-06-09 09:39:23.145 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.exception.GlobalExceptionHandlerTest]: GlobalExceptionHandlerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-09 09:39:23.212 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.exception.GlobalExceptionHandlerTest
+2026-06-09 09:39:23.220 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-09 09:39:23.697 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-09 09:39:23.697 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-09 09:39:23.698 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 0 ms
+2026-06-09 09:39:23.799 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.repository.ClienteRepositoryTest]: ClienteRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-09 09:39:23.861 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.repository.ClienteRepositoryTest
+2026-06-09 09:39:23.868 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-09 09:39:24.134 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 09:39:24.200 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 63 ms. Found 7 JPA repository interfaces.
+2026-06-09 09:39:24.335 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 09:39:24.337 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-2 - Starting...
+2026-06-09 09:39:24.341 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2026-06-09 09:39:24.343 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-2 - Start completed.
+2026-06-09 09:39:24.822 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 09:39:25.953 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.repository.ContaRepositoryTest]: ContaRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-09 09:39:25.978 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.repository.ContaRepositoryTest
+2026-06-09 09:39:26.788 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 09:39:26.800 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-09 09:39:26.806 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-09 09:39:26.810 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 09:39:26.815 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-2 - Shutdown initiated...
+2026-06-09 09:39:26.820 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-2 - Shutdown completed.
+2026-06-09 09:40:19.361 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 09:40:19.577 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 201 ms. Found 7 JPA repository interfaces.
+2026-06-09 09:40:23.752 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 09:40:23.830 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-09 09:40:24.531 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-09 09:40:24.539 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-09 09:40:26.829 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 09:40:27.699 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-09 09:40:30.844 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-09 09:40:30.986 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-09 09:40:30.987 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-09 09:40:30.991 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 3 ms
+2026-06-09 09:40:31.490 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.controller.AdminControllerTest]: AdminControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-09 09:40:31.577 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.controller.AdminControllerTest
+2026-06-09 09:40:31.592 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-09 09:40:32.436 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-09 09:40:32.438 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-09 09:40:32.440 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 1 ms
+2026-06-09 09:40:32.960 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.exception.GlobalExceptionHandlerTest]: GlobalExceptionHandlerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-09 09:40:33.033 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.exception.GlobalExceptionHandlerTest
+2026-06-09 09:40:33.039 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-09 09:40:33.478 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-09 09:40:33.479 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-09 09:40:33.481 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 1 ms
+2026-06-09 09:40:33.593 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.repository.ContaRepositoryTest]: ContaRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-09 09:40:33.655 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.repository.ContaRepositoryTest
+2026-06-09 09:40:33.664 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-09 09:40:34.033 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 09:40:34.075 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 39 ms. Found 7 JPA repository interfaces.
+2026-06-09 09:40:34.206 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 09:40:34.210 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-2 - Starting...
+2026-06-09 09:40:34.213 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2026-06-09 09:40:34.214 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-2 - Start completed.
+2026-06-09 09:40:34.649 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 09:40:35.817 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 09:40:35.822 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-09 09:40:35.825 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-09 09:40:35.828 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 09:40:35.830 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-2 - Shutdown initiated...
+2026-06-09 09:40:35.832 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-2 - Shutdown completed.
+2026-06-09 09:42:03.673 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 09:42:03.862 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 170 ms. Found 7 JPA repository interfaces.
+2026-06-09 09:42:08.212 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 09:42:08.292 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-09 09:42:08.882 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-09 09:42:08.888 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-09 09:42:11.002 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 09:42:12.048 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-09 09:42:15.493 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-09 09:42:15.612 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-09 09:42:15.613 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-09 09:42:15.617 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 3 ms
+2026-06-09 09:42:16.071 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.controller.AdminControllerTest]: AdminControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-09 09:42:16.142 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.controller.AdminControllerTest
+2026-06-09 09:42:16.153 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-09 09:42:16.790 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-09 09:42:16.792 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-09 09:42:16.793 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 0 ms
+2026-06-09 09:42:17.343 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.repository.ContaRepositoryTest]: ContaRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-09 09:42:17.388 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.repository.ContaRepositoryTest
+2026-06-09 09:42:17.397 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-09 09:42:17.685 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 09:42:17.733 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 46 ms. Found 7 JPA repository interfaces.
+2026-06-09 09:42:17.868 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 09:42:17.871 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-2 - Starting...
+2026-06-09 09:42:17.874 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2026-06-09 09:42:17.876 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-2 - Start completed.
+2026-06-09 09:42:18.365 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 09:42:19.813 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 09:42:19.837 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-09 09:42:19.843 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-09 09:42:19.847 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 09:42:19.853 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-2 - Shutdown initiated...
+2026-06-09 09:42:19.858 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-2 - Shutdown completed.
+2026-06-09 09:43:25.323 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 09:43:25.508 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 167 ms. Found 7 JPA repository interfaces.
+2026-06-09 09:43:29.978 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 09:43:30.049 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-09 09:43:30.481 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-09 09:43:30.490 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-09 09:43:32.456 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 09:43:33.346 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-09 09:43:36.682 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-09 09:43:36.812 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-09 09:43:36.813 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-09 09:43:36.817 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 3 ms
+2026-06-09 09:43:37.317 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.controller.AdminControllerTest]: AdminControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-09 09:43:37.410 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.controller.AdminControllerTest
+2026-06-09 09:43:37.422 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-09 09:43:38.080 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-09 09:43:38.082 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-09 09:43:38.083 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 1 ms
+2026-06-09 09:43:39.473 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 09:43:39.489 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-09 09:43:39.496 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-09 10:25:14.822 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-09 10:25:14.823 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-09 10:25:15.594 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 10:25:15.669 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 67 ms. Found 7 JPA repository interfaces.
+2026-06-09 10:25:16.310 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize:111 - Tomcat initialized with port 8081 (http)
+2026-06-09 10:25:16.321 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2026-06-09 10:25:16.324 [restartedMain] INFO  o.a.catalina.core.StandardService.log:173 - Starting service [Tomcat]
+2026-06-09 10:25:16.324 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log:173 - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-06-09 10:25:16.391 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring embedded WebApplicationContext
+2026-06-09 10:25:16.392 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:296 - Root WebApplicationContext: initialization completed in 1568 ms
+2026-06-09 10:25:16.908 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 10:25:16.933 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-09 10:25:17.032 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@9b9a3e4
+2026-06-09 10:25:17.034 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-09 10:25:18.184 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 10:25:18.477 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-09 10:25:19.477 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer:59 - LiveReload server is running on port 35729
+2026-06-09 10:25:19.489 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Starting ProtocolHandler ["http-nio-8081"]
+2026-06-09 10:25:19.506 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start:243 - Tomcat started on port 8081 (http) with context path '/'
+2026-06-09 10:26:53.839 [tomcat-handler-0] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-09 10:26:53.839 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:532 - Initializing Servlet 'dispatcherServlet'
+2026-06-09 10:26:53.839 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:554 - Completed initialization in 0 ms
+2026-06-09 10:28:51.121 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 10:28:51.124 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-09 10:28:51.127 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-09 10:29:07.102 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-09 10:29:07.103 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-09 10:29:07.976 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 10:29:08.043 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 60 ms. Found 7 JPA repository interfaces.
+2026-06-09 10:29:08.551 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize:111 - Tomcat initialized with port 8081 (http)
+2026-06-09 10:29:08.560 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2026-06-09 10:29:08.563 [restartedMain] INFO  o.a.catalina.core.StandardService.log:173 - Starting service [Tomcat]
+2026-06-09 10:29:08.563 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log:173 - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-06-09 10:29:08.623 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring embedded WebApplicationContext
+2026-06-09 10:29:08.624 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:296 - Root WebApplicationContext: initialization completed in 1519 ms
+2026-06-09 10:29:09.144 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 10:29:09.170 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-09 10:29:09.261 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@57ebbc31
+2026-06-09 10:29:09.262 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-09 10:29:10.462 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 10:29:10.713 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-09 10:29:11.762 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer:59 - LiveReload server is running on port 35729
+2026-06-09 10:29:11.786 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Starting ProtocolHandler ["http-nio-8081"]
+2026-06-09 10:29:11.804 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start:243 - Tomcat started on port 8081 (http) with context path '/'
+2026-06-09 10:29:15.590 [tomcat-handler-0] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-09 10:29:15.606 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:532 - Initializing Servlet 'dispatcherServlet'
+2026-06-09 10:29:15.609 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:554 - Completed initialization in 1 ms
+2026-06-09 10:31:06.102 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 10:31:06.106 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-09 10:31:06.111 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-09 10:31:21.988 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-09 10:31:21.989 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-09 10:31:22.719 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 10:31:22.793 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 66 ms. Found 7 JPA repository interfaces.
+2026-06-09 10:31:23.350 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize:111 - Tomcat initialized with port 8081 (http)
+2026-06-09 10:31:23.359 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2026-06-09 10:31:23.362 [restartedMain] INFO  o.a.catalina.core.StandardService.log:173 - Starting service [Tomcat]
+2026-06-09 10:31:23.362 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log:173 - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-06-09 10:31:23.414 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring embedded WebApplicationContext
+2026-06-09 10:31:23.415 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:296 - Root WebApplicationContext: initialization completed in 1424 ms
+2026-06-09 10:31:24.089 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 10:31:24.148 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-09 10:31:24.253 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@2a12a94f
+2026-06-09 10:31:24.255 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-09 10:31:25.437 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 10:31:25.728 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-09 10:31:26.731 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer:59 - LiveReload server is running on port 35729
+2026-06-09 10:31:26.742 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Starting ProtocolHandler ["http-nio-8081"]
+2026-06-09 10:31:26.755 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start:243 - Tomcat started on port 8081 (http) with context path '/'
+2026-06-09 10:32:25.573 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 10:32:25.577 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-09 10:32:25.583 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-09 10:32:38.316 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-09 10:32:38.317 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-09 10:32:39.058 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 10:32:39.129 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 63 ms. Found 7 JPA repository interfaces.
+2026-06-09 10:32:39.643 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize:111 - Tomcat initialized with port 8081 (http)
+2026-06-09 10:32:39.651 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2026-06-09 10:32:39.653 [restartedMain] INFO  o.a.catalina.core.StandardService.log:173 - Starting service [Tomcat]
+2026-06-09 10:32:39.654 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log:173 - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-06-09 10:32:39.716 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring embedded WebApplicationContext
+2026-06-09 10:32:39.717 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:296 - Root WebApplicationContext: initialization completed in 1400 ms
+2026-06-09 10:32:40.239 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 10:32:40.262 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-09 10:32:40.355 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@3ada8026
+2026-06-09 10:32:40.357 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-09 10:32:41.465 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 10:32:41.760 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-09 10:32:42.873 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer:59 - LiveReload server is running on port 35729
+2026-06-09 10:32:42.884 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Starting ProtocolHandler ["http-nio-8081"]
+2026-06-09 10:32:42.898 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start:243 - Tomcat started on port 8081 (http) with context path '/'
+2026-06-09 10:32:48.350 [tomcat-handler-0] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-09 10:32:48.351 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:532 - Initializing Servlet 'dispatcherServlet'
+2026-06-09 10:32:48.355 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:554 - Completed initialization in 2 ms
+2026-06-09 10:32:49.476 [tomcat-handler-8] INFO  o.s.api.AbstractOpenApiResource.getOpenApi:390 - Init duration for springdoc-openapi is: 730 ms
+2026-06-09 10:41:01.777 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 10:41:01.782 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-09 10:41:01.789 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-09 10:41:15.388 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-09 10:41:15.389 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-09 10:41:16.190 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 10:41:16.261 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 63 ms. Found 7 JPA repository interfaces.
+2026-06-09 10:41:16.837 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize:111 - Tomcat initialized with port 8081 (http)
+2026-06-09 10:41:16.847 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2026-06-09 10:41:16.849 [restartedMain] INFO  o.a.catalina.core.StandardService.log:173 - Starting service [Tomcat]
+2026-06-09 10:41:16.849 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log:173 - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-06-09 10:41:16.910 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring embedded WebApplicationContext
+2026-06-09 10:41:16.910 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:296 - Root WebApplicationContext: initialization completed in 1519 ms
+2026-06-09 10:41:17.480 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 10:41:17.507 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-09 10:41:17.655 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@3b01c167
+2026-06-09 10:41:17.657 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-09 10:41:18.908 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 10:41:19.150 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-09 10:41:20.276 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer:59 - LiveReload server is running on port 35729
+2026-06-09 10:41:20.287 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Starting ProtocolHandler ["http-nio-8081"]
+2026-06-09 10:41:20.301 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start:243 - Tomcat started on port 8081 (http) with context path '/'
+2026-06-09 10:41:36.819 [tomcat-handler-0] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-09 10:41:36.821 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:532 - Initializing Servlet 'dispatcherServlet'
+2026-06-09 10:41:36.823 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:554 - Completed initialization in 2 ms
+2026-06-09 10:41:38.044 [tomcat-handler-3] INFO  o.s.api.AbstractOpenApiResource.getOpenApi:390 - Init duration for springdoc-openapi is: 898 ms
+2026-06-09 11:14:57.848 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 11:14:57.852 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-09 11:14:57.856 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-09 11:15:11.092 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-09 11:15:11.093 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-09 11:15:11.871 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 11:15:11.962 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 82 ms. Found 7 JPA repository interfaces.
+2026-06-09 11:15:12.470 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize:111 - Tomcat initialized with port 8081 (http)
+2026-06-09 11:15:12.480 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2026-06-09 11:15:12.482 [restartedMain] INFO  o.a.catalina.core.StandardService.log:173 - Starting service [Tomcat]
+2026-06-09 11:15:12.483 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log:173 - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-06-09 11:15:12.551 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring embedded WebApplicationContext
+2026-06-09 11:15:12.552 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:296 - Root WebApplicationContext: initialization completed in 1458 ms
+2026-06-09 11:15:13.087 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 11:15:13.113 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-09 11:15:13.204 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@2eb1ef22
+2026-06-09 11:15:13.206 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-09 11:15:14.488 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 11:15:14.788 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-09 11:15:15.869 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer:59 - LiveReload server is running on port 35729
+2026-06-09 11:15:15.879 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Starting ProtocolHandler ["http-nio-8081"]
+2026-06-09 11:15:15.893 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start:243 - Tomcat started on port 8081 (http) with context path '/'
+2026-06-09 11:15:25.486 [tomcat-handler-0] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-09 11:15:25.486 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:532 - Initializing Servlet 'dispatcherServlet'
+2026-06-09 11:15:25.486 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:554 - Completed initialization in 0 ms
+2026-06-09 11:15:26.419 [tomcat-handler-3] INFO  o.s.api.AbstractOpenApiResource.getOpenApi:390 - Init duration for springdoc-openapi is: 582 ms
+2026-06-09 11:20:26.901 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 11:20:26.906 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-09 11:20:26.911 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-09 11:20:43.060 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-09 11:20:43.061 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-09 11:20:43.824 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 11:20:43.905 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 71 ms. Found 7 JPA repository interfaces.
+2026-06-09 11:20:44.417 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize:111 - Tomcat initialized with port 8081 (http)
+2026-06-09 11:20:44.432 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2026-06-09 11:20:44.436 [restartedMain] INFO  o.a.catalina.core.StandardService.log:173 - Starting service [Tomcat]
+2026-06-09 11:20:44.437 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log:173 - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-06-09 11:20:44.493 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring embedded WebApplicationContext
+2026-06-09 11:20:44.494 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:296 - Root WebApplicationContext: initialization completed in 1432 ms
+2026-06-09 11:20:45.011 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 11:20:45.035 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-09 11:20:45.125 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@d8e0e1c
+2026-06-09 11:20:45.127 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-09 11:20:46.360 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 11:20:46.588 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-09 11:20:47.649 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer:59 - LiveReload server is running on port 35729
+2026-06-09 11:20:47.659 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Starting ProtocolHandler ["http-nio-8081"]
+2026-06-09 11:20:47.672 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start:243 - Tomcat started on port 8081 (http) with context path '/'
+2026-06-09 11:23:48.805 [tomcat-handler-0] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-09 11:23:48.805 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:532 - Initializing Servlet 'dispatcherServlet'
+2026-06-09 11:23:48.805 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:554 - Completed initialization in 0 ms
+2026-06-09 11:27:52.516 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 11:27:52.519 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-09 11:27:52.523 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-09 11:28:07.295 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-09 11:28:07.296 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-09 11:28:08.092 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 11:28:08.166 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 66 ms. Found 7 JPA repository interfaces.
+2026-06-09 11:28:08.665 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize:111 - Tomcat initialized with port 8081 (http)
+2026-06-09 11:28:08.673 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2026-06-09 11:28:08.675 [restartedMain] INFO  o.a.catalina.core.StandardService.log:173 - Starting service [Tomcat]
+2026-06-09 11:28:08.676 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log:173 - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-06-09 11:28:08.722 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring embedded WebApplicationContext
+2026-06-09 11:28:08.723 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:296 - Root WebApplicationContext: initialization completed in 1425 ms
+2026-06-09 11:28:09.230 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 11:28:09.269 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-09 11:28:09.390 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@164e4d6f
+2026-06-09 11:28:09.392 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-09 11:28:12.532 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 11:28:13.146 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-09 11:28:15.270 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer:59 - LiveReload server is running on port 35729
+2026-06-09 11:28:15.291 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Starting ProtocolHandler ["http-nio-8081"]
+2026-06-09 11:28:15.316 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start:243 - Tomcat started on port 8081 (http) with context path '/'
+2026-06-09 11:28:36.213 [tomcat-handler-0] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-09 11:28:36.213 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:532 - Initializing Servlet 'dispatcherServlet'
+2026-06-09 11:28:36.220 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:554 - Completed initialization in 0 ms
+2026-06-09 11:28:37.278 [tomcat-handler-3] INFO  o.s.api.AbstractOpenApiResource.getOpenApi:390 - Init duration for springdoc-openapi is: 698 ms
+2026-06-09 11:31:35.892 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 11:31:35.895 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-09 11:31:35.900 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-09 11:33:41.644 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-09 11:33:41.644 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-09 11:33:42.494 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 11:33:42.571 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 69 ms. Found 7 JPA repository interfaces.
+2026-06-09 11:33:43.112 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize:111 - Tomcat initialized with port 8081 (http)
+2026-06-09 11:33:43.124 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2026-06-09 11:33:43.126 [restartedMain] INFO  o.a.catalina.core.StandardService.log:173 - Starting service [Tomcat]
+2026-06-09 11:33:43.127 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log:173 - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-06-09 11:33:43.185 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring embedded WebApplicationContext
+2026-06-09 11:33:43.186 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:296 - Root WebApplicationContext: initialization completed in 1542 ms
+2026-06-09 11:33:44.302 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 11:33:44.361 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-09 11:33:44.626 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7b7c452c
+2026-06-09 11:33:44.630 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-09 11:33:47.906 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 11:33:48.721 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-09 11:33:51.369 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer:59 - LiveReload server is running on port 35729
+2026-06-09 11:33:51.402 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Starting ProtocolHandler ["http-nio-8081"]
+2026-06-09 11:33:51.449 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start:243 - Tomcat started on port 8081 (http) with context path '/'
+2026-06-09 11:36:14.705 [tomcat-handler-0] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-09 11:36:14.707 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:532 - Initializing Servlet 'dispatcherServlet'
+2026-06-09 11:36:14.709 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:554 - Completed initialization in 1 ms
+2026-06-09 11:36:15.964 [tomcat-handler-3] INFO  o.s.api.AbstractOpenApiResource.getOpenApi:390 - Init duration for springdoc-openapi is: 930 ms
+2026-06-09 11:41:49.752 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 11:41:49.755 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-09 11:41:49.760 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-09 11:51:02.737 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-09 11:51:02.738 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-09 11:51:03.631 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 11:51:03.714 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 73 ms. Found 7 JPA repository interfaces.
+2026-06-09 11:51:04.242 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize:111 - Tomcat initialized with port 8081 (http)
+2026-06-09 11:51:04.252 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2026-06-09 11:51:04.255 [restartedMain] INFO  o.a.catalina.core.StandardService.log:173 - Starting service [Tomcat]
+2026-06-09 11:51:04.256 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log:173 - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-06-09 11:51:04.325 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring embedded WebApplicationContext
+2026-06-09 11:51:04.325 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:296 - Root WebApplicationContext: initialization completed in 1586 ms
+2026-06-09 11:51:04.861 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 11:51:04.890 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-09 11:51:04.983 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@4ca38f20
+2026-06-09 11:51:04.985 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-09 11:51:06.100 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 11:51:06.353 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-09 11:51:07.473 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer:59 - LiveReload server is running on port 35729
+2026-06-09 11:51:07.493 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Starting ProtocolHandler ["http-nio-8081"]
+2026-06-09 11:51:07.514 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start:243 - Tomcat started on port 8081 (http) with context path '/'
+2026-06-09 11:54:50.866 [tomcat-handler-0] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-09 11:54:50.866 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:532 - Initializing Servlet 'dispatcherServlet'
+2026-06-09 11:54:50.866 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:554 - Completed initialization in 0 ms
+2026-06-09 11:54:51.964 [tomcat-handler-3] INFO  o.s.api.AbstractOpenApiResource.getOpenApi:390 - Init duration for springdoc-openapi is: 795 ms
+2026-06-09 11:59:55.520 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 11:59:55.524 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-09 11:59:55.528 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-09 12:00:07.510 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-09 12:00:07.511 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-09 12:00:08.263 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 12:00:08.338 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 65 ms. Found 7 JPA repository interfaces.
+2026-06-09 12:00:08.842 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize:111 - Tomcat initialized with port 8080 (http)
+2026-06-09 12:00:08.851 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-09 12:00:08.853 [restartedMain] INFO  o.a.catalina.core.StandardService.log:173 - Starting service [Tomcat]
+2026-06-09 12:00:08.854 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log:173 - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-06-09 12:00:08.924 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring embedded WebApplicationContext
+2026-06-09 12:00:08.925 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:296 - Root WebApplicationContext: initialization completed in 1413 ms
+2026-06-09 12:00:08.980 [restartedMain] INFO  o.a.catalina.core.StandardService.log:173 - Stopping service [Tomcat]
+2026-06-09 12:00:08.993 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger.logMessage:82 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-09 12:02:21.335 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-09 12:02:21.336 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-09 12:02:22.097 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 12:02:22.171 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 66 ms. Found 7 JPA repository interfaces.
+2026-06-09 12:02:22.712 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize:111 - Tomcat initialized with port 8081 (http)
+2026-06-09 12:02:22.722 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2026-06-09 12:02:22.724 [restartedMain] INFO  o.a.catalina.core.StandardService.log:173 - Starting service [Tomcat]
+2026-06-09 12:02:22.725 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log:173 - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-06-09 12:02:22.785 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring embedded WebApplicationContext
+2026-06-09 12:02:22.785 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:296 - Root WebApplicationContext: initialization completed in 1448 ms
+2026-06-09 12:02:23.310 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 12:02:23.336 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-09 12:02:23.430 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@489d6e90
+2026-06-09 12:02:23.432 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-09 12:02:24.556 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 12:02:24.839 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-09 12:02:25.920 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer:59 - LiveReload server is running on port 35729
+2026-06-09 12:02:25.930 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Starting ProtocolHandler ["http-nio-8081"]
+2026-06-09 12:02:25.951 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start:243 - Tomcat started on port 8081 (http) with context path '/'
+2026-06-09 12:03:05.731 [tomcat-handler-0] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-09 12:03:05.731 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:532 - Initializing Servlet 'dispatcherServlet'
+2026-06-09 12:03:05.731 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:554 - Completed initialization in 0 ms
+2026-06-09 12:03:53.042 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 12:03:53.047 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-09 12:03:53.052 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-09 12:16:51.512 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-09 12:16:51.512 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-09 12:16:52.283 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 12:16:52.356 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 66 ms. Found 7 JPA repository interfaces.
+2026-06-09 12:16:52.869 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize:111 - Tomcat initialized with port 8081 (http)
+2026-06-09 12:16:52.877 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2026-06-09 12:16:52.879 [restartedMain] INFO  o.a.catalina.core.StandardService.log:173 - Starting service [Tomcat]
+2026-06-09 12:16:52.879 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log:173 - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-06-09 12:16:52.940 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring embedded WebApplicationContext
+2026-06-09 12:16:52.941 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:296 - Root WebApplicationContext: initialization completed in 1428 ms
+2026-06-09 12:16:53.452 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 12:16:53.489 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-09 12:16:53.581 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@45068a31
+2026-06-09 12:16:53.583 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-09 12:16:54.810 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 12:16:55.093 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-09 12:16:56.205 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer:59 - LiveReload server is running on port 35729
+2026-06-09 12:16:56.216 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Starting ProtocolHandler ["http-nio-8081"]
+2026-06-09 12:16:56.228 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start:243 - Tomcat started on port 8081 (http) with context path '/'
+2026-06-09 12:17:43.547 [tomcat-handler-0] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-09 12:17:43.548 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:532 - Initializing Servlet 'dispatcherServlet'
+2026-06-09 12:17:43.551 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:554 - Completed initialization in 2 ms
+2026-06-09 12:17:44.605 [tomcat-handler-3] INFO  o.s.api.AbstractOpenApiResource.getOpenApi:390 - Init duration for springdoc-openapi is: 841 ms
+2026-06-09 12:42:01.083 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 12:42:01.087 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-09 12:42:01.091 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-09 12:42:16.040 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-09 12:42:16.040 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo:252 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-09 12:42:16.890 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-09 12:42:16.976 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 78 ms. Found 7 JPA repository interfaces.
+2026-06-09 12:42:17.507 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize:111 - Tomcat initialized with port 8081 (http)
+2026-06-09 12:42:17.523 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2026-06-09 12:42:17.525 [restartedMain] INFO  o.a.catalina.core.StandardService.log:173 - Starting service [Tomcat]
+2026-06-09 12:42:17.526 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log:173 - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-06-09 12:42:17.583 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring embedded WebApplicationContext
+2026-06-09 12:42:17.584 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:296 - Root WebApplicationContext: initialization completed in 1542 ms
+2026-06-09 12:42:18.228 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-09 12:42:18.274 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-09 12:42:18.367 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@72f64fa3
+2026-06-09 12:42:18.369 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-09 12:42:19.504 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 12:42:19.727 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-09 12:42:20.828 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer:59 - LiveReload server is running on port 35729
+2026-06-09 12:42:20.838 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol.log:173 - Starting ProtocolHandler ["http-nio-8081"]
+2026-06-09 12:42:20.852 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start:243 - Tomcat started on port 8081 (http) with context path '/'
+2026-06-09 12:42:56.010 [tomcat-handler-0] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-09 12:42:56.010 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:532 - Initializing Servlet 'dispatcherServlet'
+2026-06-09 12:42:56.010 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet.initServletBean:554 - Completed initialization in 0 ms
+2026-06-09 12:42:57.192 [tomcat-handler-3] INFO  o.s.api.AbstractOpenApiResource.getOpenApi:390 - Init duration for springdoc-openapi is: 828 ms
+2026-06-09 13:13:15.348 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-09 13:13:15.357 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-09 13:13:15.363 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.

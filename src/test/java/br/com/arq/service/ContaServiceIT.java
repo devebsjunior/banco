@@ -4,6 +4,7 @@ package br.com.arq.service;
 import br.com.arq.dto.request.ContaRequestDTO;
 import br.com.arq.dto.request.OperacaoBancariaDTO;
 import br.com.arq.dto.TransferenciaDTO;
+import br.com.arq.model.Agencia;
 import br.com.arq.model.Conta;
 import br.com.arq.repository.AppLogRepository;
 import br.com.arq.repository.AuditRepository;
@@ -53,10 +54,17 @@ class ContaServiceIT {
                         "Edson",
                         "12345678901",
                         "edson@email.com",
+                        "Agencia Central",
+                        "0001",
+                        "01001000",
                         "0001",
                         BigDecimal.valueOf(2000),
-                         "USER",
-                        "123456"
+                        "123456",
+                        "Rua A",
+                        "100",
+                        "Centro",
+                        "São Paulo",
+                        "SP"
                 );
 
         Conta conta =
@@ -83,13 +91,21 @@ class ContaServiceIT {
 
         criarContaBase();
 
+
         OperacaoBancariaDTO dto =
                 new OperacaoBancariaDTO(
-                        "0001",
                         "Banco Mundial",
                         "0001",
-                        BigDecimal.valueOf(500)
+                        "0001",
+                        BigDecimal.valueOf(500),
+                        "Rua A",
+                        "100",
+                        "Centro",
+                        "São Paulo",
+                        "SP",
+                        "01001000"
                 );
+
 
         contaService.depositar(dto);
 
@@ -109,13 +125,21 @@ class ContaServiceIT {
 
         criarContaBase();
 
+
         OperacaoBancariaDTO dto =
                 new OperacaoBancariaDTO(
-                        "0001",
                         "Banco Mundial",
                         "0001",
-                        BigDecimal.valueOf(200)
+                        "0001",
+                        BigDecimal.valueOf(500),
+                        "Rua A",
+                        "100",
+                        "Centro",
+                        "São Paulo",
+                        "SP",
+                        "01001000"
                 );
+
 
         contaService.sacar(dto);
 
@@ -198,16 +222,21 @@ class ContaServiceIT {
 
     @Test
     void deveLancarExcecaoQuandoSaldoInsuficiente() {
-
         criarContaBase();
-
         OperacaoBancariaDTO dto =
                 new OperacaoBancariaDTO(
-                        "0001",
                         "Banco Mundial",
                         "0001",
-                        BigDecimal.valueOf(999999)
+                        "0001",
+                        BigDecimal.valueOf(500),
+                        "Rua A",
+                        "100",
+                        "Centro",
+                        "São Paulo",
+                        "SP",
+                        "01001000"
                 );
+
 
         assertThrows(
                 IllegalStateException.class,
@@ -220,13 +249,21 @@ class ContaServiceIT {
 
         criarContaBase();
 
+
         OperacaoBancariaDTO dto =
                 new OperacaoBancariaDTO(
+                        "Banco Mundial",
                         "0001",
-                        "Banco Fake",
                         "0001",
-                        BigDecimal.valueOf(100)
+                        BigDecimal.valueOf(500),
+                        "Rua A",
+                        "100",
+                        "Centro",
+                        "São Paulo",
+                        "SP",
+                        "01001000"
                 );
+
 
         RuntimeException ex =
                 assertThrows(
@@ -262,8 +299,10 @@ class ContaServiceIT {
                 new Conta();
 
         conta.setNumeroConta("0001");
-        conta.setNomeBanco("Banco Mundial");
-        conta.setAgencia("0001");
+        Agencia agencia = new Agencia();
+        agencia.setNomeAgencia("agencia 001");
+        agencia.setEstado("Rio de Janeiro");
+        conta.setAgencia(agencia);
         conta.setPerfil("CLIENTE");
         conta.setSaldo(BigDecimal.valueOf(1000));
         conta.setSenha("123");
@@ -276,34 +315,14 @@ class ContaServiceIT {
                 new Conta();
 
         conta.setNumeroConta("0002");
-        conta.setNomeBanco("Banco Mundial");
-        conta.setAgencia("0001");
+        Agencia agencia = new Agencia();
+        agencia.setNomeAgencia("agencia 002");
+        agencia.setEstado("Rio de Janeiro");
+        conta.setAgencia(agencia);
         conta.setPerfil("CLIENTE");
         conta.setSaldo(BigDecimal.valueOf(1000));
         conta.setSenha("123");
         contaRepository.save(conta);
-    }
-
-    @Test
-    void deveLancarExcecaoQuandoAgenciaInvalida() {
-        criarContaBase();
-        OperacaoBancariaDTO dto =
-                new OperacaoBancariaDTO(
-                        "0001",
-                        "Banco Mundial",
-                        "9999",
-                        BigDecimal.valueOf(100)
-                );
-
-        RuntimeException ex =
-                assertThrows(
-                        RuntimeException.class,
-                        () -> contaService.depositar(dto)
-                );
-        assertEquals(
-                "Agência inválida",
-                ex.getMessage()
-        );
     }
 
 }

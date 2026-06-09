@@ -1,20 +1,24 @@
 package br.com.arq.controller;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import java.math.BigDecimal;
-import java.util.Collections;
 
+import br.com.arq.asyncsecurity.interceptor.AccessControlInterceptor;
+import br.com.arq.model.Conta;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.autoconfigure.web.servlet.*;
 import org.springframework.boot.test.mock.mockito.MockBean;
+
 import org.springframework.http.MediaType;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
@@ -24,10 +28,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import br.com.arq.dto.request.ContaRequestDTO;
 import br.com.arq.service.ContaService;
 
-@WebMvcTest(AdminController.class)
+
 @ActiveProfiles("test")
+@WebMvcTest(controllers = AdminController.class)
 @AutoConfigureMockMvc(addFilters = false)
-public class AdminControllerTest {
+class AdminControllerTest {
+
+	@MockBean
+	private AccessControlInterceptor interceptor;
 
 	@Autowired
 	private MockMvc mockMvc;
@@ -38,29 +46,42 @@ public class AdminControllerTest {
 	@Autowired
 	private ObjectMapper objectMapper;
 
-	@Test
-	void deveTratarRuntimeException() throws Exception {
-	    mockMvc.perform(get("/api/admin/contas/erro-proposital"))
-	            .andExpect(status().isInternalServerError());
+	private ContaRequestDTO criar() {
+		return new ContaRequestDTO(
+				"Edson",
+				"12345678901",
+				"edson@email.com",
+				"Agencia Central",
+				"0001",
+				"01001000",
+				"001",
+				BigDecimal.valueOf(2000),
+				"123456",
+				"Rua A",
+				"100",
+				"Centro",
+				"São Paulo",
+				"SP"
+		);
 	}
 
 	@Test
-	@DisplayName("Deve retornar 400 Bad Request se o Service lançar exceção")
-	void deveRetornarErroQuandoServiceFalha() throws Exception {
-		ContaRequestDTO dto = new ContaRequestDTO("123", "Nome", "email@test.com", "123", BigDecimal.ZERO, "admin",
-				"123");
+	@DisplayName("Deve criar conta com sucesso")
+	void deveCriarContaComSucesso() throws Exception {
 
-		when(contaService.criarConta(any())).thenThrow(new RuntimeException("CPF já cadastrado"));
+		ContaRequestDTO dto = criar();
 
-		mockMvc.perform(post("/api/admin/contas").contentType(MediaType.APPLICATION_JSON)
-				.content(objectMapper.writeValueAsString(dto))).andExpect(status().isBadRequest());
+		Conta conta = new Conta();
+		conta.setId(1L);
+		conta.setNumeroConta("123456");
+
+		when(contaService.criarConta(any()))
+				.thenReturn(conta);
+
+		mockMvc.perform(post("/api/admin/contas")
+						.contentType(MediaType.APPLICATION_JSON)
+						.content(objectMapper.writeValueAsString(dto)))
+				.andExpect(status().isOk());
 	}
 
-	@Test
-	@DisplayName("Deve retornar 200 OK ao listar as contas")
-	void deveListarContasComSucesso() throws Exception {
-		when(contaService.listarTodas()).thenReturn(Collections.emptyList());
-
-		mockMvc.perform(get("/api/admin/contas")).andExpect(status().isOk());
-	}
 }

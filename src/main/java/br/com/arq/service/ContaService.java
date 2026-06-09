@@ -44,6 +44,71 @@ public class ContaService {
   private final AuditService auditService;
   private final AgenciaRepository agenciaRepository;
   private final BcryptService bcryptService;
+  private final EmailService emailService;
+
+
+  @Transactional
+  public Conta criarContaAdmin(ContaRequestDTO dto) {
+
+    long inicio = System.currentTimeMillis();
+
+    try {
+
+      logger.info("Criando conta Admin- CPF: {}, Numero: {}", dto.cpf(), dto.numeroConta());
+
+      logService.info("Iniciando criação de conta", "ContaService");
+
+      Cliente cliente = obterOuCriarCliente(dto);
+
+      Agencia agencia = agenciaRepository
+              .findByNumeroAgencia(dto.codigoAgencia())
+              .orElseGet(() -> {
+                logger.info("Agência não encontrada. Criando automaticamente...");
+
+                Agencia nova = new Agencia();
+                nova.setCodigo(dto.codigoAgencia());
+                nova.setNumeroAgencia(dto.codigoAgencia());
+                nova.setNomeAgencia(dto.nomeAgencia());
+                nova.setCep(dto.cep());
+                nova.setLogradouro(dto.logradouro());
+                nova.setBairro(dto.bairro());
+                nova.setCidade(dto.cidade());
+                nova.setEstado(dto.estado());
+
+                return agenciaRepository.save(nova);
+              });
+
+      Facts facts = new Facts().add(FactNames.VALOR, dto.saldo());
+
+      executarRegras(facts, ContaRules.saldoInicialInvalido());
+
+      Conta conta = construirContaAdmin(dto, cliente);
+
+      conta.setAgencia(agencia);
+
+      Conta salva = contaRepository.save(conta);
+
+      logger.info("Conta Admin criada com sucesso - Numero: {}, Saldo: {}", dto.numeroConta(), dto.saldo());
+
+      auditService.registrar("admin", "Admin", "CRIAR_CONTA", true, "Conta criada", null, "ContaService", tempo(inicio));
+
+      logService.contaCriada(dto.numeroConta());
+      emailService.enviarResend(dto.email(), "Bank Trader Invest","Seja bem vindo ao Banco Invest Trader. Agradecemos a preferência, esperamos que sua Jornada em nosso Banco seja Satisfatória");
+
+      return salva;
+
+    }
+    catch (Exception ex) {
+
+      logger.error("Erro ao criar conta - CPF: {}, Numero: {}", dto.cpf(), dto.numeroConta(), ex);
+
+      auditService.registrar("user", "USER", "CRIAR_CONTA", false, ex.getMessage(), null, "ContaService", tempo(inicio));
+
+      logService.contaErro(dto.numeroConta(), ex);
+
+      throw ex;
+    }
+  }
 
   @Transactional
   public Conta criarConta(ContaRequestDTO dto) {
@@ -58,13 +123,29 @@ public class ContaService {
 
       Cliente cliente = obterOuCriarCliente(dto);
 
-      Agencia agencia = agenciaRepository.findByNumeroAgencia(dto.codigoAgencia()).orElseThrow(() -> new RuntimeException("Agência não encontrada"));
+      Agencia agencia = agenciaRepository
+              .findByNumeroAgencia(dto.codigoAgencia())
+              .orElseGet(() -> {
+                logger.info("Agência não encontrada. Criando automaticamente...");
+
+                Agencia nova = new Agencia();
+                nova.setCodigo(dto.codigoAgencia());
+                nova.setNumeroAgencia(dto.codigoAgencia());
+                nova.setNomeAgencia(dto.nomeAgencia());
+                nova.setCep(dto.cep());
+                nova.setLogradouro(dto.logradouro());
+                nova.setBairro(dto.bairro());
+                nova.setCidade(dto.cidade());
+                nova.setEstado(dto.estado());
+
+                return agenciaRepository.save(nova);
+              });
 
       Facts facts = new Facts().add(FactNames.VALOR, dto.saldo());
 
       executarRegras(facts, ContaRules.saldoInicialInvalido());
 
-      Conta conta = construirConta(dto, cliente);
+      Conta conta = construirContaSomente(dto, cliente);
 
       conta.setAgencia(agencia);
 
@@ -75,6 +156,8 @@ public class ContaService {
       auditService.registrar("user", "USER", "CRIAR_CONTA", true, "Conta criada", null, "ContaService", tempo(inicio));
 
       logService.contaCriada(dto.numeroConta());
+
+      emailService.enviarResend(dto.email(), "Bank Trader Invest","Seja bem vindo ao Banco Invest Trader. Agradecemos a preferência, esperamos que sua Jornada em nosso Banco seja Satisfatória");
 
       return salva;
 
@@ -330,6 +413,20 @@ public class ContaService {
     return System.currentTimeMillis() - inicio;
   }
 
+
+  public void sacarSimples(String numeroConta, BigDecimal valor) {
+    Conta conta = contaRepository.findByNumeroContaWithLock(numeroConta)
+            .orElseThrow(() -> new RuntimeException("Conta não encontrada"));
+
+    if (conta.getSaldo().compareTo(valor) < 0) {
+      throw new RuntimeException("Saldo insuficiente");
+    }
+
+    conta.setSaldo(conta.getSaldo().subtract(valor));
+    contaRepository.save(conta);
+  }
+
+
   private Cliente obterOuCriarCliente(ContaRequestDTO dto) {
 
     return clienteRepository.findByCpf(dto.cpf()).orElseGet(() -> {
@@ -346,6 +443,30 @@ public class ContaService {
     });
   }
 
+  private Conta construirContaSomente(ContaRequestDTO dto, Cliente cliente) {
+    Conta conta = new Conta();
+
+    conta.setNumeroConta(dto.numeroConta());
+    conta.setSaldo(dto.saldo());
+    conta.setCliente(cliente);
+    conta.setPerfil("CLIENTE");
+
+    conta.setSenha(bcryptService.hash(dto.senha()));
+
+    return conta;
+  }
+
+  private Conta construirContaAdmin(ContaRequestDTO dto, Cliente cliente) {
+    Conta conta = new Conta();
+    conta.setNumeroConta(dto.numeroConta());
+    conta.setSaldo(dto.saldo());
+    conta.setCliente(cliente);
+    conta.setPerfil("ADMIN");
+
+    conta.setSenha(bcryptService.hash(dto.senha()));
+
+    return conta;
+  }
 
   private Conta construirConta(ContaRequestDTO dto, Cliente cliente) {
 
@@ -366,6 +487,7 @@ public class ContaService {
 
     conta.setAgencia(agencia);
     conta.setSaldo(dto.saldo());
+    conta.setPerfil("cliente");
 
     conta.setSenha(BCrypt.hashpw(dto.senha(), BCrypt.gensalt()));
 

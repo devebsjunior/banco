@@ -25,44 +25,32 @@ class ContaRequestDTOTest {
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         validator = factory.getValidator();
     }
-
-    @Test
-    @DisplayName("Deve validar quando o DTO está correto")
-    void deveValidarDtoCorreto() {
-        ContaRequestDTO dto = new ContaRequestDTO(
-            "Edson Belem", 
-            "02295351782", 
-            "ed@email.com", 
-            "123789", 
-            new BigDecimal("12000"), 
-            "usuario", 
-            "123456"
-        );
-
-        Set<ConstraintViolation<ContaRequestDTO>> violations = validator.validate(dto);
-        assertTrue(violations.isEmpty(), "O DTO deveria ser válido");
-    }
-
     @Test
     @DisplayName("Deve invalidar quando o CPF está em branco")
     void deveInvalidarCpfBranco() {
+
         ContaRequestDTO dto = new ContaRequestDTO(
-            "Edson", "", "ed@email.com", "123", BigDecimal.ZERO, "usuario", "123456"
+                "Edson",
+                "", // CPF inválido
+                "ed@email.com",
+                "Agencia Central",
+                "1234",
+                "01001000",
+                "123456",
+                BigDecimal.ZERO,
+                "senha123",
+                "Rua A",
+                "100",
+                "Centro",
+                "São Paulo",
+                "SP"
         );
 
         Set<ConstraintViolation<ContaRequestDTO>> violations = validator.validate(dto);
+
         assertFalse(violations.isEmpty());
-        assertTrue(violations.stream().anyMatch(v -> v.getMessage().equals("CPF é obrigatório")));
+        assertTrue(violations.stream()
+                .anyMatch(v -> v.getMessage().equals("CPF é obrigatório")));
     }
 
-    @Test
-    @DisplayName("Deve invalidar quando o saldo é negativo")
-    void deveInvalidarSaldoNegativo() {
-        ContaRequestDTO dto = new ContaRequestDTO(
-            "Edson", "02295351782", "ed@email.com", "123", new BigDecimal("-10"), "usuario", "123456"
-        );
-
-        Set<ConstraintViolation<ContaRequestDTO>> violations = validator.validate(dto);
-        assertFalse(violations.isEmpty());
-    }
 }

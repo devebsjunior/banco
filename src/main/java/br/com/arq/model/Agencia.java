@@ -19,7 +19,7 @@ public class Agencia {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull(message = "O código da agência é obrigatório")
+    
     private String codigo;
     @NotNull(message = "O nome da agência é obrigatório")
     private String nomeAgencia;
