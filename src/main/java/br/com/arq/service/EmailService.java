@@ -15,7 +15,6 @@ public class EmailService {
 
     private final JavaMailSender mailSender;
 
-
     public void enviarResend(
               String para,
             String assunto,

@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 public class AuthService {
 
+
 	private static final Logger logger = LoggerFactory.getLogger(AuthService.class);
 
 	private final ContaRepository contaRepository;

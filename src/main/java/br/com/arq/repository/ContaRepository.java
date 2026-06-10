@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 import br.com.arq.model.Conta;
 import jakarta.persistence.LockModeType;
 
+
 @Repository
 public interface ContaRepository extends JpaRepository<Conta, Long> {
 

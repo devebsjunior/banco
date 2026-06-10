@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
 
+
 /**
  * Representa um log técnico da aplicação.
  * Usado para registrar eventos de execução,

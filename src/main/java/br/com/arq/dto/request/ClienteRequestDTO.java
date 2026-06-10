@@ -7,6 +7,7 @@ import jakarta.validation.constraints.NotNull;
 
 public record ClienteRequestDTO(
 
+
         @NotBlank(message = "O nome é obrigatório")
         String nome,
 

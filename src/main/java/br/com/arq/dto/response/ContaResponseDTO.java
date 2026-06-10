@@ -2,6 +2,7 @@ package br.com.arq.dto.response;
 
 import br.com.arq.model.Conta;
 
+
 public record ContaResponseDTO(
         Long id,
         String numeroConta,

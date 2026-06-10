@@ -4,6 +4,7 @@ package br.com.arq.dto.response;
 import br.com.arq.model.Cliente;
 import java.util.List;
 
+
 public record ClienteResponseDTO(
         Long id,
         String nome,

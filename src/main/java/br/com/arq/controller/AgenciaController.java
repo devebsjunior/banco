@@ -19,6 +19,7 @@ public class AgenciaController {
 
     private final AgenciaService agenciaService;
 
+
     @Operation(
             summary = "Criar agência",
             description = "Cria uma nova agência bancária (somente ADMIN)"
