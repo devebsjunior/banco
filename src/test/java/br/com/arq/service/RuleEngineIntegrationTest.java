@@ -6,8 +6,6 @@ import br.com.arq.rules.core.RuleEngine;
 import br.com.arq.rules.core.catalog.ContaRules;
 import org.junit.jupiter.api.Test;
 import java.math.BigDecimal;
-
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class RuleEngineIntegrationTest {

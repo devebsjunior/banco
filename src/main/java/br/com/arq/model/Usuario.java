@@ -1,5 +1,6 @@
 package br.com.arq.model;
 
+import br.com.arq.enums.TipoPerfil;
 import br.com.arq.utils.TimeUtils;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -71,5 +72,12 @@ public class Usuario {
 
     private LocalDateTime now() {
         return TimeUtils.now();
+    }
+
+    public Usuario(String username, String email, String senha, List<Perfil> perfis) {
+        this.username = username;
+        this.email = email;
+        this.senha = senha;
+        this.perfis = perfis;
     }
 }

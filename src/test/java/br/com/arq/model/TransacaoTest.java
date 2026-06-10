@@ -10,24 +10,33 @@ import java.time.LocalDateTime;
 
 class TransacaoTest {
 
-
         @Test
-        void deveTestarBuilderETipos() {
+        void deveCriarTransacao() {
 
-            String numeroConta = "123789";
+            Conta conta = new Conta();
+            conta.setNumeroConta("123");
 
-            Transacao transacao = Transacao.builder()
-                    .numeroConta(numeroConta)
+            Transacao t = Transacao.builder()
+                    .id(1L)
+                    .numeroConta("123")
+                    .conta(conta)
                     .tipo(TipoTransacao.DEPOSITO)
-                    .valor(new BigDecimal("500.00"))
+                    .valor(BigDecimal.valueOf(100))
                     .build();
 
-
-            assertEquals(numeroConta, transacao.getNumeroConta());
-
-
-            assertEquals(TipoTransacao.DEPOSITO, transacao.getTipo());
-
-            assertEquals(new BigDecimal("500.00"), transacao.getValor());
+            assertNotNull(t);
+            assertEquals("123", t.getNumeroConta());
+            assertEquals(TipoTransacao.DEPOSITO, t.getTipo());
+            assertEquals(BigDecimal.valueOf(100), t.getValor());
         }
- }
+
+        @Test
+        void deveGerarDataAoPersistir() {
+
+            Transacao t = new Transacao();
+
+            t.onCreate(); // simula @PrePersist
+
+            assertNotNull(t.getDataHora());
+        }
+}

@@ -3,10 +3,17 @@ package br.com.arq.rules.core;
 import br.com.arq.rules.core.interfaces.Then;
 import br.com.arq.rules.core.interfaces.When;
 
+
 /**
- * Builder responsável por criar uma regra.
- * Permite montar uma regra de forma fluente:
- * RuleBuilder.when(...).then(...)
+ * Builder para criação fluente de regras.
+ * <p>Permite definir uma regra de forma legível e encadeada,
+ * separando claramente condição (WHEN) e ação (THEN).</p>
+ * Exemplo:
+ * <pre>
+ *    Rule rule = RuleBuilder
+ *     .when("Validar CPF", facts -> true)
+ *     .then(facts -> { ... });
+ *</pre>
  */
 public class RuleBuilder {
 

@@ -1,15 +1,11 @@
 package br.com.arq.service;
 
 
-
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
-
-import java.math.BigDecimal;
-import java.util.Optional;
-
-import br.com.arq.dto.request.OperacaoBancariaDTO;
 import br.com.arq.model.Agencia;
+import br.com.arq.model.Conta;
+import br.com.arq.repository.ClienteRepository;
+import br.com.arq.repository.ContaRepository;
+import br.com.arq.repository.TransacaoRepository;
 import jakarta.persistence.EntityManager;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -18,10 +14,12 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import br.com.arq.model.Conta;
-import br.com.arq.repository.ClienteRepository;
-import br.com.arq.repository.ContaRepository;
-import br.com.arq.repository.TransacaoRepository;
+import java.math.BigDecimal;
+import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 public class ContaServiceTest {
@@ -36,7 +34,7 @@ public class ContaServiceTest {
     private TransacaoRepository transacaoRepository;
 
     @Mock
-     private EntityManager entityManager;
+    private EntityManager entityManager;
 
     @Mock
     private AppLogService logService;
@@ -57,7 +55,6 @@ public class ContaServiceTest {
         agencia.setCodigo("001");
 
         entityManager.persist(agencia);
-
 
 
         Conta conta = new Conta();

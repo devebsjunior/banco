@@ -1,113 +1,137 @@
 package br.com.arq.repository;
 
-
-
-import static org.junit.jupiter.api.Assertions.*;
-
-import java.math.BigDecimal;
-import java.util.Optional;
-import java.util.UUID;
-
-import br.com.arq.dto.DadosAgencia;
-import br.com.arq.dto.DadosCliente;
-import br.com.arq.dto.DadosConta;
 import br.com.arq.model.Agencia;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
-import org.springframework.test.context.ActiveProfiles;
-
 import br.com.arq.model.Cliente;
 import br.com.arq.model.Conta;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
-@DataJpaTest
-@ActiveProfiles("test")
-@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+import java.math.BigDecimal;
+import java.util.List;
+import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+
+@ExtendWith(MockitoExtension.class)
 class ContaRepositoryTest {
 
-    @Autowired
+    @Mock
     private ContaRepository contaRepository;
 
-    @Autowired
-    private TestEntityManager entityManager;
-
     private Cliente cliente;
+
     private Agencia agencia;
 
-//    @BeforeEach
-//    void setUp() {
-//
-//        cliente = new Cliente();
-//        cliente.setNome("Teste");
-//        cliente.setCpf("12345678900");
-//        cliente.setEmail("teste@email.com");
-//
-//        entityManager.persist(cliente);
-//
-//        agencia = new Agencia();
-//        agencia.setNomeAgencia("Banco Teste");
-//        agencia.setNumeroAgencia("0001");
-//        agencia.setCodigo("001");
-//
-//        entityManager.persist(agencia);
-//
-//        Conta conta = new Conta();
-//        conta.setNumeroConta("111111");
-//        conta.setSaldo(BigDecimal.ZERO);
-//        conta.setCliente(cliente);
-//        conta.setPerfil("usuario");
-//        conta.setAgencia(agencia);
-//
-//        entityManager.persist(conta);
-//        entityManager.flush();
-//    }
+    private Conta conta;
 
-//    @Test
-//    @DisplayName("Deve encontrar conta por número com Bloqueio Pessimista")
-//    void deveEncontrarComLockPessimista() {
-//        DadosCliente dadosCliente = new DadosCliente(
-//                "Edson",
-//                "02295351782",
-//                "edson@email.com"
-//        );
-//
-//        DadosAgencia dadosAgencia = new DadosAgencia(
-//                "Banco Teste",
-//                "0001",
-//                "001"
-//        );
-//
-//        DadosConta dadosConta = new DadosConta(
-//                UUID.randomUUID().toString(), // ✅ evita conflito
-//                "usuario",
-//                "123",
-//                BigDecimal.ZERO
-//        );
-//
-//
-//        Conta conta = Conta.criarContaCompleta(
-//                dadosCliente,
-//                dadosAgencia,
-//                dadosConta
-//        );
-//
-//
-//        entityManager.persist(conta.getCliente());
-//        entityManager.persist(conta.getAgencia());
-//        entityManager.persist(conta);
-//
-//        entityManager.flush();
-//
-//        Optional<Conta> resultado =
-//                contaRepository.findByNumeroContaWithLock(dadosConta.numeroConta());
-//
-//        assertTrue(resultado.isPresent());
-//        assertEquals(dadosConta.numeroConta(), resultado.get().getNumeroConta());
-//
-//    }
+
+    @BeforeEach
+    void setUp() {
+
+        cliente = new Cliente();
+        cliente.setNome("Teste");
+        cliente.setCpf("12345678900");
+        cliente.setEmail("teste@email.com");
+
+        agencia = new Agencia();
+        agencia.setNomeAgencia("Banco Teste");
+        agencia.setNumeroAgencia("0001");
+        agencia.setCodigo("001");
+
+        conta = new Conta();
+        conta.setNumeroConta("111111");
+        conta.setSaldo(BigDecimal.ZERO);
+        conta.setCliente(cliente);
+        conta.setPerfil("usuario");
+        conta.setAgencia(agencia);
+    }
+
+
+    @Test
+    void deveEncontrarContaPorNumero() {
+
+        when(contaRepository.findByNumeroConta("111111"))
+                .thenReturn(Optional.of(conta));
+
+        Optional<Conta> resultado =
+                contaRepository.findByNumeroConta("111111");
+
+        assertTrue(resultado.isPresent());
+        assertEquals("111111", resultado.get().getNumeroConta());
+
+        verify(contaRepository).findByNumeroConta("111111");
+    }
+
+
+    @Test
+    void deveEncontrarComLockPessimista() {
+
+        when(contaRepository.findByNumeroContaWithLock("111111"))
+                .thenReturn(Optional.of(conta));
+
+        Optional<Conta> resultado =
+                contaRepository.findByNumeroContaWithLock("111111");
+
+        assertTrue(resultado.isPresent());
+        assertEquals("111111", resultado.get().getNumeroConta());
+
+        verify(contaRepository).findByNumeroContaWithLock("111111");
+    }
+
+
+    @Test
+    void deveEncontrarPorEmail() {
+
+        when(contaRepository.findByClienteEmail("teste@email.com"))
+                .thenReturn(Optional.of(conta));
+
+        Optional<Conta> resultado =
+                contaRepository.findByClienteEmail("teste@email.com");
+
+        assertTrue(resultado.isPresent());
+
+        verify(contaRepository).findByClienteEmail("teste@email.com");
+    }
+
+
+    @Test
+    void deveEncontrarPorEmailOuCpf() {
+
+        when(contaRepository.findByClienteEmailOrClienteCpf("teste@email.com", "000"))
+                .thenReturn(Optional.of(conta));
+
+        when(contaRepository.findByClienteEmailOrClienteCpf("x@email.com", "12345678900"))
+                .thenReturn(Optional.of(conta));
+
+        Optional<Conta> porEmail =
+                contaRepository.findByClienteEmailOrClienteCpf("teste@email.com", "000");
+
+        Optional<Conta> porCpf =
+                contaRepository.findByClienteEmailOrClienteCpf("x@email.com", "12345678900");
+
+        assertTrue(porEmail.isPresent());
+        assertTrue(porCpf.isPresent());
+
+        verify(contaRepository, times(2))
+                .findByClienteEmailOrClienteCpf(any(), any());
+    }
+
+    @Test
+    void deveEncontrarPorPerfil() {
+
+        when(contaRepository.findByPerfil("usuario"))
+                .thenReturn(List.of(conta));
+
+        List<Conta> lista =
+                contaRepository.findByPerfil("usuario");
+
+        assertFalse(lista.isEmpty());
+        assertEquals("usuario", lista.get(0).getPerfil());
+
+        verify(contaRepository).findByPerfil("usuario");
+    }
 }

@@ -7,6 +7,11 @@ import br.com.arq.model.Usuario;
 
 import java.math.BigDecimal;
 
+/**
+ * Classe utilitária responsável por centralizar todas as chaves ({@link FactKey})
+ * utilizadas no motor de regras.
+  *Evita duplicidade, padroniza o acesso e facilita manutenção.</p>
+ */
 public class FactKeys {
 
         public static final FactKey<Conta> CONTA =
