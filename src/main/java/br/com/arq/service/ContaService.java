@@ -93,7 +93,7 @@ public class ContaService {
       auditService.registrar("admin", "Admin", "CRIAR_CONTA", true, "Conta criada", null, "ContaService", tempo(inicio));
 
       logService.contaCriada(dto.numeroConta());
-      emailService.enviarResend(dto.email(), "Bank Trader Invest","Seja bem vindo ao Banco Invest Trader. Agradecemos a preferência, esperamos que sua Jornada em nosso Banco seja Satisfatória");
+      emailService.enviarResend(dto.email(), "Bank Trade Invest","Seja bem vindo ao Banco Invest Trade. Agradecemos a preferência, esperamos que sua Jornada em nosso Banco seja Satisfatória");
 
       return salva;
 
@@ -157,7 +157,7 @@ public class ContaService {
 
       logService.contaCriada(dto.numeroConta());
 
-      emailService.enviarResend(dto.email(), "Bank Trader Invest","Seja bem vindo ao Banco Invest Trader. Agradecemos a preferência, esperamos que sua Jornada em nosso Banco seja Satisfatória");
+      emailService.enviarResend(dto.email(), "Bank Trade Invest","Seja bem vindo ao Banco Trade Invest. Agradecemos a preferência, esperamos que sua Jornada em nosso Banco seja Satisfatória");
 
       return salva;
 

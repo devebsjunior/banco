@@ -26,7 +26,7 @@ public class EmailService {
         SendEmailRequest sendEmailRequest = SendEmailRequest.builder()
                 .from("onboarding@resend.dev")
                 .to(para)
-                .subject("Bem vindo ao Banco InvestTrader")
+                .subject("Bem vindo ao Banco InvestTrade")
                 .html("<p>Aproveite sua Jornada em nosso Banco, Obrigado pelo Preferência !!!</p>")
                 .build();
 

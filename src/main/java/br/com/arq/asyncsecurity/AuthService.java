@@ -10,6 +10,7 @@ import br.com.arq.model.Conta;
 import br.com.arq.repository.ContaRepository;
 import br.com.arq.asyncsecurity.security.TokenService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
@@ -20,36 +21,30 @@ public class AuthService {
 	private final ContaRepository contaRepository;
 	private final TokenService tokenService;
 
+	@Transactional(readOnly = true)
 	public Map<String, Object> autenticar(String login, String senha) {
 		try {
 			logger.debug("Iniciando autenticação para usuário: {}", login);
 
-			// Validação de entrada
 			if (login == null || login.trim().isEmpty()) {
 				logger.warn("Tentativa de login com usuário vazio");
 				throw new RuntimeException("Login não informado");
 			}
-
 			if (senha == null || senha.trim().isEmpty()) {
 				logger.warn("Tentativa de login com senha vazia para usuário: {}", login);
 				throw new RuntimeException("Senha não informada");
 			}
-
-			Conta conta = contaRepository.findByNumeroConta(login)
+			Conta conta = contaRepository.findByClienteEmail(login)
 					.orElseThrow(() -> {
-						logger.warn("Conta não encontrada para login: {}", login);
-						return new RuntimeException("Conta não encontrada");
+						logger.warn("Conta não encontrada para o e-mail: {}", login);
+						return new RuntimeException("Usuário ou senha inválidos");
 					});
-
 			if (!org.mindrot.jbcrypt.BCrypt.checkpw(senha.trim(), conta.getSenha().trim())) {
 				logger.warn("Falha na autenticação - senha incorreta para login: {}", login);
 				throw new RuntimeException("Senha incorreta!");
 			}
-
 			logger.info("Autenticação bem-sucedida para login: {}", login);
-
 			String token = tokenService.gerarToken(conta);
-
 			Map<String, Object> response = Map.of(
 				"token", token,
 				"nome", conta.getCliente().getNome(),
@@ -57,10 +52,8 @@ public class AuthService {
 				"numeroConta", conta.getNumeroConta(),
 				"saldo", conta.getSaldo()
 			);
-
 			logger.debug("Token gerado e resposta preparada para: {}", login);
 			return response;
-
 		} catch (RuntimeException e) {
 			logger.error("Erro na autenticação para login: {}", login, e);
 			throw e;

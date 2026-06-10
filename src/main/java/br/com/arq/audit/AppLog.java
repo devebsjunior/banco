@@ -25,12 +25,13 @@ public class AppLog {
 
     private String nivel;
 
+    @Column(name = "mensagem", columnDefinition = "TEXT")
     private String mensagem;
 
     private String origem;
 
+    @Column(columnDefinition = "TEXT")
     private String error;
-
 
     @Column(columnDefinition = "TEXT")
     private String stackTrace;

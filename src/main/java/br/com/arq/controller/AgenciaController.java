@@ -9,23 +9,15 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/admin/agencias")
 @RequiredArgsConstructor
-@Tag(
-        name = "Admin - Agências",
-        description = "Endpoints administrativos para gerenciamento de agências bancárias"
-)
+@Tag( name = "Admin - Agências", description = "Endpoints administrativos para gerenciamento de agências bancárias" )
 public class AgenciaController {
 
     private final AgenciaService agenciaService;
-
 
     @Operation(
             summary = "Criar agência",
@@ -40,6 +32,16 @@ public class AgenciaController {
     @PostMapping
     public ResponseEntity<?> criar(@RequestBody AgenciaRequestDTO dto) {
         return ResponseEntity.ok(agenciaService.criar(dto));
+    }
+
+    @Operation(
+            summary = "Listar agências",
+            description = "Retorna a listagem de todas as agências (somente ADMIN)"
+    )
+    @SecurityRequirement(name = "bearerAuth")
+    @GetMapping
+    public ResponseEntity<?> listarTodas() {
+        return ResponseEntity.ok(agenciaService.buscarTodas());
     }
 }
 

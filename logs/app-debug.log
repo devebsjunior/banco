@@ -63,3 +63,241 @@
 2026-06-09 12:02:21.282 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
 2026-06-09 12:16:51.456 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
 2026-06-09 12:42:15.975 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 13:37:38.280 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 13:46:30.204 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 14:09:32.493 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 14:11:28.789 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 14:12:02.876 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 14:15:39.291 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 14:17:01.441 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 14:18:10.699 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 14:20:13.440 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 14:21:22.046 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 14:25:24.754 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 14:27:33.625 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 14:31:51.356 [tomcat-handler-9] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:25 - Iniciando autenticação para usuário: devebsjunior@gmail.com
+2026-06-09 14:53:08.557 [tomcat-handler-11] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:25 - Iniciando autenticação para usuário: devebsjunior@gmail.com
+2026-06-09 15:00:02.529 [tomcat-handler-13] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:25 - Iniciando autenticação para usuário: devebsjunior@gmail.com
+2026-06-09 15:00:29.086 [tomcat-handler-14] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:25 - Iniciando autenticação para usuário: devebsjunior@gmail.com
+2026-06-09 15:04:20.231 [tomcat-handler-17] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:25 - Iniciando autenticação para usuário: 123456
+2026-06-09 15:06:08.086 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 15:06:45.922 [tomcat-handler-0] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:27 - Iniciando autenticação para usuário: 123456
+2026-06-09 15:06:46.263 [tomcat-handler-0] DEBUG b.c.a.a.security.TokenService.gerarToken:63 - Token gerado com sucesso para conta: 123456
+2026-06-09 15:06:46.264 [tomcat-handler-0] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:63 - Token gerado e resposta preparada para: 123456
+2026-06-09 15:09:18.772 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 15:09:42.227 [tomcat-handler-0] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:27 - Iniciando autenticação para usuário: devedsonbelem@gmail.com
+2026-06-09 15:09:55.652 [tomcat-handler-1] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:27 - Iniciando autenticação para usuário: devebsjunior@gmail.com
+2026-06-09 15:09:55.970 [tomcat-handler-1] DEBUG b.c.a.a.security.TokenService.gerarToken:63 - Token gerado com sucesso para conta: 123456
+2026-06-09 15:09:55.971 [tomcat-handler-1] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:55 - Token gerado e resposta preparada para: devebsjunior@gmail.com
+2026-06-09 15:26:19.264 [tomcat-handler-12] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:27 - Iniciando autenticação para usuário: devebsjunior@gmail.com
+2026-06-09 15:26:19.543 [tomcat-handler-12] DEBUG b.c.a.a.security.TokenService.gerarToken:63 - Token gerado com sucesso para conta: 123456
+2026-06-09 15:26:19.543 [tomcat-handler-12] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:55 - Token gerado e resposta preparada para: devebsjunior@gmail.com
+2026-06-09 15:29:04.817 [tomcat-handler-18] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:27 - Iniciando autenticação para usuário: devebsjunior@gmail.com
+2026-06-09 15:29:05.099 [tomcat-handler-18] DEBUG b.c.a.a.security.TokenService.gerarToken:63 - Token gerado com sucesso para conta: 123456
+2026-06-09 15:29:05.100 [tomcat-handler-18] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:55 - Token gerado e resposta preparada para: devebsjunior@gmail.com
+2026-06-09 15:39:23.935 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 15:44:22.631 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 15:45:16.542 [tomcat-handler-2] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:27 - Iniciando autenticação para usuário: devebsjunior@gmail.com
+2026-06-09 15:45:16.895 [tomcat-handler-2] DEBUG b.c.a.a.security.TokenService.gerarToken:63 - Token gerado com sucesso para conta: 123456
+2026-06-09 15:45:16.896 [tomcat-handler-2] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:55 - Token gerado e resposta preparada para: devebsjunior@gmail.com
+2026-06-09 15:50:20.099 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 15:50:28.906 [tomcat-handler-0] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 15:50:28.907 [tomcat-handler-0] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 15:53:07.947 [tomcat-handler-2] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 15:53:07.948 [tomcat-handler-2] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 15:54:37.446 [tomcat-handler-4] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 15:54:37.447 [tomcat-handler-4] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 15:54:44.968 [tomcat-handler-5] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 15:54:44.968 [tomcat-handler-5] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 15:56:11.547 [tomcat-handler-7] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 15:56:11.548 [tomcat-handler-7] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 15:57:01.874 [tomcat-handler-8] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 15:57:01.875 [tomcat-handler-8] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 15:57:03.129 [tomcat-handler-9] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 15:57:03.130 [tomcat-handler-9] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 15:57:12.889 [tomcat-handler-10] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 15:57:12.894 [tomcat-handler-10] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 15:57:15.373 [tomcat-handler-11] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 15:57:15.373 [tomcat-handler-11] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 15:57:23.529 [tomcat-handler-12] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 15:57:23.536 [tomcat-handler-12] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 15:57:28.093 [tomcat-handler-13] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 15:57:28.093 [tomcat-handler-13] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 15:57:33.125 [tomcat-handler-14] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 15:57:33.129 [tomcat-handler-14] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 15:57:38.366 [tomcat-handler-15] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 15:57:38.369 [tomcat-handler-15] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:01:52.202 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 16:02:00.791 [tomcat-handler-0] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:02:00.792 [tomcat-handler-0] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:02:21.256 [tomcat-handler-1] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:02:21.257 [tomcat-handler-1] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:06:54.787 [tomcat-handler-5] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:06:54.788 [tomcat-handler-5] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:06:57.030 [tomcat-handler-6] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:06:57.032 [tomcat-handler-6] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:08:15.310 [tomcat-handler-8] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:08:15.311 [tomcat-handler-8] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:08:16.881 [tomcat-handler-10] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:08:16.881 [tomcat-handler-10] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:08:20.290 [tomcat-handler-11] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:08:20.291 [tomcat-handler-11] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:10:15.726 [tomcat-handler-13] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:27 - Iniciando autenticação para usuário: devedsonbelem@gmail.com
+2026-06-09 16:10:25.457 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 16:10:30.583 [tomcat-handler-0] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:27 - Iniciando autenticação para usuário: devebsjunior@gmail.com
+2026-06-09 16:10:30.937 [tomcat-handler-0] DEBUG b.c.a.a.security.TokenService.gerarToken:63 - Token gerado com sucesso para conta: 123456
+2026-06-09 16:10:30.937 [tomcat-handler-0] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:55 - Token gerado e resposta preparada para: devebsjunior@gmail.com
+2026-06-09 16:10:32.238 [tomcat-handler-2] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:10:32.238 [tomcat-handler-1] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:10:32.239 [tomcat-handler-2] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:10:32.239 [tomcat-handler-1] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:10:33.662 [tomcat-handler-3] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:10:33.663 [tomcat-handler-3] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:10:37.100 [tomcat-handler-4] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:10:37.100 [tomcat-handler-4] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:10:41.798 [tomcat-handler-5] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:10:41.798 [tomcat-handler-5] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:12:50.662 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 16:13:57.646 [tomcat-handler-0] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:13:57.647 [tomcat-handler-0] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:13:57.861 [tomcat-handler-1] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:13:57.861 [tomcat-handler-1] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:16:36.633 [tomcat-handler-3] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:16:36.635 [tomcat-handler-3] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:16:36.637 [tomcat-handler-4] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:16:36.637 [tomcat-handler-4] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:16:45.932 [tomcat-handler-5] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:16:45.932 [tomcat-handler-5] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:20:31.774 [tomcat-handler-8] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:20:31.780 [tomcat-handler-8] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:20:52.897 [tomcat-handler-9] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:20:52.897 [tomcat-handler-9] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:31:11.843 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 16:31:22.123 [tomcat-handler-0] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:31:22.123 [tomcat-handler-0] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:33:12.712 [tomcat-handler-2] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:33:12.716 [tomcat-handler-2] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:33:16.354 [tomcat-handler-3] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:33:16.354 [tomcat-handler-3] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:34:47.718 [tomcat-handler-6] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:34:47.719 [tomcat-handler-6] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:35:31.869 [tomcat-handler-7] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:35:31.869 [tomcat-handler-7] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:41:01.546 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 16:41:23.423 [tomcat-handler-1] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:27 - Iniciando autenticação para usuário: devebsjunior@gmail.com
+2026-06-09 16:41:23.788 [tomcat-handler-1] DEBUG b.c.a.a.security.TokenService.gerarToken:63 - Token gerado com sucesso para conta: 123456
+2026-06-09 16:41:23.789 [tomcat-handler-1] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:55 - Token gerado e resposta preparada para: devebsjunior@gmail.com
+2026-06-09 16:41:25.080 [tomcat-handler-4] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:41:25.081 [tomcat-handler-4] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:41:25.080 [tomcat-handler-3] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:41:25.082 [tomcat-handler-3] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:41:27.258 [tomcat-handler-5] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:41:27.258 [tomcat-handler-5] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:41:32.109 [tomcat-handler-6] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:41:32.110 [tomcat-handler-6] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:41:35.680 [tomcat-handler-7] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:41:35.680 [tomcat-handler-7] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:42:08.164 [tomcat-handler-8] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:42:08.164 [tomcat-handler-8] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:42:08.311 [tomcat-handler-9] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:42:08.311 [tomcat-handler-9] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:46:06.191 [tomcat-handler-12] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:46:06.191 [tomcat-handler-12] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:46:21.607 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 16:46:28.386 [tomcat-handler-0] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:46:28.387 [tomcat-handler-0] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:46:37.801 [tomcat-handler-1] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:46:37.801 [tomcat-handler-1] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:46:40.200 [tomcat-handler-2] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:46:40.200 [tomcat-handler-2] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:46:57.798 [tomcat-handler-3] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:46:57.799 [tomcat-handler-3] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:46:57.905 [tomcat-handler-4] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:46:57.906 [tomcat-handler-4] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:47:00.776 [tomcat-handler-5] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:47:00.776 [tomcat-handler-5] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:47:44.504 [tomcat-handler-6] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:47:44.505 [tomcat-handler-6] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:47:44.610 [tomcat-handler-7] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:47:44.611 [tomcat-handler-7] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:50:21.182 [tomcat-handler-9] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:50:21.183 [tomcat-handler-9] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:50:52.172 [tomcat-handler-11] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:50:52.177 [tomcat-handler-11] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:51:17.270 [tomcat-handler-12] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:51:17.270 [tomcat-handler-12] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:51:20.107 [tomcat-handler-13] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:51:20.108 [tomcat-handler-13] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:52:19.724 [tomcat-handler-14] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:52:19.724 [tomcat-handler-14] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:53:03.250 [tomcat-handler-15] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:53:03.250 [tomcat-handler-15] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:53:09.668 [tomcat-handler-16] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:53:09.668 [tomcat-handler-16] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:55:07.607 [tomcat-handler-18] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:55:07.609 [tomcat-handler-18] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:55:29.400 [tomcat-handler-19] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:55:29.401 [tomcat-handler-19] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:55:38.418 [tomcat-handler-20] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:27 - Iniciando autenticação para usuário: devebsjunior@gmail.com
+2026-06-09 16:55:38.711 [tomcat-handler-20] DEBUG b.c.a.a.security.TokenService.gerarToken:63 - Token gerado com sucesso para conta: 123456
+2026-06-09 16:55:38.711 [tomcat-handler-20] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:55 - Token gerado e resposta preparada para: devebsjunior@gmail.com
+2026-06-09 16:55:39.967 [tomcat-handler-21] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:55:39.967 [tomcat-handler-21] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:55:39.976 [tomcat-handler-22] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:55:39.976 [tomcat-handler-22] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:55:41.181 [tomcat-handler-23] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:55:41.181 [tomcat-handler-23] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 16:59:11.701 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 16:59:21.442 [tomcat-handler-0] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 16:59:21.443 [tomcat-handler-0] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 17:00:29.369 [tomcat-handler-2] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 17:00:29.370 [tomcat-handler-2] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 17:00:35.033 [tomcat-handler-3] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 17:00:35.034 [tomcat-handler-3] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 17:00:38.268 [tomcat-handler-4] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 17:00:38.269 [tomcat-handler-4] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 17:00:50.818 [tomcat-handler-5] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 17:00:50.819 [tomcat-handler-5] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 17:00:54.267 [tomcat-handler-6] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 17:00:54.267 [tomcat-handler-6] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 17:01:53.857 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 17:05:41.596 [tomcat-handler-0] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 17:05:41.597 [tomcat-handler-0] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 17:11:31.671 [tomcat-handler-2] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 17:11:31.671 [tomcat-handler-2] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 17:11:34.183 [tomcat-handler-4] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 17:11:34.183 [tomcat-handler-4] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 17:12:00.880 [tomcat-handler-5] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 17:12:00.881 [tomcat-handler-5] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 17:23:31.212 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 17:25:26.107 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 17:25:40.609 [tomcat-handler-1] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:27 - Iniciando autenticação para usuário: devebsjunior@gmail.com
+2026-06-09 17:25:40.954 [tomcat-handler-1] DEBUG b.c.a.a.security.TokenService.gerarToken:63 - Token gerado com sucesso para conta: 123456
+2026-06-09 17:25:40.954 [tomcat-handler-1] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:55 - Token gerado e resposta preparada para: devebsjunior@gmail.com
+2026-06-09 17:25:42.256 [tomcat-handler-3] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 17:25:42.256 [tomcat-handler-4] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 17:25:42.257 [tomcat-handler-3] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 17:25:42.257 [tomcat-handler-4] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 17:25:43.314 [tomcat-handler-5] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 17:25:43.314 [tomcat-handler-5] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 17:26:01.677 [tomcat-handler-6] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 17:26:01.678 [tomcat-handler-6] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 17:26:01.796 [tomcat-handler-7] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 17:26:01.797 [tomcat-handler-7] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 17:30:29.006 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 17:32:02.950 [tomcat-handler-0] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 17:32:02.952 [tomcat-handler-0] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 17:37:37.666 [tomcat-handler-1] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 17:37:37.667 [tomcat-handler-1] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 17:37:49.190 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 17:38:11.648 [tomcat-handler-0] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 17:38:11.649 [tomcat-handler-0] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 17:47:46.222 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 17:48:17.721 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 17:48:37.531 [tomcat-handler-0] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 17:48:37.533 [tomcat-handler-0] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 17:48:41.353 [tomcat-handler-1] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 17:48:41.354 [tomcat-handler-1] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-09 17:54:01.015 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-09 17:54:07.293 [tomcat-handler-0] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
+2026-06-09 17:54:07.294 [tomcat-handler-0] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36

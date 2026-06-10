@@ -22,6 +22,8 @@ public class Audit {
     private String perfil;
     private String operacao;
     private boolean sucesso;
+
+    @Column(columnDefinition = "TEXT")
     private String mensagem;
     private String regra;
     private String origem;

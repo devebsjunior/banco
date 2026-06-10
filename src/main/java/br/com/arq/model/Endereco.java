@@ -33,8 +33,7 @@ public class Endereco {
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "cliente_id", nullable = false)
+    @JsonIgnore
     private Cliente cliente;
-
-
 
 }

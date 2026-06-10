@@ -27,9 +27,17 @@ public class AccessControlInterceptor implements HandlerInterceptor {
             return true;
         }
         if ("OPTIONS".equalsIgnoreCase(request.getMethod())) {
-            return true;
+            response.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
+            response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+            response.setHeader("Access-Control-Allow-Headers", "Authorization, Content-Type");
+            response.setHeader("Access-Control-Allow-Credentials", "true");
+            response.setStatus(HttpServletResponse.SC_OK); // Retorna 200 OK
+            return false; // Retorna false para interromper o fluxo aqui e responder direto ao browser
         }
-        if (path.startsWith("/api/auth")) {
+        if (path.contains("swagger") ||
+                path.contains("api-docs") ||
+                path.contains("webjars") ||
+                path.startsWith("/api/auth")) {
             return true;
         }
         try {

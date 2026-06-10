@@ -1,11 +1,15 @@
 package br.com.arq.service;
 
 import br.com.arq.dto.request.ClienteRequestDTO;
+import br.com.arq.model.Agencia;
 import br.com.arq.model.Cliente;
+import br.com.arq.model.Conta;
+import br.com.arq.repository.AgenciaRepository;
 import br.com.arq.repository.ClienteRepository;
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import java.math.BigDecimal;
 import java.util.List;
 
 @Service
@@ -15,6 +19,7 @@ public class ClienteService {
   private final ClienteRepository repository;
   private final AppLogService logService;
   private final AuditService auditService;
+  private final AgenciaRepository agenciaRepository;
 
   @Transactional
   public Cliente criar(ClienteRequestDTO dto) {
@@ -26,14 +31,50 @@ public class ClienteService {
         throw new RuntimeException("CPF já cadastrado");
       });
 
-      Cliente cliente = Cliente.builder().nome(dto.nome()).cpf(dto.cpf()).email(dto.email()).build();
+      Cliente cliente = Cliente.builder()
+              .nome(dto.nome())
+              .cpf(dto.cpf())
+              .email(dto.email())
+              .build();
+
+      if (dto.enderecoCliente() != null) {
+        br.com.arq.model.Endereco endereco = br.com.arq.model.Endereco.builder()
+                .logradouro(dto.enderecoCliente().logradouro())
+                .numero(dto.enderecoCliente().numero())
+                .complemento(dto.enderecoCliente().complemento())
+                .bairro(dto.enderecoCliente().bairro())
+                .cidade(dto.enderecoCliente().cidade())
+                .estado(dto.enderecoCliente().estado())
+                .cep(dto.enderecoCliente().cep())
+                .cliente(cliente)
+                .build();
+
+        cliente.setEndereco(endereco);
+      }
+
+      if (dto.conta() != null) {
+        Agencia agencia = agenciaRepository.findById(dto.conta().agencia().id())
+                .orElseThrow(() -> new RuntimeException("Agência associada não encontrada"));
+
+        Conta conta = Conta.builder()
+                .numeroConta(dto.conta().numeroConta())
+                .saldo(new BigDecimal("0.00"))
+                .agencia(agencia)
+                .cliente(cliente)
+                .perfil("CLIENTE")
+                .senha(dto.senha())
+                .build();
+
+        cliente.setContas(List.of(conta));
+      }
+
       Cliente salvo = repository.save(cliente);
-      logService.info("Cliente criado CPF=" + dto.cpf(),
-                      "ClienteService");
+
+      logService.info("Cliente criado CPF=" + dto.cpf(), "ClienteService");
       auditService.registrar("system", "CLIENTE",
-                             "CRIAR_CLIENTE", true,
-                             "Cliente criado", null,
-                             "ClienteService", tempo(inicio));
+              "CRIAR_CLIENTE", true,
+              "Cliente criado com endereço e conta bancária", null,
+              "ClienteService", tempo(inicio));
       return salvo;
     }
     catch (Exception ex) {
@@ -51,8 +92,14 @@ public class ClienteService {
     return repository.findByCpf(cpf).orElseThrow(() -> new RuntimeException("Cliente não encontrado"));
   }
 
+  @Transactional(readOnly = true)
   public List<Cliente> buscarTodos() {
-    return repository.findAll();
+    List<Cliente> clientes = repository.findAllComContas();
+    clientes.forEach(c -> {
+      if (c.getContas() != null) c.getContas().size();
+      if (c.getEndereco() != null) c.getEndereco().getId();
+    });
+    return clientes;
   }
 
   @Transactional

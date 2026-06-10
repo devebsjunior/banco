@@ -34,17 +34,14 @@ public class Conta {
     @Column(name = "numero_conta", unique = true)
     private String numeroConta;
 
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "cliente_id", nullable = false)
     @JsonIgnore
     private Cliente cliente;
 
-
     @JsonIgnore
     @OneToMany(mappedBy = "conta", fetch = FetchType.LAZY)
     private List<Transacao> transacoes;
-
 
     @NotNull(message = "O saldo inicial deve ser informado")
     @Min(value = 0, message = "O saldo nao pode ser negativo")
