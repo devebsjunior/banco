@@ -991,3 +991,83 @@ Consider defining a bean of type 'br.com.arq.repository.ContaRepository' in your
     alter table transacoes 
        drop 
        foreign key if exists FKqknvd0xl8u532gmq093dgvxoe
+2026-06-10 16:00:33.521 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKcv38e6kk2iu1nm5qffjma2kds
+2026-06-10 16:00:33.522 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKe46s8q5k8d3r3h8x1vs19nl82
+2026-06-10 16:00:33.522 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table enderecos 
+       drop 
+       foreign key if exists FKifst74rmma55fhyky5g1l0589
+2026-06-10 16:00:33.523 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table perfis 
+       drop 
+       foreign key if exists FK4khnbs8y5xgijftx9c34bbpg
+2026-06-10 16:00:33.523 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table transacoes 
+       drop 
+       foreign key if exists FKqknvd0xl8u532gmq093dgvxoe
+2026-06-10 16:01:54.911 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKcv38e6kk2iu1nm5qffjma2kds
+2026-06-10 16:01:54.912 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKe46s8q5k8d3r3h8x1vs19nl82
+2026-06-10 16:01:54.912 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table enderecos 
+       drop 
+       foreign key if exists FKifst74rmma55fhyky5g1l0589
+2026-06-10 16:01:54.913 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table perfis 
+       drop 
+       foreign key if exists FK4khnbs8y5xgijftx9c34bbpg
+2026-06-10 16:01:54.913 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table transacoes 
+       drop 
+       foreign key if exists FKqknvd0xl8u532gmq093dgvxoe
+2026-06-10 16:06:43.717 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKcv38e6kk2iu1nm5qffjma2kds
+2026-06-10 16:06:43.717 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKe46s8q5k8d3r3h8x1vs19nl82
+2026-06-10 16:06:43.717 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table enderecos 
+       drop 
+       foreign key if exists FKifst74rmma55fhyky5g1l0589
+2026-06-10 16:06:43.718 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table perfis 
+       drop 
+       foreign key if exists FK4khnbs8y5xgijftx9c34bbpg
+2026-06-10 16:06:43.718 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table transacoes 
+       drop 
+       foreign key if exists FKqknvd0xl8u532gmq093dgvxoe
+2026-06-10 16:42:09.502 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKcv38e6kk2iu1nm5qffjma2kds
+2026-06-10 16:42:09.503 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table contas 
+       drop 
+       foreign key if exists FKe46s8q5k8d3r3h8x1vs19nl82
+2026-06-10 16:42:09.503 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table enderecos 
+       drop 
+       foreign key if exists FKifst74rmma55fhyky5g1l0589
+2026-06-10 16:42:09.503 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table perfis 
+       drop 
+       foreign key if exists FK4khnbs8y5xgijftx9c34bbpg
+2026-06-10 16:42:09.504 [SpringApplicationShutdownHook] ERROR o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl.perform:630 - HHH000478: Unsuccessful: 
+    alter table transacoes 
+       drop 
+       foreign key if exists FKqknvd0xl8u532gmq093dgvxoe

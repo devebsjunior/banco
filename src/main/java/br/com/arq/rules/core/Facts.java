@@ -5,6 +5,18 @@ package br.com.arq.rules.core;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * Container de dados (fatos) utilizado pelo motor de regras.
+ *  Armazena informações necessárias para avaliação e execução das regras.</p>
+ * É thread-safe, utilizando {@link java.util.concurrent.ConcurrentHashMap}.</p>
+ *
+ *   Suporta três formas de armazenamento:
+ *     Chaves tipadas ({@link FactKey}) - recomendado
+ *     _ Classe (Class)
+ *     _ String
+ * </ul>
+ * </p>
+ */
 public class Facts {
 
 

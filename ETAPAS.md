@@ -1,8 +1,58 @@
+# dOCUMENTAÇÃO DO Projeto
+
+
+
+
+###  1_ Núcleo do Motor de Regras
+
+```text=
+   | Classe        | Responsabilidade               | Métodos              | O que faz                          |
+   |--------------|------------------------------|---------------------|-----------------------------------|
+   | FactKey<T>   | Representa uma chave tipada   | name()              | Retorna nome da chave             |
+   |              |                               | toString()          | Retorna representação textual     |
+   | FactKeys     | Centraliza chaves do sistema  | (constantes)        | Define chaves como CPF, VALOR     |
+   | Facts        | Armazena dados das regras     | add(FactKey, T)     | Adiciona fato tipado              |
+   |              |                               | get(FactKey)        | Recupera fato tipado              |
+   |              |                               | add(Class, T)       | Armazena por tipo                 |
+   |              |                               | get(Class)          | Recupera por tipo                 |
+   |              |                               | add(String, Object) | Armazena por string               |
+   |              |                               | get(String)         | Recupera por string               |
+   |              |                               | contains(Object)    | Verifica se existe                |
+   |              |                               | remove(Object)      | Remove fato                       |
+```
+
+
+###  2_ Construção e Execução de Regras
+
+```text=
+
+| Classe      | Responsabilidade       | Métodos              | O que faz                        |
+|-------------|------------------------|----------------------|----------------------------------|
+| RuleBuilder | Builder de regras      | when(String, When)   | Define condição da regra         |
+|             |                        | then(Then)           | Define ação da regra             |
+| RuleEngine  | Executa regras         | run()                | Executa todas regras             |
+|             |                        | builder              | Monta engine com regras          |
+| RuleResult  | Resultado da execução  | success()            | Retorno de sucesso               |
+|             |                        | failure()            | Retorno de erro                  |
+
+```
+
+
+3. Fluxo do Engine
+
+```text=
+| Etapa             | Classe      | Descrição                    |
+|-------------------|-------------|------------------------------|
+| Entrada de dados  | Facts       | Armazena informações         |
+| Definição de regra| RuleBuilder | Monta regra                  |
+| Execução          | RuleEngine  | Executa regras               |
+| Resultado         | RuleResult  | Retorna resposta             |
+```
+
+
+
 ## Caminho do PayLoad
-
-
-
-
+ 
 
 
 {

@@ -365,3 +365,7 @@
 2026-06-10 13:19:57.365 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
 2026-06-10 13:25:31.182 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
 2026-06-10 13:28:04.593 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 16:00:25.915 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 16:01:47.171 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 16:06:36.365 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 16:42:01.549 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
