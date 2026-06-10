@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
 
+
 /**
  * Representa um log técnico da aplicação.
  * Usado para registrar eventos de execução,
@@ -25,12 +26,13 @@ public class AppLog {
 
     private String nivel;
 
+    @Column(name = "mensagem", columnDefinition = "TEXT")
     private String mensagem;
 
     private String origem;
 
+    @Column(columnDefinition = "TEXT")
     private String error;
-
 
     @Column(columnDefinition = "TEXT")
     private String stackTrace;

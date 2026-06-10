@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 import br.com.arq.model.Conta;
 import jakarta.persistence.LockModeType;
 
+
 @Repository
 public interface ContaRepository extends JpaRepository<Conta, Long> {
 
@@ -25,4 +26,7 @@ public interface ContaRepository extends JpaRepository<Conta, Long> {
     
     @Query("SELECT c FROM Conta c WHERE c.cliente.cpf = :cpf")
     List<Conta> findByClienteCpf(@Param("cpf") String cpf);
+
+    Optional<Conta> findByClienteEmail(String email);
+    Optional<Conta> findByClienteEmailOrClienteCpf(String email, String cpf);
 }

@@ -9,6 +9,7 @@ import lombok.*;
 
 import java.util.List;
 
+
 @Entity
 @Table(name = "clientes")
 @Getter
@@ -34,9 +35,11 @@ public class Cliente {
     @Column(unique = true)
     private String email;
 
-    @OneToMany(mappedBy = "cliente",
-            fetch = FetchType.LAZY)
-    @JsonIgnore
+    @OneToMany(
+            mappedBy = "cliente",
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL
+    )
     private List<Conta> contas;
 
     @OneToOne(mappedBy = "cliente", fetch = FetchType.LAZY,

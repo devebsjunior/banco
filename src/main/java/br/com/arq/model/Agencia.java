@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import java.util.List;
 
+
 @Entity
 @Table(name = "agencias")
 @Getter
@@ -19,24 +20,19 @@ public class Agencia {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    
     private String codigo;
+
     @NotNull(message = "O nome da agência é obrigatório")
     private String nomeAgencia;
+
     @NotNull(message = "O número da agência é obrigatório")
     private String numeroAgencia;
 
-     @JsonIgnore
     private String logradouro;
-    @JsonIgnore
     private String numero;
-    @JsonIgnore
     private String bairro;
-    @JsonIgnore
     private String cidade;
-    @JsonIgnore
     private String estado;
-    @JsonIgnore
     private String cep;
 
     @OneToMany(
@@ -45,6 +41,4 @@ public class Agencia {
     )
     @JsonIgnore
     private List<Conta> contas;
-
 }
-

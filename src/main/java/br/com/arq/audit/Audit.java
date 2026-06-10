@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 @Builder
 public class Audit {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,6 +23,8 @@ public class Audit {
     private String perfil;
     private String operacao;
     private boolean sucesso;
+
+    @Column(columnDefinition = "TEXT")
     private String mensagem;
     private String regra;
     private String origem;

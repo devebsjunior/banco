@@ -6,10 +6,11 @@ import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.security.SecurityScheme;
 import org.springframework.context.annotation.Configuration;
 
+
 @Configuration
 @OpenAPIDefinition(
         info = @Info(
-                title = "API Banco Arq",
+                title = "API Bank Trade Invest",
                 version = "1.0",
                 description = "API de contas bancárias com JWT"
         )

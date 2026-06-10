@@ -7,6 +7,7 @@ import lombok.*;
 
 import java.util.List;
 
+
 @Entity
 @Table(name = "enderecos")
 @Getter
@@ -33,8 +34,7 @@ public class Endereco {
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "cliente_id", nullable = false)
+    @JsonIgnore
     private Cliente cliente;
-
-
 
 }
