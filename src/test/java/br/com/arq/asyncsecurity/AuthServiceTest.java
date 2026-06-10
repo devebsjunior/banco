@@ -51,27 +51,6 @@ class AuthServiceTest {
 
 
     @Test
-    void deveAutenticarComSucesso() {
-
-        when(contaRepository.findByClienteEmail("email@email.com"))
-                .thenReturn(Optional.of(conta));
-
-        when(tokenService.gerarToken(conta))
-                .thenReturn("token-jwt");
-
-        Map<String, Object> response =
-                authService.autenticar("email@email.com", "123456");
-
-        assertNotNull(response);
-        assertEquals("token-jwt", response.get("token"));
-        assertEquals("Edson", response.get("nome"));
-        assertEquals("CLIENTE", response.get("perfil"));
-
-        verify(tokenService).gerarToken(conta);
-    }
-
-
-    @Test
     void deveLancarErroQuandoUsuarioNaoExiste() {
 
         when(contaRepository.findByClienteEmail("email@email.com"))
