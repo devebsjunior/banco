@@ -1,68 +1,121 @@
-//package br.com.arq.auth;
-//
-//import static org.junit.jupiter.api.Assertions.*;
-//import static org.mockito.Mockito.*;
-//
-//import java.util.Optional;
-//
-//import org.junit.jupiter.api.DisplayName;
-//import org.junit.jupiter.api.Test;
-//import org.junit.jupiter.api.extension.ExtendWith;
-//import org.mockito.InjectMocks;
-//import org.mockito.Mock;
-//import org.mockito.junit.jupiter.MockitoExtension;
-//
-//import br.com.arq.model.Conta;
-//import br.com.arq.repository.ContaRepository;
-//
-//@ExtendWith(MockitoExtension.class)
-//class AuthServiceTest {
-//
-//    @Mock
-//    private ContaRepository contaRepository;
-//
-//    @InjectMocks
-//    private AuthService authService;
-//
-//    @Test
-//    @DisplayName("Deve autenticar com sucesso quando login e senha estiverem corretos")
-//    void deveAutenticarComSucesso() {
-//        String login = "123789";
-//        String senha = "password123";
-//        Conta contaMock = new Conta();
-//        contaMock.setNumeroConta(login);
-//        contaMock.setSenha(senha);
-//
-//        when(contaRepository.findByNumeroConta(login)).thenReturn(Optional.of(contaMock));
-//
-//        Conta resultado = authService.autenticar(login, senha);
-//        assertNotNull(resultado);
-//        assertEquals(login, resultado.getNumeroConta());
-//        verify(contaRepository, times(1)).findByNumeroConta(login);
-//    }
-//
-//    @Test
-//    @DisplayName("Deve lançar exceção quando a senha estiver incorreta")
-//    void deveLancarExcecaoSenhaIncorreta() {
-//        String login = "123789";
-//        Conta contaMock = new Conta();
-//        contaMock.setNumeroConta(login);
-//        contaMock.setSenha("senha_correta");
-//
-//        when(contaRepository.findByNumeroConta(login)).thenReturn(Optional.of(contaMock));
-//        RuntimeException exception = assertThrows(RuntimeException.class, () -> {
-//            authService.autenticar(login, "senha_errada");
-//        });
-//        assertEquals("Senha incorreta!", exception.getMessage());
-//    }
-//
-//    @Test
-//    @DisplayName("Deve lançar exceção quando a conta não for encontrada")
-//    void deveLancarExcecaoContaInexistente() {
-//        when(contaRepository.findByNumeroConta("999999")).thenReturn(Optional.empty());
-//        RuntimeException exception = assertThrows(RuntimeException.class, () -> {
-//            authService.autenticar("999999", "123456");
-//        });
-//        assertTrue(exception.getMessage().contains("Conta não encontrada"));
-//    }
-//}
+package br.com.arq.asyncsecurity;
+
+import br.com.arq.model.Cliente;
+import br.com.arq.model.Conta;
+import br.com.arq.repository.ContaRepository;
+import br.com.arq.asyncsecurity.security.TokenService;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+
+import java.math.BigDecimal;
+import java.util.Map;
+import java.util.Optional;
+
+@ExtendWith(MockitoExtension.class)
+class AuthServiceTest {
+
+    @InjectMocks
+    private AuthService authService;
+
+    @Mock
+    private ContaRepository contaRepository;
+
+    @Mock
+    private TokenService tokenService;
+
+    private Conta conta;
+
+    @BeforeEach
+    void setup() {
+        Cliente cliente = new Cliente();
+        cliente.setNome("Edson");
+
+        conta = new Conta();
+        conta.setNumeroConta("123");
+        conta.setSaldo(BigDecimal.valueOf(1000));
+        conta.setPerfil("CLIENTE");
+        conta.setCliente(cliente);
+
+        // senha = "123456"
+        conta.setSenha(org.mindrot.jbcrypt.BCrypt.hashpw("123456", org.mindrot.jbcrypt.BCrypt.gensalt()));
+    }
+
+
+    @Test
+    void deveAutenticarComSucesso() {
+
+        when(contaRepository.findByClienteEmail("email@email.com"))
+                .thenReturn(Optional.of(conta));
+
+        when(tokenService.gerarToken(conta))
+                .thenReturn("token-jwt");
+
+        Map<String, Object> response =
+                authService.autenticar("email@email.com", "123456");
+
+        assertNotNull(response);
+        assertEquals("token-jwt", response.get("token"));
+        assertEquals("Edson", response.get("nome"));
+        assertEquals("CLIENTE", response.get("perfil"));
+
+        verify(tokenService).gerarToken(conta);
+    }
+
+
+    @Test
+    void deveLancarErroQuandoUsuarioNaoExiste() {
+
+        when(contaRepository.findByClienteEmail("email@email.com"))
+                .thenReturn(Optional.empty());
+
+        RuntimeException ex = assertThrows(RuntimeException.class, () -> {
+            authService.autenticar("email@email.com", "123456");
+        });
+
+        assertEquals("Usuário ou senha inválidos", ex.getMessage());
+    }
+
+
+    @Test
+    void deveLancarErroQuandoSenhaIncorreta() {
+
+        when(contaRepository.findByClienteEmail("email@email.com"))
+                .thenReturn(Optional.of(conta));
+
+        RuntimeException ex = assertThrows(RuntimeException.class, () -> {
+            authService.autenticar("email@email.com", "senhaErrada");
+        });
+
+        assertEquals("Senha incorreta!", ex.getMessage());
+    }
+
+    @Test
+    void deveLancarErroQuandoLoginVazio() {
+
+        RuntimeException ex = assertThrows(RuntimeException.class, () -> {
+            authService.autenticar("", "123456");
+        });
+
+        assertEquals("Login não informado", ex.getMessage());
+    }
+
+
+    @Test
+    void deveLancarErroQuandoSenhaVazia() {
+
+        RuntimeException ex = assertThrows(RuntimeException.class, () -> {
+            authService.autenticar("email@email.com", "");
+        });
+
+        assertEquals("Senha não informada", ex.getMessage());
+    }
+}

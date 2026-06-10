@@ -21,6 +21,7 @@ public class ClienteService {
   private final AppLogService logService;
   private final AuditService auditService;
   private final AgenciaRepository agenciaRepository;
+  private final EmailService emailService;
 
   @Transactional
   public Cliente criar(ClienteRequestDTO dto) {
@@ -76,6 +77,7 @@ public class ClienteService {
               "CRIAR_CLIENTE", true,
               "Cliente criado com endereço e conta bancária", null,
               "ClienteService", tempo(inicio));
+      emailService.enviarGmail(salvo.getEmail());
       return salvo;
     }
     catch (Exception ex) {

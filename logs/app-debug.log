@@ -301,3 +301,67 @@
 2026-06-09 17:54:01.015 [restartedMain] DEBUG br.com.arq.BancoApplication.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
 2026-06-09 17:54:07.293 [tomcat-handler-0] DEBUG b.c.a.a.security.TokenService.validarToken:86 - Token validado com sucesso para conta: 123456
 2026-06-09 17:54:07.294 [tomcat-handler-0] DEBUG b.c.a.a.i.AccessControlInterceptor.preHandle:59 - OK | Conta=123456 | IP=0:0:0:0:0:0:0:1 | Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36
+2026-06-10 09:19:24.549 [main] DEBUG b.c.a.a.AuthControllerTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 09:19:27.166 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: email@email.com
+2026-06-10 09:19:27.222 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:56 - Token gerado e resposta preparada para: email@email.com
+2026-06-10 09:19:27.302 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: 
+2026-06-10 09:19:27.363 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: email@email.com
+2026-06-10 09:19:27.478 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: email@email.com
+2026-06-10 09:19:27.531 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: email@email.com
+2026-06-10 09:19:27.664 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 09:19:32.966 [main] DEBUG b.c.a.controller.AdminControllerTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 09:20:43.204 [main] DEBUG b.c.a.a.AuthControllerTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 09:20:45.659 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: email@email.com
+2026-06-10 09:20:45.715 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:56 - Token gerado e resposta preparada para: email@email.com
+2026-06-10 09:20:45.782 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: 
+2026-06-10 09:20:45.835 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: email@email.com
+2026-06-10 09:20:45.936 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: email@email.com
+2026-06-10 09:20:45.988 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: email@email.com
+2026-06-10 09:20:46.094 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 09:20:52.369 [main] DEBUG b.c.a.controller.AdminControllerTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 09:23:10.879 [main] DEBUG b.c.a.a.AuthControllerTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 09:23:13.634 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: email@email.com
+2026-06-10 09:23:13.701 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:56 - Token gerado e resposta preparada para: email@email.com
+2026-06-10 09:23:13.801 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: 
+2026-06-10 09:23:13.874 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: email@email.com
+2026-06-10 09:23:14.029 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: email@email.com
+2026-06-10 09:23:14.087 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: email@email.com
+2026-06-10 09:23:14.207 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 09:23:20.626 [main] DEBUG b.c.a.controller.AdminControllerTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 09:45:41.045 [main] DEBUG b.c.a.a.AuthControllerTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 09:45:43.681 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: email@email.com
+2026-06-10 09:45:43.747 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:56 - Token gerado e resposta preparada para: email@email.com
+2026-06-10 09:45:43.857 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: 
+2026-06-10 09:45:43.916 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: email@email.com
+2026-06-10 09:45:44.042 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: email@email.com
+2026-06-10 09:45:44.100 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: email@email.com
+2026-06-10 09:45:44.221 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 09:45:50.961 [main] DEBUG b.c.a.controller.AdminControllerTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 09:59:04.485 [main] DEBUG b.c.a.a.AuthControllerTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 09:59:07.200 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: email@email.com
+2026-06-10 09:59:07.260 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:56 - Token gerado e resposta preparada para: email@email.com
+2026-06-10 09:59:07.337 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: 
+2026-06-10 09:59:07.399 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: email@email.com
+2026-06-10 09:59:07.515 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: email@email.com
+2026-06-10 09:59:07.581 [main] DEBUG b.com.arq.asyncsecurity.AuthService.autenticar:28 - Iniciando autenticação para usuário: email@email.com
+2026-06-10 09:59:07.748 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 09:59:14.449 [main] DEBUG b.c.a.controller.AdminControllerTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 10:02:44.886 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 10:02:54.715 [main] DEBUG b.c.a.controller.AdminControllerTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 10:06:04.663 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 10:06:12.526 [main] DEBUG b.c.a.controller.AdminControllerTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 10:10:33.339 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 10:10:44.443 [main] DEBUG b.c.a.controller.AdminControllerTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 11:53:49.649 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 11:53:57.129 [main] DEBUG b.c.a.controller.AdminControllerTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 12:03:39.295 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 12:04:12.053 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 12:32:05.444 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 12:37:44.714 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 12:48:38.427 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 12:58:42.994 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 12:59:50.725 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 13:02:24.669 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 13:19:57.365 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 13:25:31.182 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8
+2026-06-10 13:28:04.593 [main] DEBUG br.com.arq.config.WebConfigTest.logStarting:51 - Running with Spring Boot v3.3.0, Spring v6.1.8

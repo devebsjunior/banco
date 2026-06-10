@@ -28,6 +28,7 @@ public class UsuarioService {
   private final ClienteRepository clienteRepository;
   private final AppLogService logService;
   private final AuditService auditService;
+  private final EmailService emailService;
 
   @Transactional
   public Usuario criarUsuario(UsuarioRequestDTO dto) {
@@ -49,6 +50,8 @@ public class UsuarioService {
       Usuario salvo = usuarioRepository.save(usuario);
 
       auditoriaSucesso("CRIAR_USUARIO", "Usuário criado", inicio);
+
+      emailService.enviarGmail(salvo.getEmail());
       return salvo;
 
     } catch (Exception ex) {

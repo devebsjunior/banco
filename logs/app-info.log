@@ -1503,3 +1503,487 @@ Error starting ApplicationContext. To display the condition evaluation report re
 2026-06-09 17:55:37.971 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-06-09 17:55:38.015 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
 2026-06-09 17:55:38.018 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-10 09:19:24.497 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 8.0.1.Final
+2026-06-10 09:19:26.592 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger.logMessage:82 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-10 09:19:27.538 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.config.WebConfigTest]: WebConfigTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-10 09:19:27.567 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.config.WebConfigTest
+2026-06-10 09:19:27.578 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-10 09:19:28.187 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-10 09:19:28.291 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 91 ms. Found 7 JPA repository interfaces.
+2026-06-10 09:19:28.792 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-10 09:19:28.906 [main] INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-06-10 09:19:28.964 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService:50 - HHH000026: Second-level cache disabled
+2026-06-10 09:19:29.122 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-10 09:19:29.154 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-10 09:19:29.370 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-10 09:19:29.374 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-10 09:19:30.428 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-10 09:19:30.541 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 09:19:31.201 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-10 09:19:32.683 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-10 09:19:32.740 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-10 09:19:32.741 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-10 09:19:32.742 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 1 ms
+2026-06-10 09:19:32.921 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.controller.AdminControllerTest]: AdminControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-10 09:19:32.938 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.controller.AdminControllerTest
+2026-06-10 09:19:32.945 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-10 09:19:33.106 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger.logMessage:82 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-10 09:19:33.530 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 09:19:33.541 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-10 09:19:33.546 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-10 09:20:43.162 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 8.0.1.Final
+2026-06-10 09:20:45.146 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger.logMessage:82 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-10 09:20:45.998 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.config.WebConfigTest]: WebConfigTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-10 09:20:46.024 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.config.WebConfigTest
+2026-06-10 09:20:46.032 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-10 09:20:46.584 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-10 09:20:46.677 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 78 ms. Found 7 JPA repository interfaces.
+2026-06-10 09:20:47.216 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-10 09:20:47.370 [main] INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-06-10 09:20:47.452 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService:50 - HHH000026: Second-level cache disabled
+2026-06-10 09:20:47.758 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-10 09:20:47.808 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-10 09:20:48.064 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-10 09:20:48.068 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-10 09:20:49.212 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-10 09:20:49.318 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 09:20:50.060 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-10 09:20:52.064 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-10 09:20:52.132 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-10 09:20:52.133 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-10 09:20:52.136 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 2 ms
+2026-06-10 09:20:52.301 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.controller.AdminControllerTest]: AdminControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-10 09:20:52.337 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.controller.AdminControllerTest
+2026-06-10 09:20:52.341 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-10 09:20:52.544 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger.logMessage:82 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-10 09:20:53.033 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 09:20:53.040 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-10 09:20:53.044 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-10 09:23:10.828 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 8.0.1.Final
+2026-06-10 09:23:13.047 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger.logMessage:82 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-10 09:23:14.093 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.config.WebConfigTest]: WebConfigTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-10 09:23:14.126 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.config.WebConfigTest
+2026-06-10 09:23:14.140 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-10 09:23:14.791 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-10 09:23:14.886 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 80 ms. Found 7 JPA repository interfaces.
+2026-06-10 09:23:15.508 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-10 09:23:15.721 [main] INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-06-10 09:23:15.811 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService:50 - HHH000026: Second-level cache disabled
+2026-06-10 09:23:16.114 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-10 09:23:16.151 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-10 09:23:16.430 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-10 09:23:16.434 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-10 09:23:17.775 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-10 09:23:17.865 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 09:23:18.542 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-10 09:23:20.312 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-10 09:23:20.367 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-10 09:23:20.369 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-10 09:23:20.370 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 1 ms
+2026-06-10 09:23:20.539 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.controller.AdminControllerTest]: AdminControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-10 09:23:20.589 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.controller.AdminControllerTest
+2026-06-10 09:23:20.593 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-10 09:23:20.880 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger.logMessage:82 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-10 09:23:21.336 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 09:23:21.344 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-10 09:23:21.348 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-10 09:45:40.985 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 8.0.1.Final
+2026-06-10 09:45:43.160 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger.logMessage:82 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-10 09:45:44.107 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.config.WebConfigTest]: WebConfigTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-10 09:45:44.134 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.config.WebConfigTest
+2026-06-10 09:45:44.145 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-10 09:45:44.781 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-10 09:45:44.877 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 83 ms. Found 7 JPA repository interfaces.
+2026-06-10 09:45:45.467 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-10 09:45:45.645 [main] INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-06-10 09:45:45.740 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService:50 - HHH000026: Second-level cache disabled
+2026-06-10 09:45:46.143 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-10 09:45:46.251 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-10 09:45:46.640 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-10 09:45:46.643 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-10 09:45:48.020 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-10 09:45:48.115 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 09:45:48.763 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-10 09:45:50.628 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-10 09:45:50.685 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-10 09:45:50.686 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-10 09:45:50.688 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 1 ms
+2026-06-10 09:45:50.883 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.controller.AdminControllerTest]: AdminControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-10 09:45:50.928 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.controller.AdminControllerTest
+2026-06-10 09:45:50.935 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-10 09:45:51.132 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger.logMessage:82 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-10 09:45:51.567 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 09:45:51.574 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-10 09:45:51.578 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-10 09:59:04.423 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 8.0.1.Final
+2026-06-10 09:59:06.616 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger.logMessage:82 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-10 09:59:07.595 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.config.WebConfigTest]: WebConfigTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-10 09:59:07.630 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.config.WebConfigTest
+2026-06-10 09:59:07.641 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-10 09:59:08.321 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-10 09:59:08.417 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 82 ms. Found 7 JPA repository interfaces.
+2026-06-10 09:59:09.001 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-10 09:59:09.169 [main] INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-06-10 09:59:09.269 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService:50 - HHH000026: Second-level cache disabled
+2026-06-10 09:59:09.621 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-10 09:59:09.699 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-10 09:59:10.134 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-10 09:59:10.140 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-10 09:59:11.516 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-10 09:59:11.616 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 09:59:12.304 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-10 09:59:14.115 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-10 09:59:14.186 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-10 09:59:14.187 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-10 09:59:14.190 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 1 ms
+2026-06-10 09:59:14.383 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.controller.AdminControllerTest]: AdminControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-10 09:59:14.415 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.controller.AdminControllerTest
+2026-06-10 09:59:14.419 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-10 09:59:14.622 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger.logMessage:82 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-10 09:59:15.076 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 09:59:15.086 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-10 09:59:15.089 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-10 10:02:44.825 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 8.0.1.Final
+2026-06-10 10:02:46.400 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-10 10:02:46.531 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 117 ms. Found 7 JPA repository interfaces.
+2026-06-10 10:02:47.689 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-10 10:02:47.900 [main] INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-06-10 10:02:47.981 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService:50 - HHH000026: Second-level cache disabled
+2026-06-10 10:02:48.212 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-10 10:02:48.265 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-10 10:02:48.536 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-10 10:02:48.541 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-10 10:02:50.262 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-10 10:02:50.369 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 10:02:51.149 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-10 10:02:54.315 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-10 10:02:54.400 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-10 10:02:54.402 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-10 10:02:54.404 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 1 ms
+2026-06-10 10:02:54.618 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.controller.AdminControllerTest]: AdminControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-10 10:02:54.664 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.controller.AdminControllerTest
+2026-06-10 10:02:54.671 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-10 10:02:55.006 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger.logMessage:82 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-10 10:02:55.868 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 10:02:55.878 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-10 10:02:55.887 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-10 10:06:04.610 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 8.0.1.Final
+2026-06-10 10:06:05.905 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-10 10:06:06.005 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 86 ms. Found 7 JPA repository interfaces.
+2026-06-10 10:06:06.892 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-10 10:06:07.065 [main] INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-06-10 10:06:07.193 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService:50 - HHH000026: Second-level cache disabled
+2026-06-10 10:06:07.520 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-10 10:06:07.564 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-10 10:06:07.843 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-10 10:06:07.846 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-10 10:06:09.241 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-10 10:06:09.351 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 10:06:10.070 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-10 10:06:12.126 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-10 10:06:12.214 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-10 10:06:12.215 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-10 10:06:12.218 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 2 ms
+2026-06-10 10:06:12.438 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.controller.AdminControllerTest]: AdminControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-10 10:06:12.490 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.controller.AdminControllerTest
+2026-06-10 10:06:12.496 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-10 10:06:12.745 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger.logMessage:82 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-10 10:06:13.258 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 10:06:13.272 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-10 10:06:13.276 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-10 10:10:33.123 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 8.0.1.Final
+2026-06-10 10:10:35.475 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-10 10:10:35.622 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 127 ms. Found 7 JPA repository interfaces.
+2026-06-10 10:10:36.841 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-10 10:10:37.004 [main] INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-06-10 10:10:37.068 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService:50 - HHH000026: Second-level cache disabled
+2026-06-10 10:10:37.336 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-10 10:10:37.423 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-10 10:10:37.910 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-10 10:10:37.915 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-10 10:10:40.433 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-10 10:10:40.608 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 10:10:41.361 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-10 10:10:43.912 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-10 10:10:44.029 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-10 10:10:44.030 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-10 10:10:44.033 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 2 ms
+2026-06-10 10:10:44.302 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.controller.AdminControllerTest]: AdminControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-10 10:10:44.391 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.controller.AdminControllerTest
+2026-06-10 10:10:44.396 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-10 10:10:44.895 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger.logMessage:82 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-10 10:10:45.682 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 10:10:45.703 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-10 10:10:45.714 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-10 11:53:49.543 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 8.0.1.Final
+2026-06-10 11:53:50.986 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-10 11:53:51.113 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 110 ms. Found 7 JPA repository interfaces.
+2026-06-10 11:53:52.073 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-10 11:53:52.266 [main] INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-06-10 11:53:52.335 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService:50 - HHH000026: Second-level cache disabled
+2026-06-10 11:53:52.553 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-10 11:53:52.595 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-10 11:53:52.878 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-10 11:53:52.880 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-10 11:53:54.336 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-10 11:53:54.415 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 11:53:54.876 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-10 11:53:56.752 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-10 11:53:56.835 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-10 11:53:56.836 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-10 11:53:56.838 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 2 ms
+2026-06-10 11:53:57.035 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 - Could not detect default configuration classes for test class [br.com.arq.controller.AdminControllerTest]: AdminControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-06-10 11:53:57.083 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:234 - Found @SpringBootConfiguration br.com.arq.BancoApplication for test class br.com.arq.controller.AdminControllerTest
+2026-06-10 11:53:57.088 [main] INFO  o.s.b.d.r.RestartApplicationListener.onApplicationStartingEvent:74 - Restart disabled due to context in which it is running
+2026-06-10 11:53:57.466 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger.logMessage:82 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-10 11:53:58.084 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 11:53:58.092 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-10 11:53:58.096 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-10 12:03:39.251 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 8.0.1.Final
+2026-06-10 12:03:40.401 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-10 12:03:40.496 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 78 ms. Found 7 JPA repository interfaces.
+2026-06-10 12:03:41.211 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-10 12:03:41.346 [main] INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-06-10 12:03:41.382 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService:50 - HHH000026: Second-level cache disabled
+2026-06-10 12:03:41.531 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-10 12:03:41.573 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-10 12:03:41.792 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-10 12:03:41.793 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-10 12:03:42.826 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-10 12:03:42.948 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 12:03:43.595 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-10 12:03:45.283 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-10 12:03:45.353 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-10 12:03:45.355 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-10 12:03:45.356 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 1 ms
+2026-06-10 12:03:45.978 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 12:03:45.985 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-10 12:03:45.987 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-10 12:04:12.013 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 8.0.1.Final
+2026-06-10 12:04:13.112 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-10 12:04:13.229 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 100 ms. Found 7 JPA repository interfaces.
+2026-06-10 12:04:14.134 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-10 12:04:14.326 [main] INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-06-10 12:04:14.387 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService:50 - HHH000026: Second-level cache disabled
+2026-06-10 12:04:14.585 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-10 12:04:14.638 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-10 12:04:14.910 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-10 12:04:14.912 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-10 12:04:16.055 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-10 12:04:16.155 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 12:04:16.886 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-10 12:04:19.079 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-10 12:04:19.149 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-10 12:04:19.150 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-10 12:04:19.152 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 1 ms
+2026-06-10 12:04:19.812 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 12:04:19.822 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-10 12:04:19.828 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-10 12:32:05.403 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 8.0.1.Final
+2026-06-10 12:32:06.577 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-10 12:32:06.677 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 83 ms. Found 7 JPA repository interfaces.
+2026-06-10 12:32:07.476 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-10 12:32:07.696 [main] INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-06-10 12:32:07.754 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService:50 - HHH000026: Second-level cache disabled
+2026-06-10 12:32:07.949 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-10 12:32:07.989 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-10 12:32:08.253 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-10 12:32:08.257 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-10 12:32:09.409 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-10 12:32:09.503 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 12:32:10.028 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-10 12:32:11.995 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-10 12:32:12.069 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-10 12:32:12.070 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-10 12:32:12.071 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 1 ms
+2026-06-10 12:32:12.752 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 12:32:12.762 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-10 12:32:12.767 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-10 12:37:44.660 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 8.0.1.Final
+2026-06-10 12:37:45.830 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-10 12:37:45.934 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 88 ms. Found 7 JPA repository interfaces.
+2026-06-10 12:37:46.792 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-10 12:37:46.948 [main] INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-06-10 12:37:47.060 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService:50 - HHH000026: Second-level cache disabled
+2026-06-10 12:37:47.352 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-10 12:37:47.389 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-10 12:37:47.738 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-10 12:37:47.742 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-10 12:37:49.143 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-10 12:37:49.238 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 12:37:49.939 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-10 12:37:51.831 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-10 12:37:51.897 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-10 12:37:51.897 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-10 12:37:51.899 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 1 ms
+2026-06-10 12:37:52.751 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 12:37:52.762 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-10 12:37:52.766 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-10 12:48:38.381 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 8.0.1.Final
+2026-06-10 12:48:39.496 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-10 12:48:39.585 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 75 ms. Found 7 JPA repository interfaces.
+2026-06-10 12:48:40.489 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-10 12:48:40.637 [main] INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-06-10 12:48:40.683 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService:50 - HHH000026: Second-level cache disabled
+2026-06-10 12:48:40.877 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-10 12:48:40.923 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-10 12:48:41.174 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-10 12:48:41.177 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-10 12:48:42.297 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-10 12:48:42.390 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 12:48:42.878 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-10 12:48:44.852 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-10 12:48:44.915 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-10 12:48:44.916 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-10 12:48:44.917 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 1 ms
+2026-06-10 12:48:45.832 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 12:48:45.840 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-10 12:48:45.843 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-10 12:58:42.945 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 8.0.1.Final
+2026-06-10 12:58:44.065 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-10 12:58:44.190 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 108 ms. Found 7 JPA repository interfaces.
+2026-06-10 12:58:45.101 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-10 12:58:45.266 [main] INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-06-10 12:58:45.353 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService:50 - HHH000026: Second-level cache disabled
+2026-06-10 12:58:45.596 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-10 12:58:45.637 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-10 12:58:45.896 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-10 12:58:45.899 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-10 12:58:46.995 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-10 12:58:47.101 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 12:58:47.721 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-10 12:58:49.551 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-10 12:58:49.617 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-10 12:58:49.617 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-10 12:58:49.618 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 1 ms
+2026-06-10 12:58:50.628 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 12:58:50.635 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-10 12:58:50.638 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-10 12:59:50.661 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 8.0.1.Final
+2026-06-10 12:59:51.961 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-10 12:59:52.054 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 76 ms. Found 7 JPA repository interfaces.
+2026-06-10 12:59:52.843 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-10 12:59:53.025 [main] INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-06-10 12:59:53.118 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService:50 - HHH000026: Second-level cache disabled
+2026-06-10 12:59:53.410 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-10 12:59:53.451 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-10 12:59:53.738 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-10 12:59:53.742 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-10 12:59:54.923 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-10 12:59:55.012 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 12:59:55.732 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-10 12:59:57.680 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-10 12:59:57.762 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-10 12:59:57.762 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-10 12:59:57.765 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 2 ms
+2026-06-10 12:59:58.796 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 12:59:58.811 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-10 12:59:58.817 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-10 13:02:24.624 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 8.0.1.Final
+2026-06-10 13:02:25.833 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-10 13:02:25.915 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 71 ms. Found 7 JPA repository interfaces.
+2026-06-10 13:02:26.714 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-10 13:02:26.887 [main] INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-06-10 13:02:26.973 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService:50 - HHH000026: Second-level cache disabled
+2026-06-10 13:02:27.165 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-10 13:02:27.215 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-10 13:02:27.475 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-10 13:02:27.478 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-10 13:02:28.563 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-10 13:02:28.660 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 13:02:29.299 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-10 13:02:31.188 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-10 13:02:31.253 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-10 13:02:31.254 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-10 13:02:31.255 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 1 ms
+2026-06-10 13:02:32.301 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 13:02:32.309 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-10 13:02:32.313 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-10 13:19:57.295 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 8.0.1.Final
+2026-06-10 13:19:58.471 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-10 13:19:58.584 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 97 ms. Found 7 JPA repository interfaces.
+2026-06-10 13:19:59.443 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-10 13:19:59.630 [main] INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-06-10 13:19:59.674 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService:50 - HHH000026: Second-level cache disabled
+2026-06-10 13:19:59.886 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-10 13:19:59.949 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-10 13:20:00.244 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-10 13:20:00.247 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-10 13:20:01.361 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-10 13:20:01.452 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 13:20:01.938 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-10 13:20:03.908 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-10 13:20:04.013 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-10 13:20:04.014 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-10 13:20:04.016 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 1 ms
+2026-06-10 13:20:05.104 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 13:20:05.114 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-10 13:20:05.119 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-10 13:25:31.132 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 8.0.1.Final
+2026-06-10 13:25:32.271 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-10 13:25:32.384 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 98 ms. Found 7 JPA repository interfaces.
+2026-06-10 13:25:33.239 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-10 13:25:33.394 [main] INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-06-10 13:25:33.475 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService:50 - HHH000026: Second-level cache disabled
+2026-06-10 13:25:33.743 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-10 13:25:33.783 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-10 13:25:34.031 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-10 13:25:34.035 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-10 13:25:35.173 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-10 13:25:35.281 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 13:25:35.918 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-10 13:25:37.672 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-10 13:25:37.732 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-10 13:25:37.732 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-10 13:25:37.733 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 0 ms
+2026-06-10 13:25:38.685 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 13:25:38.696 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-10 13:25:38.701 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.
+2026-06-10 13:28:04.531 [background-preinit] INFO  o.h.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 8.0.1.Final
+2026-06-10 13:28:05.765 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:143 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-10 13:28:05.873 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn:211 - Finished Spring Data repository scanning in 91 ms. Found 7 JPA repository interfaces.
+2026-06-10 13:28:06.691 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-10 13:28:06.806 [main] INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-06-10 13:28:06.844 [main] INFO  o.h.c.i.RegionFactoryInitiator.initiateService:50 - HHH000026: Second-level cache disabled
+2026-06-10 13:28:07.032 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer:87 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-10 13:28:07.071 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:109 - HikariPool-1 - Starting...
+2026-06-10 13:28:07.300 [main] INFO  com.zaxxer.hikari.pool.HikariPool.checkFailFast:554 - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-06-10 13:28:07.302 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:122 - HikariPool-1 - Start completed.
+2026-06-10 13:28:08.562 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-10 13:28:08.663 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 13:28:09.309 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory.<clinit>:49 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-10 13:28:11.014 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration.logDataSources:88 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-06-10 13:28:11.071 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext.log:437 - Initializing Spring TestDispatcherServlet ''
+2026-06-10 13:28:11.072 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:532 - Initializing Servlet ''
+2026-06-10 13:28:11.072 [main] INFO  o.s.t.w.s.TestDispatcherServlet.initServletBean:554 - Completed initialization in 0 ms
+2026-06-10 13:28:12.095 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy:650 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-10 13:28:12.107 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:349 - HikariPool-1 - Shutdown initiated...
+2026-06-10 13:28:12.112 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close:351 - HikariPool-1 - Shutdown completed.

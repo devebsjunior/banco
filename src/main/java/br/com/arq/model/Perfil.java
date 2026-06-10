@@ -29,4 +29,11 @@ public class Perfil {
     @JoinColumn(name = "usuario_id")
     @JsonIgnore
     private Usuario usuario;
+
+    public Perfil(Long id, TipoPerfil tipoPerfil, Integer nivelPermissao) {
+        this.id = id;
+        this.tipoPerfil = tipoPerfil;
+        this.nivelPermissao = nivelPermissao;
+    }
+
 }
