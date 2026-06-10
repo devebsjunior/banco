@@ -73,7 +73,8 @@ public class ClienteController {
   @GetMapping("/{id}")
   public ResponseEntity<?> buscarPorId(@PathVariable Long id) {
     try {
-      return ResponseEntity.ok(service.buscarPorId(id));
+      Cliente cliente = service.buscarPorId(id);
+      return ResponseEntity.ok(new br.com.arq.dto.response.ClienteResponseDTO(cliente));
     }
     catch (Exception ex) {
       return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());

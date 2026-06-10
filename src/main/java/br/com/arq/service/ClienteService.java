@@ -7,6 +7,7 @@ import br.com.arq.model.Conta;
 import br.com.arq.repository.AgenciaRepository;
 import br.com.arq.repository.ClienteRepository;
 import lombok.RequiredArgsConstructor;
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
@@ -56,14 +57,14 @@ public class ClienteService {
       if (dto.conta() != null) {
         Agencia agencia = agenciaRepository.findById(dto.conta().agencia().id())
                 .orElseThrow(() -> new RuntimeException("Agência associada não encontrada"));
-
+        String senhaCriptografada = BCrypt.hashpw(dto.senha(), BCrypt.gensalt());
         Conta conta = Conta.builder()
                 .numeroConta(dto.conta().numeroConta())
                 .saldo(new BigDecimal("0.00"))
                 .agencia(agencia)
                 .cliente(cliente)
                 .perfil("CLIENTE")
-                .senha(dto.senha())
+                .senha(senhaCriptografada)
                 .build();
 
         cliente.setContas(List.of(conta));
@@ -85,8 +86,23 @@ public class ClienteService {
     }
   }
 
+  @Transactional(readOnly = true)
   public Cliente buscarPorId(Long id) {
-    return repository.findById(id).orElseThrow(() -> new RuntimeException("Cliente não encontrado"));
+    Cliente cliente = repository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Cliente não encontrado"));
+    if (cliente.getContas() != null) {
+      cliente.getContas().forEach(conta -> {
+        if (conta.getAgencia() != null) {
+          conta.getAgencia().getNumeroAgencia();
+          conta.getAgencia().getNomeAgencia();
+        }
+      });
+    }
+    if (cliente.getEndereco() != null) {
+      cliente.getEndereco().getId();
+    }
+
+    return cliente;
   }
 
   public Cliente buscarPorCpf(String cpf) {
@@ -97,8 +113,18 @@ public class ClienteService {
   public List<Cliente> buscarTodos() {
     List<Cliente> clientes = repository.findAllComContas();
     clientes.forEach(c -> {
-      if (c.getContas() != null) c.getContas().size();
-      if (c.getEndereco() != null) c.getEndereco().getId();
+      if (c.getContas() != null) {
+        c.getContas().forEach(conta -> {
+          conta.getNumeroConta();
+          if (conta.getAgencia() != null) {
+            conta.getAgencia().getNumeroAgencia();
+            conta.getAgencia().getNomeAgencia();
+          }
+        });
+      }
+      if (c.getEndereco() != null) {
+        c.getEndereco().getId();
+      }
     });
     return clientes;
   }

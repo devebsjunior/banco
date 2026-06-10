@@ -10,7 +10,8 @@ public record ClienteResponseDTO(
         String nome,
         String cpf,
         String email,
-        List<ContaResponseDTO> contas
+        List<ContaResponseDTO> contas,
+        EnderecoResponseDTO endereco
 ) {
     public ClienteResponseDTO(Cliente cliente) {
         this(
@@ -18,8 +19,8 @@ public record ClienteResponseDTO(
                 cliente.getNome(),
                 cliente.getCpf(),
                 cliente.getEmail(),
-                cliente.getContas() != null ?
-                        cliente.getContas().stream().map(ContaResponseDTO::new).toList() : List.of()
+                cliente.getContas() != null ? cliente.getContas().stream().map(ContaResponseDTO::new).toList() : List.of(),
+                cliente.getEndereco() != null ? new EnderecoResponseDTO(cliente.getEndereco()) : null
         );
     }
 }

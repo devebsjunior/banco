@@ -11,7 +11,7 @@ import java.util.Optional;
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
     Optional<Cliente> findByCpf(String cpf);
 
-    @Query("SELECT c FROM Cliente c LEFT JOIN FETCH c.contas")
+    @Query("SELECT DISTINCT c FROM Cliente c LEFT JOIN FETCH c.contas LEFT JOIN FETCH c.endereco")
     List<Cliente> findAllComContas();
 
 }
